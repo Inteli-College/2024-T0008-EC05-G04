@@ -1,3 +1,0 @@
-## Primeira Pagina
-
-# Hello world
