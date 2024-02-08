@@ -57,7 +57,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Ólin',
+        title: 'Grupo 4',
         logo: {
           alt: 'My Site Logo',
           src: 'img/galaxy.webp',
