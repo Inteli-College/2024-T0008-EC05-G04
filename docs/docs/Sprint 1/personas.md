@@ -38,3 +38,15 @@
 &emsp;&emsp;William Duarte, técnico de manutenção responsável pelos sistemas automatizados do hospital, ilustra a importância de adotar soluções tencológicas que sejam realmente efetivas, de fácil implementação e que façam sentido para o hospital, pois algumas podem trazer só mais gastos e problemas de manutenção. 
 
 &emsp;&emsp;Em síntese, as personas desempenham um papel fundamental ao representar pacientes, equipes de saúde e profissionais envolvidos, permitindo uma abordagem centrada no usuário e garantindo a implementação segura do sistema de automação no ambiente hospitalar, e que atenda às necessidades reais das partes interessadas.
+
+# Jornada do Usuário
+
+&emsp;&emsp; Neste contexto, exploraremos a ideia de mapa de jornada do usuário, que consiste em uma representação visual das fases percorridas por um usuário ao se envolver com uma plataforma. Destacamos as emoções e ações vivenciadas pelo usuário durante essa interação. Esse recurso é valioso para identificar oportunidades de aprimoramento e compreender os obstáculos enfrentados pelo usuário. Abaixo apresentaremos o mapa de jornada do usuário de Mayumi Tanaka, gestora de logística do hospital Sírio-Libanês.
+
+<p align="center"><b>Figura ?? - </b> Jornada do Usuário - Mayumi Tanaka</p>
+
+![Persona Gestora Hospitalar](/img/jornada_do_usuario.png)
+<p align="center">Fonte: Elaboração Grupo 4</p>
+
+&emsp;&emsp;A jornada do usuário de Mayumi Tanaka, gestora de logística do hospital Sírio-Libanês, ilustra as etapas que ela percorre ao lidar com os kits de emergência. A partir dessa jornada, é possível identificar os pontos de dor e as oportunidades de melhoria que podem ser exploradas para aprimorar a experiência de Mayumi e de outros gestores hospitalares.
+
