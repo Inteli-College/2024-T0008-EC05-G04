@@ -2,7 +2,7 @@
 
 A arquitetura de sistema é um modelo que descreve a estrutura e a organização de um sistema, incluindo os componentes, suas interações e a troca de informações entre eles. A arquitetura deve ser capaz de atender aos requisitos funcionais e não funcionais do sistema, sendo escalável e capaz de se adaptar a mudanças futuras.
 
-A solução proposta para automatizar a montagem dos carrinhos de emergência em um hospital está descrita nessa arquitetura de sistema, que visa reduzir o tempo de montagem e melhorar a eficiência na rotina de montagem dos carrinhos, permitindo modificações nos layouts e integrações com outras soluções.
+A solução proposta para automatizar a montagem dos kits de emergência em um hospital com um sistema de automação industrial está descrita nessa arquitetura de sistema, que visa reduzir o tempo de montagem e melhorar a eficiência na rotina de montagem dos kits, permitindo modificações nos layouts e integrações com outras soluções.
 
 Baseando nos requisitos levantados, a solução terá 5 principais partes, que se integram com o objetivo de entregar a melhor experiência para o usuário.
 
