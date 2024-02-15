@@ -31,9 +31,12 @@ Nesse contexto, seguem as *user stories* referentes a cada persona no contexto d
 
 **2.** Como auxiliar de enfermagem, eu quero que a solução tenha uma interface intuitiva e fácil de usar, para que eu possa identificar e selecionar os medicamentos corretos durante o processo de administração de medicamentos e bipagem.
 - Critérios de Aceitação:
+    - O braço deve ser capaz de montar o kit selecionado pelo usuário. 
     - A interface do sistema deve ser clara e fácil de usar.
     - O sistema deve fornecer informações precisas sobre os medicamentos.
     - O sistema deve permitir a seleção fácil e rápida de medicamentos.
+    
+
 
 **3.** Como um paciente do Hospital Sírio Libanês, eu quero que a solução seja eficaz e com a mínima margem para erros possível, garantindo assim que meu tratamento em momento de crise seja o mais adequado possível.
 - Critérios de Aceitação:
@@ -45,4 +48,6 @@ Nesse contexto, seguem as *user stories* referentes a cada persona no contexto d
 - Critérios de Aceitação:
     - A solução deve ser capaz de rastrear e registrar o uso de cada medicamento.
     - O sistema deve fornecer relatórios detalhados que a gestora possa usar para análise.
-    - O sistema deve ser capaz de alertar a gestora quando os suprimentos estiverem baixos.
+    - A aplicação web deve permitir salvar novos layouts de kits.
+    -  A aplicação web deve ter uma funcionalidade de edição de layout.
+    - A aplicação web deve permitir salvar novos layouts de kits.
