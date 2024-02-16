@@ -2,7 +2,7 @@
 
 ## Matriz de Risco
 
-A utilização da matriz de riscos é fundamental para a administração estratégica do grupo, pois possibilita a identificação, avaliação e priorização de riscos com base em sua probabilidade de ocorrência e no impacto potencial, apresentando essas informações de maneira visual.
+A utilização da matriz de riscos é fundamental para a administração estratégica do projeto, pois possibilita a identificação, avaliação e priorização de riscos com base em sua probabilidade de ocorrência e no impacto potencial, apresentando essas informações de maneira visual.
 
 <h6 align="center"> Figura ??: Matriz de Risco (Sírio Libanês)  </h6>
 
