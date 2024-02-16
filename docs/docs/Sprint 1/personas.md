@@ -19,22 +19,4 @@
 
 &emsp;&emsp;A persona Renata Sanches, auxiliar de enfermagem, enfatiza a importância de uma abordagem centrada no usuário no desenvolvimento da nossa solução de automação para otimização geral dos kits de emergência. Ela demonstra a necessidade e uma melhor organização dos carrinhos e kits de medicamentos para evitar erros na hora do atendimento, tornando-os mais eficientes e seguros.
 
-&emsp;&emsp;A seguir, tem-se o Caio Barbosa, a persona do paciente, a maior preocupação de todos os membros da equipe envolvida na implementação do novo sistema de automação. Por mais que a solução seja de extrema importância para a otimização de um processo interno do hospital, de nada adianta se piorar a experiência do paciente.
-
-<p align="center"><b>Figura ?? - </b> Persona Paciente</p>
-
-![Persona Paciente](/img/personaCaio.png)
-<p align="center">Fonte: Elaboração Grupo 4</p>
-
-&emsp;&emsp; Caio, persona do paciente, deseja receber um tratamento que faça-o se sentir o mais confortável e seguro possível durante suas crises. Além disso, a garantia de que será atendido com o máximo de eficiência é crucial.
-
-&emsp;&emsp;Agora, segue a persona de um técnico de manutenção do hospital, para entender como a solução de automação pode ser implementado e se é realmente eficaz para otimização desse processo. 
-
-<p align="center"><b>Figura ?? - </b> Persona Técnico de Manutenção</p>
-
-![Persona Técnico de Manutenção](/img/personaWilliam.png)
-<p align="center">Fonte: Elaboração Grupo 4</p>
-
-&emsp;&emsp;William Duarte, técnico de manutenção responsável pelos sistemas automatizados do hospital, ilustra a importância de adotar soluções tencológicas que sejam realmente efetivas, de fácil implementação e que façam sentido para o hospital, pois algumas podem trazer só mais gastos e problemas de manutenção. 
-
 &emsp;&emsp;Em síntese, as personas desempenham um papel fundamental ao representar pacientes, equipes de saúde e profissionais envolvidos, permitindo uma abordagem centrada no usuário e garantindo a implementação segura do sistema de automação no ambiente hospitalar, e que atenda às necessidades reais das partes interessadas.
