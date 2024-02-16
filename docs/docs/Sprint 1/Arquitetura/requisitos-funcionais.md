@@ -8,26 +8,26 @@
 | RF01 | O sistema deve possuir um banco de dados para armazenar os kits. |
 | RF02 | A aplicação web deve permitir salvar novos layouts de kits. |
 | RF03 | A aplicação web deve ter uma funcionalidade de edição de layout. |
-| RF04 | A aplicação web deve registrar os itens utilizados na montagem de um determinado kit |
+| RF04 | A aplicação web deve registrar os itens utilizados na montagem de um determinado kit. |
 | RF05 | O sistema deve ser capaz de montar o kit selecionado pelo usuário. |
 | RF06 | O sistema deve ser capaz de interagir com diferentes itens para a montagem do kit. |
 
-### RF01
+### RF01 - O sistema deve possuir um banco de dados para armazenar os kits. 
 &emsp; Deve haver um banco de dados, capaz de armazenar os layouts dos kits, permitindo gravar tanto a posição do item no layout de entrada, quanto no layout de saída. Além disso, é necessário permite gravar quais são os itens, integrando com o sistema utilizado para controle atualmente. 
 
-### RF02
+### RF02 - A aplicação web deve permitir salvar novos layouts de kits.
 &emsp; A aplicação web deve possuir uma funcionalidade permitindo inserir novos registros de kits no banco de dados. Assim, possibilitando a criação de um novo kit ainda não cadastro no software ser montado pelo braço mecânico.
 
-### RF03
+### RF03 -  A aplicação web deve ter uma funcionalidade de edição de layout. 
 &emsp; O site deve permitir a alteração de um layout, caso haja a necessidade de modificar um layout de kit já existente ou seus itens. Ademais, o layout deve ser salvo no banco de dados, para permitir que seja carregado no robô.
 
-### RF04
+### RF04 - A aplicação web deve registrar os itens utilizados na montagem de um determinado kit.
 &emsp; A aplicação web tem que ser capaz de permitir o usuário selecionar todos os itens utilizados em um kit, assim como salvar essas informações no banco de dados.
 
-### RF05
+### RF05 - O sistema deve ser capaz de montar o kit selecionado pelo usuário.
 &emsp; O braço robótico deve ser capaz de realizar a montagem do kit.
 
-### RF06
+### RF06 - O sistema deve ser capaz de interagir com diferentes itens para a montagem do kit.
 &emsp; O braço robótico deve ser capaz de interagir com vários tipos de objetos, devido a diversidade de itens presentes nos diferentes kits.
 
 ## Referências
