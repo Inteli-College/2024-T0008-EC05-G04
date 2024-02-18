@@ -1,4 +1,4 @@
-# Artefato de Negócios
+# Matriz de Risco
 
 ## Matriz de Risco
 
