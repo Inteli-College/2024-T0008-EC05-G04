@@ -6,7 +6,7 @@ A utilização da matriz de riscos é fundamental para a administração estrat�
 
 <h6 align="center"> Figura ??: Matriz de Risco (Sírio Libanês)  </h6>
 
-![Matriz_de_Risco](../../../docs/static/img/Matriz%20de%20risco%20(Mod_5).jpg)
+![Matriz_de_Risco](../../../../docs/static/img/Matriz%20de%20risco%20(Mod_5).jpg)
 
 <h6 align="center"> Fonte: Elaborado pelos autores </h6>
 
