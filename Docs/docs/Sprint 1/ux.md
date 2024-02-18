@@ -28,11 +28,11 @@
     - O sistema deve permitir a busca de medicamentos por nome ou código.
     - O sistema deve exibir o rastreamento dos medicamentos.
 
-&emsp;**2.** Como auxiliar de enfermagem, quero que o hardware tenha interface de fácil entendimento de funcionamento para que consiga interagir com ele de maneira segura.<br />
+&emsp;**2.** Como auxiliar de enfermagem, quero que o software, o qual interage com o braço robótico, tenha interface da fácil usabilidade para permitir uma interação segura.<br />
 &emsp;**Critérios de Aceitação**
-    - O hardware deve ter uma interface intuitiva e fácil de usar. 
+    - O software deve ter uma interface intuitiva e fácil de usar. 
     - O hardware deve operar de maneira segura para evitar qualquer dano ao paciente ou ao auxiliar de enfermagem.
-    - Deve haver recursos de treinamento disponíveis, como manuais do usuário, para ajudar os auxiliares de enfermagem a entenderem completamente o funcionamento do hardware.
+    - Deve haver recursos de treinamento disponíveis, como manuais do usuário, para ajudar os auxiliares de enfermagem a entenderem completamente o funcionamento do software e do hardware.
     
 &emsp;**3.** Como auxiliar de enfermagem, quero que o sistema me permita registrar a administração de medicamentos para manter um registro preciso.<br />
 &emsp;**Critérios de Aceitação**<br />
@@ -53,11 +53,11 @@
     - A interface do sistema para programar os layouts dos kits de emergência deve ser intuitiva e fácil de usar.
 
 
-### **Persona: Patricia Tanaka, gestora Hospitalar**
+### **Persona: Mayumi Tanaka, gestora Hospitalar**
 
-&emsp;**1.** Como gestora hospitalar, quero ser capaz de monitorar o abastecimento e desmontagem dos carrinhos e kits de emergência para garantir a eficiência do processo.<br />
+&emsp;**1.** Como gestora hospitalar, quero ser capaz de monitorar o abastecimento e desmontagem dos kits de emergência para garantir a eficiência do processo.<br />
 &emsp;**Critérios de Aceitação**<br />
-    - O sistema deve fornecer informações em tempo real sobre o status de abastecimento e desmontagem dos carrinhos e kits de
+    - O sistema deve fornecer informações em tempo real sobre o status de abastecimento e desmontagem dos kits de
     emergência.
     - O sistema deve permitir a visualização do histórico de abastecimento e desmontagem.
     - O sistema deve fornecer alertas quando os níveis de suprimentos atingirem um ponto crítico.
