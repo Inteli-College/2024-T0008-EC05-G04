@@ -45,8 +45,16 @@
 
 <p align="center"><b>Figura ?? - </b> Jornada do Usuário - Mayumi Tanaka</p>
 
-![Persona Gestora Hospitalar](/img/jornada_do_usuario.png)
+![Persona Gestora Hospitalar](/img/jornada_do_usuario_Mayumi.png)
 <p align="center">Fonte: Elaboração Grupo 4</p>
 
 &emsp;&emsp;A jornada do usuário de Mayumi Tanaka, gestora de logística do hospital Sírio-Libanês, ilustra as etapas que ela percorre ao lidar com os kits de emergência. A partir dessa jornada, é possível identificar os pontos de dor e as oportunidades de melhoria que podem ser exploradas para aprimorar a experiência de Mayumi e de outros gestores hospitalares.
 
+&emsp;&emsp;A seguir, temos a jornada do usuário de Renata Sanches, auxiliar de enfermagem do hospital Sírio-Libanês, que ilustra as etapas que ela percorre ao lidar com os kits de emergência. A partir dessa jornada, é possível identificar os pontos de dor e as oportunidades de melhoria que podem ser exploradas para aprimorar a experiência de Renata e de outros profissionais de saúde.
+
+<p align="center"><b>Figura ?? - </b> Jornada do Usuário - Renata Sanches</p>
+
+![Persona Gestora Hospitalar](/img/jornada_do_usuario_Renata.png)
+<p align="center">Fonte: Elaboração Grupo 4</p>
+
+&emsp;&emsp;Em resumo, a jornada do usuário serve como um guia essencial para criar, aprimorar e inovar, promovendo experiências mais significativas e alinhadas com as expectativas dos usuários, resultando em produtos e serviços mais bem-sucedidos e impactantes.
