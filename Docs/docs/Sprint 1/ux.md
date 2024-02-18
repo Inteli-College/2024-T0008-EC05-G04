@@ -40,11 +40,11 @@
     - O sistema deve permitir a entrada de notas adicionais, se necessário.
     - O sistema deve atualizar automaticamente o registro do paciente com as informações de administração do medicamento.
    
-&emsp;**4.** Como auxiliar de enfermagem, quero que o sistema me permita visualizar o histórico de medicamentos do paciente para entender melhor seu tratamento.<br />
+&emsp;**4.** Como auxiliar de enfermagem, quero que o sistema consiga se conectar aos demais softwares já utilizados pelo hospital Sírio Libanês para que possamos ter uma visão unificada e integrada de todas as operações. <br />
 &emsp;**Critérios de Aceitação**
-    - O sistema deve fornecer uma visão clara e organizada do histórico de medicamentos do paciente.
-    - O sistema deve permitir a filtragem do histórico de medicamentos por data, tipo de medicamento, etc.
-    - O sistema deve permitir o acesso a detalhes adicionais sobre cada entrada do histórico de medicamentos, se necessário.
+    - O sistema deve ser capaz de se conectar e integrar com os demais softwares já utilizados pelo hospital Sírio Libanês.
+    - A integração do sistema com os demais softwares não deve interromper ou prejudicar as operações existentes.
+    - O sistema deve fornecer uma visão unificada e integrada de todas as operações.
 
 &emsp;**5.** Como auxiliar de enfermagem, quero que o sistema me permita programar diferentes layouts de kits de emergência para que consiga adaptar os kits conforme a necessidade do paciente.<br />
 &emsp;**Critérios de Aceitação**<br />
@@ -74,17 +74,17 @@
     - O hardware deve ter mecanismos de verificação incorporados para identificar e corrigir erros durante a montagem do kit.
     - O hardware deve ser capaz de manter um registro preciso de cada etapa do processo de montagem do kit.
    
-&emsp;**4.** Como gestora hospitalar, quero que o sistema me permita rastrear todos os itens nos carrinhos montados para garantir a precisão e a segurança.<br />
+&emsp;**4.** Como gestora hospitalar, quero que o sistema me permita rastrear todos os itens nos kits montados para garantir a precisão e a segurança.<br />
 &emsp;**Critérios de Aceitação**<br />
-    - O sistema deve permitir o rastreamento de todos os itens nos carrinhos montados.
+    - O sistema deve permitir o rastreamento de todos os itens nos kits montados.
     - O sistema deve fornecer alertas se houver discrepâncias ou erros no rastreamento de itens.
     - O sistema deve permitir a correção de erros de rastreamento.
 
-&emsp;**5.** Como gestora hospitalar, quero que o sistema me permita programar a manutenção dos carrinhos de emergência para garantir sua funcionalidade e durabilidade.<br />
+&emsp;**5.** Como gestora hospitalar, quero que o sistema tenha um processo de remontagem eficiente e preciso para que possamos garantir a disponibilidade rápida kits, minimizar erros humanos e melhorar a qualidade do atendimento ao paciente.<br />
 &emsp;**Critérios de Aceitação**<br />
-    - O sistema deve permitir a programação de manutenção para os carrinhos de emergência.
-    - O código do sistema deve ser de fácil entendimento para que seja possível realizar alterações para garantir a manutenibilidade.
-    - O sistema deve permitir a atualização do status de manutenção após a conclusão da manutenção.
+    - O sistema deve ser capaz de remontar os carrinhos de emergência de forma eficiente e precisa.
+    - A remontagem dos carrinhos de emergência pelo sistema não deve resultar em erros ou omissões de itens essenciais. 
+    - O processo de remontagem pelo sistema deve resultar em carrinhos de emergência prontos para uso mais rapidamente do que o processo manual atual.
 
 
 
