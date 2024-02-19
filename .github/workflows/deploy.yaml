@@ -15,7 +15,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./docs/docs
+        working-directory: ./Docs/docs
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,7 +33,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/build
+          path: ./Docs/build
 
   deploy:
     name: Deploy to GitHub Pages

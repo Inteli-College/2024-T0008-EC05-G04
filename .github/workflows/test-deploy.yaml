@@ -12,7 +12,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./docs.docs
+        working-directory: ./Docs/docs
     steps:
       - uses: actions/checkout@v4
         with:
