@@ -35,10 +35,10 @@
 
 ## Matriz Oceano Azul 
 <p align="center"><b>Figura 1 - </b>Matriz de Avaliação Oceano Azul</p>
-![Persona Auxiliar de Enfermagem](/img/matrizOceano.png)
+![Persona Auxiliar de Enfermagem](/img/matriz-oceano.png)
 <p align="center">Fonte: Elaboração Grupo 4</p>
 <p align="center"><b>Figura 2 - </b>Matriz de Avaliação Oceano Azul</p>
-![Persona Auxiliar de Enfermagem](/img/graficoOceano.png)
+![Persona Auxiliar de Enfermagem](/img/grafico-oceano.png)
 <p align="center">Fonte: Elaboração Grupo 4</p>
 
 
