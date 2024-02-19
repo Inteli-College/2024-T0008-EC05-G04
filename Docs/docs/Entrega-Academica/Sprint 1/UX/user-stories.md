@@ -1,9 +1,9 @@
-# Artefato de UX
-## User Stories
+# User Stories
 
-&emsp;&emsp;As *user story* tratam-se de uma descrição simples e concisa de um recurso contado a partir da perspectiva de uma pessoa que deseja esse novo recurso, geralmente um usuário ou cliente do sistema. Elas são uma parte fundamental do desenvolvimento ágil e ajudam a criar uma visão simplificada de um requisito.<br />
-&emsp;&emsp;Elas devem ser curtas e simples seguindo um formato que identifique quem será o usuário, qual será a ação executada e qual será o objetivo da ação.<br />
-&emsp;&emsp;Além disso, elas devem ser:
+&emsp;As *user story* tratam-se de uma descrição simples e concisa de um recurso contado a partir da perspectiva de uma pessoa que deseja esse novo recurso, geralmente um usuário ou cliente do sistema. Elas são uma parte fundamental do desenvolvimento ágil e ajudam a criar uma visão simplificada de um requisito.<br />
+&emsp;Elas devem ser curtas e simples seguindo um formato que identifique quem será o usuário, qual será a ação executada e qual será o objetivo da ação.<br />
+
+&emsp;Além disso, elas devem ser:
 
 **1. Independentes**: Cada *user story* deve ser autônoma, ou seja, deve ser possível desenvolvê-la e implementá-la independentemente das outras.
 
@@ -17,10 +17,9 @@
 
 **6. Testáveis**: Cada *user story* deve ser testável para garantir que o recurso foi implementado corretamente.
 
-&emsp;Existem ainda os **critérios de aceitação** que são um conjunto de parâmetros que definem se um produto, processo ou serviço atende aos requisitos especificados por empresas ou normas e são uma ferramenta importante para garantir que o produto final atenda às necessidades do cliente e esteja em conformidade com as normas e regulamentações aplicáveis.<br />
-&emsp;Nesse contexto, seguem as *user stories* referentes a cada persona no contexto do projeto<br />
+&emsp;Existem ainda os **critérios de aceitação** que são um conjunto de parâmetros que definem se um produto, processo ou serviço atende aos requisitos especificados por empresas ou normas e são uma ferramenta importante para garantir que o produto final atenda às necessidades do cliente e esteja em conformidade com as normas e regulamentações aplicáveis. Nesse contexto, seguem as *user stories* referentes a cada persona no contexto do projeto:
 
-### **Persona: Renata Sanches, auxiliar de enfermagem**
+## **Persona: Renata Sanches, auxiliar de enfermagem**
 
 &emsp;**1.** Como auxiliar de enfermagem, quero ser capaz de identificar facilmente os medicamentos corretos no sistema para garantir a administração precisa e segura.<br />
 &emsp;**Critérios de Aceitação**
@@ -53,7 +52,7 @@
     - A interface do sistema para programar os layouts dos kits de emergência deve ser intuitiva e fácil de usar.
 
 
-### **Persona: Mayumi Tanaka, gestora Hospitalar**
+## **Persona: Mayumi Tanaka, gestora Hospitalar**
 
 &emsp;**1.** Como gestora hospitalar, quero ser capaz de monitorar o abastecimento e desmontagem dos kits de emergência para garantir a eficiência do processo.<br />
 &emsp;**Critérios de Aceitação**<br />
