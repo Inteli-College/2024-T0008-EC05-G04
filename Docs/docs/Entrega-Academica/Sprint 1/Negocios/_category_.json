@@ -1,0 +1,8 @@
+{
+  "label": "Entendimento do Negócio",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Entendimento do projeto, na visão de business."
+  }
+}
