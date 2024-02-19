@@ -5,7 +5,7 @@
 
 <p align="center"><b>Figura 1 - </b> Persona Gestora Hospitalar</p>
 
-![Persona Gestora Hospitalar](/img/personaMayumi.png)
+![Persona Gestora Hospitalar](/img/persona-mayumi.png)
 <p align="center">Fonte: Elaboração Grupo 4</p>
 
 &emsp;A persona da gestora Mayumi Tanaka é uma peça-chave para esse projeto, pois ela evidencia a importância do entendimento da organização e fluxo logístico já existente. Suas expectativas de otimização do processo de montagem e desmontagem os kits, e melhoria dos atendimentos aos pacientes são fundamentais.
@@ -14,7 +14,7 @@
 
 <p align="center"><b>Figura 2 - </b> Persona Auxiliar de Enfermagem</p>
 
-![Persona Auxiliar de Enfermagem](/img/personaRenata.png)
+![Persona Auxiliar de Enfermagem](/img/persona-renata.png)
 <p align="center">Fonte: Elaboração Grupo 4</p>
 
 &emsp;A persona Renata Sanches, auxiliar de enfermagem, enfatiza a importância de uma abordagem centrada no usuário no desenvolvimento da nossa solução de automação para otimização geral dos kits de emergência. Ela demonstra a necessidade e uma melhor organização dos carrinhos e kits de medicamentos para evitar erros na hora do atendimento, tornando-os mais eficientes e seguros.
