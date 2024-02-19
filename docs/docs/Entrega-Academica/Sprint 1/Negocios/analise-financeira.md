@@ -8,7 +8,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 &emsp;Decidimos que o braço robótico Dobot CR3-1300 e quatro funcionários na área seriam o mais adequado para a conclusão do projeto num período de um ano.
 
-![Planilha](../../../../static/sheets/planilha-analise-financeira.png)
+![Planilha](/sheets/planilha-analise-financeira.png)
 
 <img class="image-intro" src={useBaseUrl("sheets/clt-table.png")} alt="CLT Automa"/>
 
