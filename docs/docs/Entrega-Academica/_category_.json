@@ -1,0 +1,10 @@
+{
+    "label": "Entregas Acadêmica",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "Essas pasta contém todas as entregas acadêmicas realizadas pelo grupo durante o desenvolvimento do projeto."
+      
+    }
+  }
+  
