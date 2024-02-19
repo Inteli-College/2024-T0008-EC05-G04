@@ -6,16 +6,13 @@ sidebar_position: "1"
 
 ## Logo
 
-![Matriz_de_Risco](../../docs/static/img/logo.png)
+![Logo_do_grupo](../../docs/static/img/logo.png)
 
 ## Nossa equipe
 
-![Matriz_de_Risco](../../docs/static/img/equipe.png)
+![equipe](../../docs/static/img/equipe.png)
 
 
 ## Apresentação 1 
 
-<object data="/img/Sprint-1.pdf"type="application/pdf" width="700px" height="700px">
-    <embed src="/img/Sprint-1.pdf">
-    </embed>
-</object>
+![Link da Apresentação](https://www.canva.com/design/DAF85Ckz8DI/p-FtudwShip6BgdqTsuDGQ/edit?utm_content=DAF85Ckz8DI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
