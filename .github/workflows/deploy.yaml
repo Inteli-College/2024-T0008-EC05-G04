@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - Github-Actions
     
 permissions:
   contents: write
@@ -15,7 +16,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./Docs/docs
+        working-directory: ./Docs
     steps:
       - uses: actions/checkout@v4
         with:
