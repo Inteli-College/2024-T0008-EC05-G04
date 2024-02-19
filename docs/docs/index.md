@@ -6,13 +6,26 @@ sidebar_position: "1"
 
 ## Logo
 
-![Logo_do_grupo](../../docs/static/img/logo.png)
+![Logo_do_grupo](../../docs/static/img/1.png)
 
 ## Nossa equipe
 
-![equipe](../../docs/static/img/equipe.png)
+![equipe](../../docs/static/img/2.png)
 
 
 ## Apresentação 1 
-
-*[Link da Apresentação](https://www.canva.com/design/DAF85Ckz8DI/p-FtudwShip6BgdqTsuDGQ/edit?utm_content=DAF85Ckz8DI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)*
+![apresentação](../../docs/static/img/3.png)
+![apresentação](../../docs/static/img/4.png)
+![apresentação](../../docs/static/img/5.png)
+![apresentação](../../docs/static/img/6.png)
+![apresentação](../../docs/static/img/7.png)
+![apresentação](../../docs/static/img/8.png)
+![apresentação](../../docs/static/img/9.png)
+![apresentação](../../docs/static/img/10.png)
+![apresentação](../../docs/static/img/11.png)
+![apresentação](../../docs/static/img/12.png)
+![apresentação](../../docs/static/img/13.png)
+![apresentação](../../docs/static/img/14.png)
+![apresentação](../../docs/static/img/15.png)
+![apresentação](../../docs/static/img/16.png)
+![apresentação](../../docs/static/img/17.png)
