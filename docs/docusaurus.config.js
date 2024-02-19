@@ -8,20 +8,20 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'My Site',
-    tagline: 'Dinosaurs are cool',
+    title: 'Grupo 4',
+    tagline: '4U',
     favicon: 'img/favicon.ico',
 
     // Set the production url of your site here
-    url: 'https://your-docusaurus-site.example.com',
+    url: 'https://inteli-college.github.io',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/2024-T0008-EC05-G04/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'facebook', // Usually your GitHub org/user name.
-    projectName: 'docusaurus', // Usually your repo name.
+    organizationName: 'Inteli', // Usually your GitHub org/user name.
+    projectName: '2024-T0008-EC05-G04', // Usually your repo name.
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -55,7 +55,7 @@ const config = {
             }),
         ],
     ],
-    themes : ['@docusaurus/theme-mermaid'],
+    themes: ['@docusaurus/theme-mermaid'],
 
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -66,7 +66,7 @@ const config = {
                 title: 'Grupo 4',
                 logo: {
                     alt: 'My Site Logo',
-                    src: 'img/galaxy.webp',
+                    src: 'img/logo/svg/logo-no-background.svg',
                 },
                 items: [
                     {
@@ -76,7 +76,7 @@ const config = {
                         label: 'Seções',
                     },
                     {
-                        href: 'https://github.com/olin-med',
+                        href: 'https://github.com/Inteli-College/2024-T0008-EC05-G04',
                         label: 'GitHub',
                         position: 'right',
                     },
@@ -87,7 +87,7 @@ const config = {
                 links: [
 
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} Ólin. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus.`,
             },
             prism: {
                 theme: prismThemes.github,
