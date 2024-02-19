@@ -12,7 +12,6 @@ sidebar_position: "1"
 
 ![equipe](/img/apresentacao1/apresentacao2.png)
 
-
 ## Apresentação 1 
 ![apresentação](/img/apresentacao1/apresentacao3.png)
 ![apresentação](/img/apresentacao1/apresentacao4.png)
