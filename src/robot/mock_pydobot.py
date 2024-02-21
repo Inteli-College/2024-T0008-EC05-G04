@@ -1,11 +1,12 @@
-class MockedSerial:
-    device = ''
+__mocked__ = True
 
-mocked_ports = [MockedSerial() for _ in range(5)]
+class MockedSerial:
+    device = "mock"
+
+mocked_serial = MockedSerial()
+
 
 class Dobot:
-    __mocked__ = True
-
     def __init__(self, port, verbose=False):
         self.x = 0
         self.y = 0

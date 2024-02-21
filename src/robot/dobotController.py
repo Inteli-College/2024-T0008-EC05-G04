@@ -1,6 +1,5 @@
 from serial.tools import list_ports
 import mock_pydobot as pydobot
-import json
 
 from position import Position
 
@@ -11,14 +10,19 @@ class DobotController:
         self.home_position = Position(240, 0, 150, 0, 0, 0, 0, 0, False, False)
 
     def list_ports(self):
-        if hasattr(pydobot.Dobot, "__mocked__"):
-            print("mock")
-            return pydobot.mocked_ports
+        ports = [port.device for port in list_ports.comports()]
 
-        return list_ports.comports()
+        if hasattr(pydobot, "__mocked__"):
+            print('mock')
+            ports.append("mock")
 
-    def connect(self, port_name):
-        self.dobot = pydobot.Dobot(port=port_name.device, verbose=False)
+        return ports
+
+    def connect(self, port):
+        self.dobot = pydobot.Dobot(port=port, verbose=False)
+
+    def disconnect(self):
+        self.dobot.close()
 
     def pose(self):
         current_position = Position(*self.dobot.pose())
@@ -48,38 +52,18 @@ class DobotController:
             current_position.load_from_dict(position)
             self.move_to(current_position, wait=True)
 
-    def save_current_position(self, path):
-        current_position = self.pose()
-        print(current_position)
-
-        try:
-            with open(path, "r") as file:
-                saved_positions = json.load(file)
-        except FileNotFoundError:
-            saved_positions = {"positions": []}
-
-            with open(path, "w") as file:
-                json.dump(saved_positions, file)
-
-        saved_positions["positions"].append(current_position.to_dict())
-        with open(path, "w") as file:
-            json.dump(saved_positions, file, indent=4)
-
     def home(self):
         print("Homing robot")
         self.move_to(self.home_position, wait=True)
 
-    def enable_tool(self):
+    def enable_tool(self, time_to_wait=200):
         print("Enabling tool")
         self.dobot.suck(True)
+        self.dobot.wait(time_to_wait)
         self.tool_enabled = True
 
-    def disable_tool(self):
+    def disable_tool(self, time_to_wait=200):
         print("Disabling tool")
         self.dobot.suck(False)
+        self.dobot.wait(time_to_wait)
         self.tool_enabled = False
-
-    def get_current_position(self):
-        print("Getting current position")
-        current_position = self.pose()
-        print(current_position)
