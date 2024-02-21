@@ -1,14 +1,19 @@
 from commands import *
+from dobotController import DobotController
+
+dobot_controller = DobotController()
+available_ports = dobot_controller.list_ports()
+dobot_controller.connect(available_ports[0])
 
 command_mapping = {
-    "move": MoveCommand(),
-    "move_to": MoveToCommand(),
-    "execute": ExecuteCommand(),
-    "save": SavePositionCommand(),
-    "home": HomeCommand(),
-    "enable_tool": EnableToolCommand(),
-    "disable_tool": DisableToolCommand(),
-    "current": GetCurrentPositionCommand(),
+    "move": MoveCommand(dobot_controller),
+    "move_to": MoveToCommand(dobot_controller),
+    "execute": ExecuteCommand(dobot_controller),
+    "save": SavePositionCommand(dobot_controller),
+    "home": HomeCommand(dobot_controller),
+    "enable_tool": EnableToolCommand(dobot_controller),
+    "disable_tool": DisableToolCommand(dobot_controller),
+    "current": GetCurrentPositionCommand(dobot_controller),
 }
 
 

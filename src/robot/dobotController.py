@@ -1,5 +1,5 @@
 from serial.tools import list_ports
-import pydobot
+import mock_pydobot as pydobot
 import json
 
 from position import Position
@@ -7,45 +7,49 @@ from position import Position
 
 class DobotController:
     def __init__(self):
-        available_ports = list_ports.comports()
-        port = list(available_ports)[0].device
-        self.dobot = pydobot.Dobot(port=port, verbose=False)
-
         self.tool_enabled = False
-        self.dobot.suck(self.tool_enabled)
         self.home_position = Position(240, 0, 150, 0, 0, 0, 0, 0, False, False)
 
-    def pose(self):
-        return self.dobot.pose()
+    def list_ports(self):
+        if hasattr(pydobot.Dobot, "__mocked__"):
+            print("mock")
+            return pydobot.mocked_ports
 
-    def move_by_axis(self, current_position, axis, distance, wait):
+        return list_ports.comports()
+
+    def connect(self, port_name):
+        self.dobot = pydobot.Dobot(port=port_name.device, verbose=False)
+
+    def pose(self):
+        current_position = Position(*self.dobot.pose())
+        current_position.suction = self.tool_enabled
+        return current_position
+
+    def move_to(self, position, wait=True):
+        print(f"Moving to {position}")
+        self.dobot.move_to(*position.to_list(), wait=wait)
+
+    def move_by_axis(self, axis, distance, wait):
         move = Position(
             x=distance * (axis == "x"),
             y=distance * (axis == "y"),
             z=distance * (axis == "z"),
+            r=distance * (axis == "r"),
         )
 
-        target_position = current_position + move
+        target_position = self.pose() + move
 
-        self.dobot.move_to(*target_position.to_list(), wait=wait)
-
-    def move_to_position(self, position):
-        print(f"Moving to {position}")
-        self.dobot.move_to(*position.to_list())
+        self.move_to(target_position, wait=wait)
 
     def execute_positions(self, data):
         current_position = Position()
 
         for position in data["positions"]:
             current_position.load_from_dict(position)
-
-            print(current_position)
-
-            self.dobot.move_to(*current_position.to_list(), wait=True)
+            self.move_to(current_position, wait=True)
 
     def save_current_position(self, path):
-        current_position = Position(*self.dobot.pose())
-        current_position.suction = self.tool_enabled
+        current_position = self.pose()
         print(current_position)
 
         try:
@@ -63,7 +67,7 @@ class DobotController:
 
     def home(self):
         print("Homing robot")
-        self.dobot.move_to(*self.home_position.to_list())
+        self.move_to(self.home_position, wait=True)
 
     def enable_tool(self):
         print("Enabling tool")
@@ -77,6 +81,5 @@ class DobotController:
 
     def get_current_position(self):
         print("Getting current position")
-        current_position = Position(*self.dobot.pose())
-        current_position.suction = self.tool_enabled
+        current_position = self.pose()
         print(current_position)
