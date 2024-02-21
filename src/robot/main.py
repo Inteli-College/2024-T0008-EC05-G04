@@ -1,5 +1,7 @@
+import json
 import typer
 import inquirer
+from yaspin import yaspin
 
 from typing_extensions import Annotated
 from dobotController import DobotController
@@ -36,8 +38,9 @@ def move_to(
 
 
 @app.command()
+@yaspin(text="Homing the robot...")
 def home(
-    wait: Annotated[bool, typer.Option(help="Wait for the robot to reach home")] = True,
+    wait: Annotated[bool, typer.Option(help="Wait for the robot to reach home")] = True
 ):
     """
     Move to the home position
@@ -46,6 +49,7 @@ def home(
 
 
 @app.command()
+@yaspin(text="Enabling the tool...")
 def enable_tool(
     time_to_wait: Annotated[
         int, typer.Option(help="Time to wait for the tool to enable")
@@ -58,6 +62,7 @@ def enable_tool(
 
 
 @app.command()
+@yaspin(text="Disabling the tool...")
 def disable_tool(
     time_to_wait: Annotated[
         int, typer.Option(help="Time to wait for the tool to disable")
@@ -108,9 +113,11 @@ def run(
         data = json.load(file)
 
     for position in data["positions"]:
+        spinner = yaspin(text=f"Moving to {position}...")
         current_position = Position()
         current_position.load_from_dict(position)
         dobot_controller.move_to(current_position, wait=True)
+        spinner.stop()
 
 
 def main():
@@ -120,7 +127,10 @@ def main():
         [inquirer.List("port", message="Select the port", choices=available_ports)]
     ).get("port")
 
+    spinner = yaspin(text=f"Connecting with port {port}...")
+    spinner.start()
     dobot_controller.connect(port)
+    spinner.stop()
 
     app()
 

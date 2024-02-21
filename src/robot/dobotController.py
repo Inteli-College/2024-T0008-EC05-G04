@@ -1,5 +1,6 @@
 from serial.tools import list_ports
-import mock_pydobot as pydobot
+import pydobot
+import mock_pydobot
 
 from position import Position
 
@@ -11,14 +12,15 @@ class DobotController:
 
     def list_ports(self):
         ports = [port.device for port in list_ports.comports()]
-
-        if hasattr(pydobot, "__mocked__"):
-            print('mock')
-            ports.append("mock")
+        ports.append('mock')
 
         return ports
 
     def connect(self, port):
+        if port == "mock":
+            self.dobot = mock_pydobot.Dobot(port=port, verbose=False)
+            return
+
         self.dobot = pydobot.Dobot(port=port, verbose=False)
 
     def disconnect(self):
@@ -30,7 +32,6 @@ class DobotController:
         return current_position
 
     def move_to(self, position, wait=True):
-        print(f"Moving to {position}")
         self.dobot.move_to(*position.to_list(), wait=wait)
 
     def move_by_axis(self, axis, distance, wait):
@@ -52,18 +53,15 @@ class DobotController:
             current_position.load_from_dict(position)
             self.move_to(current_position, wait=True)
 
-    def home(self):
-        print("Homing robot")
-        self.move_to(self.home_position, wait=True)
+    def home(self, wait=True):
+        self.move_to(self.home_position, wait=wait)
 
     def enable_tool(self, time_to_wait=200):
-        print("Enabling tool")
         self.dobot.suck(True)
         self.dobot.wait(time_to_wait)
         self.tool_enabled = True
 
     def disable_tool(self, time_to_wait=200):
-        print("Disabling tool")
         self.dobot.suck(False)
         self.dobot.wait(time_to_wait)
         self.tool_enabled = False
