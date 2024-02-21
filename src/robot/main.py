@@ -40,7 +40,7 @@ def move_to(
 @app.command()
 @yaspin(text="Homing the robot...")
 def home(
-    wait: Annotated[bool, typer.Option(help="Wait for the robot to reach home")] = True
+    wait: Annotated[bool, typer.Option(help="Wait for the robot to reach home")] = True,
 ):
     """
     Move to the home position
@@ -119,6 +119,76 @@ def run(
         dobot_controller.move_to(current_position, wait=True)
         spinner.stop()
 
+
+@app.command()
+def control():
+    """
+    Open the control interface
+    """
+    command = inquirer.prompt(
+        [
+            inquirer.List(
+                "command",
+                message="Select the command",
+                choices=[
+                    "Move",
+                    "Move to",
+                    "Home",
+                    "Enable tool",
+                    "Disable tool",
+                    "Current",
+                    "Save",
+                    "Run",
+                ],
+            )
+        ]
+    ).get("command")
+
+    command_map = {
+        "Move": move,
+        "Move to": move_to,
+        "Home": home,
+        "Enable tool": enable_tool,
+        "Disable tool": disable_tool,
+        "Current": current,
+        "Save": save,
+        "Run": run,
+    }
+
+    args = {
+        "Move": ["axis", "distance", "wait"],
+        "Move to": ["x", "y", "z", "r", "wait"],
+        "Home": ["wait"],
+        "Enable tool": ["time_to_wait"],
+        "Disable tool": ["time_to_wait"],
+        "Save": ["file_path"],
+        "Run": ["file_path"],
+    }
+
+    types = {
+        "Move": [str, float, bool],
+        "Move to": [float, float, float, float, bool],
+        "Home": [bool],
+        "Enable tool": [int],
+        "Disable tool": [int],
+        "Save": [str],
+        "Run": [str],
+    }
+
+    command_args = args.get(command)
+
+    if not command_args:
+        command_map[command]()
+        return
+
+    command_args = [
+        typer.prompt(
+            f"Enter the {arg}", type=types[command][index], show_default=False
+        )
+        for index, arg in enumerate(command_args)
+    ]
+
+    command_map[command](*command_args)
 
 def main():
     available_ports = dobot_controller.list_ports()
