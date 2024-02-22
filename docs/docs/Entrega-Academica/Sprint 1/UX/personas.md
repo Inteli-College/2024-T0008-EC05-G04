@@ -17,7 +17,16 @@
 ![Persona Auxiliar de Enfermagem](/img/persona-renata.png)
 <p align="center">Fonte: Elaboração Grupo 4</p>
 
-&emsp;A persona Renata Sanches, auxiliar de enfermagem, enfatiza a importância de uma abordagem centrada no usuário no desenvolvimento da nossa solução de automação para otimização geral dos kits de emergência. Ela demonstra a necessidade e uma melhor organização dos carrinhos e kits de medicamentos para evitar erros na hora do atendimento, tornando-os mais eficientes e seguros.
+&emsp;A persona Renata Sanches, auxiliar de enfermagem, enfatiza a importância de uma abordagem centrada no usuário no desenvolvimento da nossa solução de automação para otimização geral dos kits de emergência. Ela demonstra a necessidade e uma melhor organização dos carrinhos e kits de medicamentos para evitar erros na hora do atendimento, tornando-os mais rápidos e seguros.
+
+&emsp;A seguir, tem-se a persona do Gabriel Menino, um auxiliar de farmácia dedicado e eficiente do Hospital Sírio Libanês, um dos responsáveis pela montagem de kits hospitalares. Entender que um membro da equipe de farmácia em sua posição é essêncial na eficiência e precisão na preparação dos kits. 
+
+<p align="center"><b>Figura 3 - </b> Persona Auxiliar de Farmácia</p>
+
+![Persona Auxiliar de Farmácia](/img/persona-gabriel.png)
+<p align="center">Fonte: Elaboração Grupo 4</p>
+
+&emsp;Gabriel Menino é uma persona importante para esse projeto de automação de montagem de kits hospitalares devido ao seu contato direto com a inovação. Ele enfrenta desafios diários relacionados ao volume de trabalho e à pressão por precisão, sua participação garante que as necessidades reais dos profissionais de saúde sejam consideradas, contribuindo para a eficiência e segurança no atendimento aos pacientes.
 
 &emsp;Em síntese, as personas desempenham um papel fundamental ao representar pacientes, equipes de saúde e profissionais envolvidos, permitindo uma abordagem centrada no usuário e garantindo a implementação segura do sistema de automação no ambiente hospitalar, e que atenda às necessidades reais das partes interessadas.
 
