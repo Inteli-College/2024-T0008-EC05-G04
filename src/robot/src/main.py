@@ -125,70 +125,81 @@ def control():
     """
     Open the control interface
     """
-    command = inquirer.prompt(
-        [
-            inquirer.List(
-                "command",
-                message="Select the command",
-                choices=[
-                    "Move",
-                    "Move to",
-                    "Home",
-                    "Enable tool",
-                    "Disable tool",
-                    "Current",
-                    "Save",
-                    "Run",
-                ],
+    loop = True
+    while loop:
+        command = inquirer.prompt(
+            [
+                inquirer.List(
+                    "command",
+                    message="Select the command",
+                    choices=[
+                        "Move",
+                        "Move to",
+                        "Home",
+                        "Enable tool",
+                        "Disable tool",
+                        "Current",
+                        "Save",
+                        "Run",
+                        "Quit",
+                    ],
+                )
+            ]
+        ).get("command")
+
+        if command == "Quit":
+            loop = False
+            continue
+
+        if command == "Move":
+            axis = inquirer.prompt(
+                [
+                    inquirer.List(
+                        "axis",
+                        message="Select the axis",
+                        choices=["x", "y", "z", "r"],
+                    )
+                ]
+            ).get("axis")
+            distance = typer.prompt("Enter the distance", type=float)
+            wait = typer.confirm("Wait for the movement to finish")
+            move(axis, distance, wait)
+
+        if command == "Move to":
+            x = typer.prompt("Enter the x coordinate", type=float)
+            y = typer.prompt("Enter the y coordinate", type=float)
+            z = typer.prompt("Enter the z coordinate", type=float)
+            r = typer.prompt("Enter the r coordinate", type=float)
+            wait = typer.confirm("Wait for the movement to finish")
+            move_to(x, y, z, r, wait)
+
+        if command == "Home":
+            wait = typer.confirm("Wait for the robot to reach home")
+            home(wait)
+
+        if command == "Enable tool":
+            time_to_wait = typer.prompt(
+                "Enter the time to wait for the tool to enable", type=int
             )
-        ]
-    ).get("command")
+            enable_tool(time_to_wait)
 
-    command_map = {
-        "Move": move,
-        "Move to": move_to,
-        "Home": home,
-        "Enable tool": enable_tool,
-        "Disable tool": disable_tool,
-        "Current": current,
-        "Save": save,
-        "Run": run,
-    }
+        if command == "Disable tool":
+            time_to_wait = typer.prompt(
+                "Enter the time to wait for the tool to disable", type=int
+            )
+            disable_tool(time_to_wait)
 
-    args = {
-        "Move": ["axis", "distance", "wait"],
-        "Move to": ["x", "y", "z", "r", "wait"],
-        "Home": ["wait"],
-        "Enable tool": ["time_to_wait"],
-        "Disable tool": ["time_to_wait"],
-        "Save": ["file_path"],
-        "Run": ["file_path"],
-    }
+        if command == "Current":
+            current()
 
-    types = {
-        "Move": [str, float, bool],
-        "Move to": [float, float, float, float, bool],
-        "Home": [bool],
-        "Enable tool": [int],
-        "Disable tool": [int],
-        "Save": [str],
-        "Run": [str],
-    }
+        if command == "Save":
+            file_path = typer.prompt("Enter the file path", type=str)
+            save(file_path)
 
-    command_args = args.get(command)
+        if command == "Run":
+            file_path = typer.prompt("Enter the file path", type=str)
+            run(file_path)
 
-    if not command_args:
-        command_map[command]()
-        return
-
-    command_args = [
-        typer.prompt(
-            f"Enter the {arg}", type=types[command][index], show_default=False
-        )
-        for index, arg in enumerate(command_args)
-    ]
-
-    command_map[command](*command_args)
 
 def main():
     available_ports = dobot_controller.list_ports()

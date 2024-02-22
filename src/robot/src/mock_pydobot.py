@@ -1,7 +1,9 @@
 __mocked__ = True
 
+
 class MockedSerial:
     device = "mock"
+
 
 mocked_serial = MockedSerial()
 
