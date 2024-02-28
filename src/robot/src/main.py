@@ -12,6 +12,7 @@ dobot_controller = DobotController()
 
 
 @app.command()
+@yaspin(text="Moving the robot...")
 def move(
     axis: Annotated[str, typer.Argument(help="Axis to move")],
     distance: Annotated[float, typer.Argument(help="Distance to move the axis")],
@@ -24,6 +25,7 @@ def move(
 
 
 @app.command()
+@yaspin(text="Moving the robot...")
 def move_to(
     x: Annotated[float, typer.Argument(help="X coordinate to move to")],
     y: Annotated[float, typer.Argument(help="Y coordinate to move to")],
