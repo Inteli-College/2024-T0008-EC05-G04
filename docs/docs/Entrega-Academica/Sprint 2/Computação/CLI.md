@@ -4,6 +4,13 @@ Um CLI ou Command Line Interface é, como o nome sugere, uma interface que permi
 
 Este CLI fornece comandos para controlar um robô usando o módulo DobotController. Abaixo estão os comandos disponíveis juntamente com suas descrições e uso.
 
+# Estrutura de pastas
+
+## Main.py
+Esse é o arquivo principal, funciona como um maestro da CLI
+
+# Comandos
+
 ## 1. Comando Move
 
 ### Descrição
@@ -19,7 +26,7 @@ $ python src/main.py move <eixo> <distância> [--wait]
 - `--wait` (Opcional): Aguarde o movimento ser concluído (o padrão é True).
 
 ### Demonstração em Vídeo
-[![Comando Move](https://www.youtube.com/watch?v=dQw4w9WgXcQ)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FfVcDDjsJwE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
@@ -40,7 +47,7 @@ $ python src/main.py move_to <x> <y> <z> <r> [--wait]
 - `--wait` (Opcional): Aguarde o movimento ser concluído (o padrão é True).
 
 ### Demonstração em Vídeo
-[![Comando Move To](https://www.youtube.com/watch?v=dQw4w9WgXcQ)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QbYWh5ShdzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
@@ -57,8 +64,8 @@ $ python src/main.py home [--wait]
 - `--wait` (Opcional): Aguarde o robô atingir a posição inicial (o padrão é True).
 
 ### Demonstração em Vídeo
-[![Comando Home](https://www.youtube.com/watch?v=dQw4w9WgXcQ)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_fDZyqgdMEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ---
 
 ## 4. Comando Enable Tool
@@ -74,7 +81,7 @@ $ python src/main.py enable_tool [--time-to-wait]
 - `--time-to-wait` (Opcional): Tempo de espera para ativar a ferramenta (o padrão é 200).
 
 ### Demonstração em Vídeo
-[![Comando Enable Tool](https://www.youtube.com/watch?v=dQw4w9WgXcQ)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zo2oTcrru6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
@@ -91,7 +98,7 @@ $ python src/main.py disable_tool [--time-to-wait]
 - `--time-to-wait` (Opcional): Tempo de espera para desativar a ferramenta (o padrão é 200).
 
 ### Demonstração em Vídeo
-[![Comando Disable Tool](https://www.youtube.com/watch?v=dQw4w9WgXcQ)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w-o-5Y0u5Wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
@@ -106,7 +113,7 @@ $ python src/main.py current
 ```
 
 ### Demonstração em Vídeo
-[![Comando Current](https://www.youtube.com/watch?v=dQw4w9WgXcQ)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9BT2fpc5WC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
@@ -123,7 +130,7 @@ $ python src/main.py save <caminho-do-arquivo>
 - `<caminho-do-arquivo>`: Caminho para salvar a posição atual.
 
 ### Demonstração em Vídeo
-[![Comando Save](https://www.youtube.com/watch?v=dQw4w9WgXcQ)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jb4VQbS3Tgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
@@ -140,7 +147,7 @@ $ python src/main.py run <caminho-do-arquivo>
 - `<caminho-do-arquivo>`: Caminho para o arquivo com as posições.
 
 ### Demonstração em Vídeo
-[![Comando Run](https://www.youtube.com/watch?v=dQw4w9WgXcQ)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jb4VQbS3Tgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
@@ -155,6 +162,6 @@ $ python src/main.py control
 ```
 
 ### Demonstração em Vídeo
-[![Comando Control](https://www.youtube.com/watch?v=dQw4w9WgXcQ)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EsCIHegrWs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
