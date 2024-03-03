@@ -28,14 +28,23 @@
 
 &emsp;Ao concluir a calibração, o usuário deve escolher o kit que será produzido pelo robô. Para isso, foi idealizado uma tela similar aos motores de pesquisa na internet, no qual usuário insere caracteres e são sugeridas alternativas para ele, com a finalidade de facilitar o processo, caso ele esqueça o nome completo do kit que precisava ser executado.
 
-![Wireframe Kit - Ponto Específico](/img/wireframe-kit.png)
+![Wireframe Selecionar Kit](/img/wireframe-kit.png)
 
 ## Tela 5 - Confirmar quantidade do kit a ser produzido
 
-&emsp;
+&emsp;Nessa parte da solução, o usuário deve verificar se o kit que está sendo realizado condiz com o solicitado à ele. Assim como, ele deverá inserir a quantidade de kits que devem ser realizados pelo robô.
 
-![Wireframe Calibrar - Ponto Específico](/img/wireframe-quantidade.png)
+![Wireframe Quantidade de Kits](/img/wireframe-quantidade.png)
 
-## Tela 6 - Finalização dos kits 
+## Tela 6 - Kit em produção
 
-![Wireframe Calibrar - Ponto Específico](/img/wireframe-final-kit.png)
+&emsp;Essa tela representa o momento em que o braço robótico estará realizando os kits necessários. Para o usuário não ficar perdido perante o trabalho do robô, essa tela contém uma imagem com um símbolo de loading, para compreender que é necessário aguardar um momento para poder usar o sistema novamente.
+
+
+![Wireframe Produção dos kits](/img/wireframe-loading.png)
+
+## Tela 7 - Finalização dos kits 
+
+&emsp;Ao finalizar todos os kits solicitados pelo usuário, essa tela aparecerá e o usuário terá duas opções. Sendo assim, ou a linha de produção é iniciada novamente ou o usuário encerrará a ação no site e fechará o mesmo.   
+
+![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png)
