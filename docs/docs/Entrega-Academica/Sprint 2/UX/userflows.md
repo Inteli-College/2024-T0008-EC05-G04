@@ -65,15 +65,71 @@
 <p align="center"><b>Figura 9 - </b> Fluxo Auxiliar de Farmácia</p>
 <p align="center">Fonte: Elaboração Grupo 4</p>
 
-&emsp;Descrição do fluxo: O Gabriel Menino começa fazendo o login no software, segue para a página de calibração de entrada do robô (alinha a posição do robô em relação ao kit) e depois para página de calibração de saída (alinha a posição conforme os suprimentos), em seguida define os kits e seus itens e verifica se está correto, depois desse passo define quantos kits serão montados baseados na configuração realizada. No próximo momento o braço mecânica realiza a tarefa, após ser completada aparece uma página indicando que o processo de montagem foi finalizado. Se o usuário quiser montar mais um leva de kits, caso queira voltará para página de calibração do robô, se não, ele fecha o programa. Esse fluxo é essencial para entender como uma pessoa dentro do setor da farmácia como responsável direto pelos kits interage com a solução.
+&emsp;O Gabriel Menino começa fazendo o login no software, segue para a página de calibração de entrada do robô (alinha a posição do robô em relação ao kit) e depois para página de calibração de saída (alinha a posição conforme os suprimentos), em seguida define os kits e seus itens e verifica se está correto, depois desse passo define quantos kits serão montados baseados na configuração realizada. No próximo momento o braço mecânica realiza a tarefa, após ser completada aparece uma página indicando que o processo de montagem foi finalizado. Se o usuário quiser montar mais um leva de kits, caso queira voltará para página de calibração do robô, se não, ele fecha o programa. Esse fluxo é essencial para entender como uma pessoa dentro do setor da farmácia como responsável direto pelos kits interage com a solução.
 
-&emsp;Por fim, tem-se o fluxo referente a persona da Auxiliar de Enfermagem, ele também destina-se a ilustrar o processo desde a chegada no posto de trabalho e sua utilização no software. Mostrando que por mais que seu contato seja mais com o robô em si, ainda, sim faz uso do software.
+## Wireframe - Persona Gabriel Menino
 
-<p align="center"><b>Figura ? - </b> Fluxo Auxiliar de Enfermagem</p>
+### Tela 1 - Login 
 
+&emsp;Visando garantir a segurança da plataforma, foi pensado em um sistema de login para evitar usuário externos. Além disso, o sistema de login permite a identificação do usuário, permitindo saber quem realizou cada pedido de kit. Por fim, o sistema permite a distinguição de usuários, garantindo mais funções aos gestores, os quais podem criar e editar um kit, assim como visualizar relatórios sobre os mesmos.
 
+![Wireframe Login](/img/wireframe-login-email.png)
+<p align="center"><b>Figura 10 - </b> Wireframe - Login </p>
 <p align="center">Fonte: Elaboração Grupo 4</p>
 
-&emsp;Descrição do fluxo: A Renata Sanches começa fazendo o login no software, a seguir, é direcionada para uma página de checklist dos itens do kit, na qual ela realiza o controle de qualidade e gestão dos materiais, garantindo que todos os suprimentos necessários para realização de suas tarefas estejam disponíveis e em condições adequadas. Após realizar essa tarefa ela confere os itens dos kits, um passo que enfatiza a importâncias da verificação prática para assegurar a conformidade com os padrões estabelecidos. Esse fluxo é essencial para entender como uma pessoa no contexto hospitalar, mas fora do setor da farmácia que tem contato com o robô interage com o software.
+&emsp;A tela apresenta a funcionalidade de login. Para entrar na plataforma, é necessário inserir nos inputs, respectivamente o e-mail e a senha. Além disso, é apresentada a funcionalidade de "esqueci minha senha", a qual recuperar a senha de um usuário.  
 
-&emsp;Em conclusão, analisar os fluxos de utilização da solução por diferentes perfis profissionais dentro do contexto hospitalar destaca a necessidade do entendimento personalizado para cada cenário. Cada persona, com suas responsabilidades e objetivos particulares, interage de forma única com o software. O sucesso da implementação da solução tem relação direta com a sua capacidade de satisfazer diferentes demandas, garantindo eficiência do processo e segurança dos pacientes. Assim, a solução de automação se torna um fator relevante na transformação dos processos hospitalares, trazendo benefícios para todos envolvidos no contexto.
+### Tela 2 e 3 - Calibração
+
+&emsp;A calibração é uma parte essencial para o funcionamento da solução, uma vez que ela permite o usuário mostrar ao robô onde deve montar os kits e retirar as peças. Para que isso ocorra, foi criado um sistema em que o usuário coloca o robô, através do uso da sua função manual, nas devidas posições.  
+
+#### Tela 2 - Selecionar posição
+
+&emsp;Nessa tela, existe uma simulação de uma bandeja de entrada, na qual aparecem 3 pontos cinzas para serem calibrados. O usuário deve clicar em um dos pontos para iniciar o processo de calibração do robô.
+
+![Wireframe Calibrar](/img/wireframe-calibrar.png)
+<p align="center"><b>Figura 11 - </b> Wireframe - Calibração - Selecionar ponto</p>
+<p align="center">Fonte: Elaboração Grupo 4</p>
+
+#### Tela 3 - Calibrar ponto específico
+
+&emsp;A tela mostra em destaque o ponto selecionado pelo usuário anteriormente. A partir desse ponto, o usuário deve interagir com a garra, utilizando de seu botão, que permite mover a garra de forma manual, para colocar ela no exato ponto indicado pela tela. Ao colocar a garra exatamente onde indicado, o usuário apertará o botão de confirmar ponto e será levado de volta a tela 2, para que faça a calibração de todos os pontos necessários. 
+
+![Wireframe Calibrar - Ponto Específico](/img/wireframe-calibrar-especifico.png)
+<p align="center"><b>Figura 12 - </b> Wireframe - Calibrar manualmente robô</p>
+<p align="center">Fonte: Elaboração Grupo 4</p>
+
+
+### Tela 4 - Escolher o kit a ser produzido
+
+&emsp;Ao concluir a calibração, o usuário deve escolher o kit que será produzido pelo robô. Para isso, foi idealizado uma tela similar aos motores de pesquisa na internet, no qual usuário insere caracteres e são sugeridas alternativas para ele, com a finalidade de facilitar o processo, caso ele esqueça o nome completo do kit que precisava ser executado.
+
+![Wireframe Selecionar Kit](/img/wireframe-kit.png)
+<p align="center"><b>Figura 13 - </b> Wireframe - Kit </p>
+<p align="center">Fonte: Elaboração Grupo 4</p>
+
+
+### Tela 5 - Confirmar quantidade do kit a ser produzido
+
+&emsp;Nessa parte da solução, o usuário deve verificar se o kit que está sendo realizado condiz com o solicitado à ele. Assim como, ele deverá inserir a quantidade de kits que devem ser realizados pelo robô.
+
+![Wireframe Quantidade de Kits](/img/wireframe-quantidade.png)
+<p align="center"><b>Figura 14 - </b> Wireframe - Quantidade de Kits</p>
+<p align="center">Fonte: Elaboração Grupo 4</p>
+
+### Tela 6 - Kit em produção
+
+&emsp;Essa tela representa o momento em que o braço robótico estará realizando os kits necessários. Para o usuário não ficar perdido perante o trabalho do robô, essa tela contém uma imagem com um símbolo de loading, para compreender que é necessário aguardar um momento para poder usar o sistema novamente.
+
+![Wireframe Produção dos kits](/img/wireframe-loading.png)
+<p align="center"><b>Figura 15 - </b> Wireframe - Kits em produção</p>
+<p align="center">Fonte: Elaboração Grupo 4</p>
+
+
+### Tela 7 - Finalização dos kits 
+
+&emsp;Ao finalizar todos os kits solicitados pelo usuário, essa tela aparecerá e o usuário terá duas opções. Sendo assim, ou a linha de produção é iniciada novamente ou o usuário encerrará a ação no site e fechará o mesmo.   
+
+![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png)
+<p align="center"><b>Figura 16 - </b> Wireframe - Tela final</p>
+<p align="center">Fonte: Elaboração Grupo 4</p>
