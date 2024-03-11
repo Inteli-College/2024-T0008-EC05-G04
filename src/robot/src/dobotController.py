@@ -9,6 +9,7 @@ class DobotController:
     def __init__(self):
         self.tool_enabled = False
         self.home_position = Position(240, 0, 150, 0, 0, 0, 0, 0, False, False)
+        self.caught_object = False
 
     def list_ports(self):
         ports = [port.device for port in list_ports.comports()]
@@ -65,3 +66,6 @@ class DobotController:
         self.dobot.suck(False)
         self.dobot.wait(time_to_wait)
         self.tool_enabled = False
+
+    def set_caught_object(status):
+        self.caught_object = status
