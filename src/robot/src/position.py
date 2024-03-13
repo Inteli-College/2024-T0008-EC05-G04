@@ -11,6 +11,7 @@ class Position:
         j4: float = 0,
         grip: bool = False,
         suction: bool = False,
+        linear: bool = False,
     ):
         self.x = x
         self.y = y
@@ -22,6 +23,7 @@ class Position:
         self.j4 = j4
         self.grip = grip
         self.suction = suction
+        self.linear = linear
 
     def load_from_dict(self, data):
         self.x = data["x"]
@@ -34,6 +36,7 @@ class Position:
         self.j4 = data["j4"]
         self.grip = data.get("grip", False)
         self.suction = data.get("suction", False)
+        self.linear = data.get("linear", False)
 
     def load_from_list(self, data):
         self.x = data[0]
@@ -46,6 +49,7 @@ class Position:
         self.j4 = data[7]
         self.grip = data[8]
         self.suction = data[9]
+        self.linear = data[10]
 
     def to_dict(self):
         return {
@@ -59,16 +63,17 @@ class Position:
             "j4": self.j4,
             "grip": self.grip,
             "suction": self.suction,
+            "linear": self.linear,
         }
 
     def to_list(self):
         return [self.x, self.y, self.z, self.r]
 
     def __str__(self):
-        return f"x: {self.x}, y: {self.y}, z: {self.z}, r: {self.r}, j1: {self.j1}, j2: {self.j2}, j3: {self.j3}, j4: {self.j4}, grip: {self.grip}, suction: {self.suction}"
+        return f"x: {self.x}, y: {self.y}, z: {self.z}, r: {self.r}, j1: {self.j1}, j2: {self.j2}, j3: {self.j3}, j4: {self.j4}, grip: {self.grip}, suction: {self.suction}, linear: {self.linear}"
 
     def __repr__(self):
-        return f"x: {self.x}, y: {self.y}, z: {self.z}, r: {self.r}, j1: {self.j1}, j2: {self.j2}, j3: {self.j3}, j4: {self.j4}, grip: {self.grip}, suction: {self.suction}"
+        return f"x: {self.x}, y: {self.y}, z: {self.z}, r: {self.r}, j1: {self.j1}, j2: {self.j2}, j3: {self.j3}, j4: {self.j4}, grip: {self.grip}, suction: {self.suction}, linear: {self.linear}"
 
     def __eq__(self, other):
         return (
@@ -82,15 +87,11 @@ class Position:
             and self.j4 == other.j4
             and self.grip == other.grip
             and self.suction == other.suction
+            and self.linear == other.linear
         )
 
     def __ne__(self, other):
         return not self.__eq__(other)
-
-    def __hash__(self):
-        return hash(
-            (self.x, self.y, self.z, self.r, self.j1, self.j2, self.j3, self.j4, self.grip, self.suction)
-        )
 
     def __add__(self, other):
         return Position(
