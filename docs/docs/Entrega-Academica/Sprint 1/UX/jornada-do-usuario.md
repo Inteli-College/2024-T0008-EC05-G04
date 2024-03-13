@@ -1,6 +1,6 @@
 # Jornada do Usuário
 
-&emsp; Neste contexto, exploraremos a ideia de mapa de jornada do usuário, que consiste em uma representação visual das fases percorridas por um usuário ao se envolver com uma plataforma. Destacamos as emoções e ações vivenciadas pelo usuário durante essa interação. Esse recurso é valioso para identificar oportunidades de aprimoramento e compreender os obstáculos enfrentados pelo usuário. Abaixo apresentaremos o mapa de jornada do usuário de Mayumi Tanaka, gestora de logística do hospital Sírio-Libanês.
+&emsp; Neste contexto, exploraremos a ideia de mapa de jornada do usuário, que consiste em uma representação visual das fases percorridas por um usuário ao se envolver com uma plataforma. Destacamos as emoções e ações vivenciadas pelo usuário durante essa interação. Esse recurso é valioso para identificar oportunidades de aprimoramento e compreender os obstáculos enfrentados pelo usuário. Abaixo apresentaremos o mapa de jornada do usuário de Mayumi Tanaka, gestora de logística do Hospital Sírio-Libanês.
 
 <p align="center"><b>Figura 3 - </b> Jornada do Usuário - Mayumi Tanaka</p>
 
