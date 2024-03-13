@@ -1,9 +1,9 @@
 # Matriz Oceano Azul
-&emsp;O Oceano Azul se trata de uma abordagem estratégica que busca a identificação e exploração de oportunidades de mercado não exploradas. Ao aplicá-la no projeto de automação para montagem dos kits de emergência de um hospital, tem-se como objetivo criar uma proposta de valor única, alinhada com as necessidades do cliente e capaz de diferenciar da concorrência.
+&emsp; O Oceano Azul se trata de uma abordagem estratégica que busca a identificação e exploração de oportunidades de mercado não exploradas. Ao aplicá-la no projeto de automação para montagem dos kits de emergência de um hospital, tem-se como objetivo criar uma proposta de valor única, alinhada com as necessidades do cliente e capaz de diferenciar da concorrência.
 
-&emsp;A Matriz Oceano Azul se baseia em quatro ações principais para redefinição da proposta de valor de uma solução, sendo essenciais para destacar o produto ou serviço da concorrência. A primeira é reduzir a ênfase em particularidades excessivas para o cliente, mantendo a qualidade. A seguir, busca-se eliminar elementos que podem ser descartados sem prejudicar a proposta de valor, muitas vezes são elementos tradicionais no setor mas que não acrescentam valor. Como terceiro atributo tem-se o aumento nas áreas de melhoria, expandindo a oferta, buscando agregar valor de alguma forma. Por fim, procura-se criar elementos únicos ou não explorados no mercado em questão, gerando uma demanda que antes era inexistente. para avaliação: reduzir, eliminar, aumentar e criar. 
+&emsp; A Matriz Oceano Azul se baseia em quatro ações principais para redefinição da proposta de valor de uma solução, sendo essenciais para destacar o produto ou serviço da concorrência. A primeira é reduzir a ênfase em particularidades excessivas para o cliente, mantendo a qualidade. A seguir, busca-se eliminar elementos que podem ser descartados sem prejudicar a proposta de valor, muitas vezes são elementos tradicionais no setor mas que não acrescentam valor. Como terceiro atributo tem-se o aumento nas áreas de melhoria, expandindo a oferta, buscando agregar valor de alguma forma. Por fim, procura-se criar elementos únicos ou não explorados no mercado em questão, gerando uma demanda que antes era inexistente. para avaliação: reduzir, eliminar, aumentar e criar. 
 
-&emsp;No contexto do projeto, foram destacados alguns atributos para cada uma dessas ações:
+&emsp; No contexto do projeto, foram destacados alguns atributos para cada uma dessas ações:
 
 ### Reduzir 
 #### Intervenção humana:
