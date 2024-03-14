@@ -2,6 +2,7 @@ import urequests as requests
 import network
 from machine import Pin
 from time import sleep
+import time
 
 import tokens
 
@@ -21,7 +22,7 @@ while not wlan.isconnected():
 print("Connected to wifi")
 
 # URL do endpoint local para enviar o POST
-local_url = '{url}/raspberry'  # Replace with your local URL
+local_url = '{tokens.BASE_URL}/raspberry'  # Replace with your local URL
 
 # Função para enviar o POST com o valor do sensor
 def send_post(distance_measured):

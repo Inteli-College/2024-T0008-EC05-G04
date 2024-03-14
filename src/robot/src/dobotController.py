@@ -34,7 +34,6 @@ class DobotController:
         return current_position
 
     def move_linear(self, position, wait=True):
-        print("linear")
         self.dobot._set_ptp_cmd(
             position.x,
             position.y,
@@ -45,7 +44,6 @@ class DobotController:
         )
 
     def move_joint(self, position, wait=True):
-        print("joint")
         self.dobot._set_ptp_cmd(
             position.x,
             position.y,
@@ -56,7 +54,6 @@ class DobotController:
         )
 
     def move_to(self, position, wait=True):
-        print(position.linear)
         if position.linear:
             self.move_linear(position, wait=wait)
             return
