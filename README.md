@@ -1,4 +1,3 @@
-
 <!-- Critérios -->
 <!-- - [Crítico] Apresenta a estrutura do projeto (como as demais pastas estão organizadas)? -->
 <!-- - [Crítico] Apresenta instruções claras de como executar o projeto e a documentação? -->
@@ -8,7 +7,6 @@
 <!-- - Apresenta a licença Inteli do projeto (CC-0)? -->
 <!-- - Apresenta os dados dos integrantes da equipe, o nome da equipe e o nome do Inteli na seção de licensa do projeto? -->
 <!-- - Possui um link para o Github Pages onde a documentação pode ser localizada? -->
-
 
 <p align="center">
     <img src="docs/static/img/logo/png/logo-no-background.png" alt="4U"/>
@@ -21,10 +19,10 @@
 O projeto está estruturado de acordo com as seguintes pastas:
 
 - `src/`: Contém o código-fonte do projeto.
-  - `firmware`: O código-fonte para a Raspberry Pi Pico W
-  - `robot`: O código-fonte para a comunicação com o Dobot
-  - `backend`: Código-fonte para o backend do projeto
-  - `frontend`: Código-fonte para o frontend do projeto
+  - `firmware/`: O código-fonte para a Raspberry Pi Pico W
+  - `robot/`: O código-fonte para a comunicação com o Dobot
+  - `backend/`: Código-fonte para o backend do projeto
+  - `frontend/`: Código-fonte para o frontend do projeto
 - `docs/`: Documentação do projeto feita no Docussaurus.
 
 ## Execução do Projeto
@@ -73,9 +71,9 @@ python3 src/main.py
 
 ## Equipe de Desenvolvimento
 
-|    ![Cecília Gonçalves](link_da_foto)    |     ![Eduardo Barreto](link_da_foto)     |  ![Fernando Vasconcelos](link_da_foto)   | ![Lidia Mariano](link_da_foto) | ![Luan Ramos](link_da_foto) | ![Murilo Prianti](link_da_foto) | ![Ólin Costa](link_da_foto) |
-| :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | ------------------------------ | --------------------------- | ------------------------------- | --------------------------- |
-|    [Cecília Gonçalves](link_da_foto)    |     [Eduardo Barreto](link_da_foto)     |  [Fernando Vasconcelos](link_da_foto)   | [Lidia Mariano](link_da_foto) | [Luan Ramos](link_da_foto) | [Murilo Prianti](link_da_foto) | [Ólin Costa](link_da_foto) |
+| ![Cecília Gonçalves](link_da_foto) | ![Eduardo Barreto](link_da_foto) | ![Fernando Vasconcelos](link_da_foto) | ![Lidia Mariano](link_da_foto) | ![Luan Ramos](link_da_foto) | ![Murilo Prianti](link_da_foto) | ![Ólin Costa](link_da_foto) |
+| :--------------------------------: | :------------------------------: | :-----------------------------------: | ------------------------------ | --------------------------- | ------------------------------- | --------------------------- |
+| [Cecília Gonçalves](link_da_foto)  | [Eduardo Barreto](link_da_foto)  | [Fernando Vasconcelos](link_da_foto)  | [Lidia Mariano](link_da_foto)  | [Luan Ramos](link_da_foto)  | [Murilo Prianti](link_da_foto)  | [Ólin Costa](link_da_foto)  |
 
 ## Licença
 
