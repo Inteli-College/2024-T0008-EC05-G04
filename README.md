@@ -74,8 +74,16 @@ Após a instalação do [python3](https://www.python.org/), para executar o back
 ```
 cd src/backend
 pip install -r requirements.txt
-python3 src/main.py
+uvicorn main:app --reload
 ```
+
+Além disso, é necessária a criação de um arquivo `tokens.py` com o seguinte conteúdo
+
+```py
+DATABASE_URL = ''
+```
+
+A variável deve representar o ponto de acesso ao seu banco de dados
 
 ## Objetivo do Projeto
 
