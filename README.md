@@ -83,7 +83,7 @@ python3 src/main.py
 
 | ![Cecília Gonçalves](link_da_foto) | ![Eduardo Barreto](link_da_foto) | ![Fernando Vasconcelos](link_da_foto) | ![Lidia Mariano](link_da_foto) | ![Luan Ramos](link_da_foto) | ![Murilo Prianti](link_da_foto) | ![Ólin Costa](link_da_foto) |
 | :--------------------------------: | :------------------------------: | :-----------------------------------: | ------------------------------ | --------------------------- | ------------------------------- | --------------------------- |
-| [Cecília Gonçalves](link_da_foto)  | [Eduardo Barreto](link_da_foto)  | [Fernando Vasconcelos](link_da_foto)  | [Lidia Mariano](link_da_foto)  | [Luan Ramos](link_da_foto)  | [Murilo Prianti](link_da_foto)  | [Ólin Costa](link_da_foto)  |
+| [Cecília Gonçalves](linkedin)  | [Eduardo Barreto](linkedin)  | [Fernando Vasconcelos](linkedin)  | [Lidia Mariano](linkedin)  | [Luan Ramos](linkedin)  | [Murilo Prianti](linkedin)  | [Ólin Costa](linkedin)  |
 
 ## Licença
 
