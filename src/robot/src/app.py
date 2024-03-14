@@ -4,7 +4,6 @@ import inquirer
 from yaspin import yaspin
 import json
 
-
 from dobotController import DobotController
 from position import Position
 
@@ -17,7 +16,6 @@ with open("home.json") as file:
 
 app = Flask(__name__)
 CORS(app)
-
 
 
 def parse_position(data):
@@ -35,30 +33,52 @@ def parse_position(data):
         data.get("linear", False),
     )
 
-
 def register_robot():
     # registra o robô no backend
     pass
 
+def move_item(item):
+    #moveu para posição de segurança, somente Z é não é alterado
+    dobot_controller.move_to(Position(item.get("X"), item.get("Y"),
+    dobot_controller.home_z, item.get("R"), linear=False), wait=200)
+
+    #moveu para o objeto, somente Z é alterado
+    dobot_controller.move_to(Position(item.get("X"), item.get("Y"),
+    item.get("Z"), item.get("R"), linear=True), wait=200)
+
+    #liga ferramenta
+    dobot_controller.enable_tool()
+
+    #verifica se pegou o objeto
+    caught_object = await receive_signal()
+    if caught_object:
+        dobot_controller.move_to(Position(item.get("X"), item.get("Y"),
+        dobot_controller.home_z, item.get("R"),linear=True), wait=200)
+        dobot_controller.move_to(Position(20, 0, 150, 0, linear=False), wait=200)
+        dobot_controller.move_to(Position(20, 0, 0, 0, linear=True), wait=200)
+        dobot_controller.move_to(Position(20, 0, 150, 0, linear=True),wait=200)
+        dobot_controller.home()
+        return True
+    return False
+
 #endpoint para montar kit
 @app.route('/make-kits')
-def make_kits(item_list):
+def try_caught_object(item_list):
     #carregando json para o objeto
-    items_kit = item_list.loads()
-    for item in items_kit.positions:
-        dobot_controller.move_to(Position(item.get("X"), item.get("Y"),
-        dobot_controller.home_z, item.get("R")), wait=200)
-
-        dobot_controller.move_to(Position(item.get("X"), item.get("Y"),
-        item.get("Z"), item.get("R")), wait=200)
-
-        dobot_controller.enable_tool()
-
-        dobot_controller.move_to(Position(item.get("X"), item.get("Y"),
-        dobot_controller.home_z, item.get("R")), wait=200)
-
-        dobot_controller.move_to(Position(item.get(home["X"]), item.get(home["Y"]), item.get(home["Z"]), item.get(home["R"])), wait=200)
-
+    itens_kit = item_list.loads()
+    for item in itens_kit.positions:
+        resultado = move_item(item)
+        if not resultado:
+            for i in range(3):
+                resultado = move_item(item)
+                if resultado:
+                    break 
+        
+@app.get('/raspberry', methods=['POST'])
+def receive_signal (sensor_value):
+    return sensor_value > 25000 
+    
+# sinal< 25000
 if __name__ == "__main__":
     available_ports = dobot_controller.list_ports()
     port = inquirer.prompt(
