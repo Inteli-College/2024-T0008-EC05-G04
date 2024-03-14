@@ -57,6 +57,16 @@ python3 src/app.py
 
 Para a execução do firmware, é necessária a instalação do software Thonny e a gravação da Raspberry Pi Pico W através de sua interface.
 
+Além disso, é necessária a criação de um arquivo `tokens.py` com o seguinte conteúdo
+
+```py
+SSID = ''
+PASSWORD = ''
+BASE_URL = ''
+```
+
+nas variáveis é preciso colocar as informações da sua rede
+
 ### Backend
 
 Após a instalação do [python3](https://www.python.org/), para executar o backend, execute os comandos abaixo
