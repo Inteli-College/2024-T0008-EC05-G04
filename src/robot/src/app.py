@@ -16,7 +16,8 @@ app = Flask(__name__)
 CORS(app)
 
 with open("positions.json") as file:
-    positions = json.load(file) 
+    positions = json.load(file)
+
 
 def parse_position(data):
     return Position(
@@ -33,58 +34,92 @@ def parse_position(data):
         data.get("linear", False),
     )
 
+
 def register_robot():
     # registra o robô no backend
     pass
 
+
 def move_item(item):
-    #moveu para posição de segurança, somente Z é não é alterado
-    dobot_controller.move_to(Position(item.get("x"), item.get("y"),
-    dobot_controller.home_position.z, item.get("r"), linear=False), wait=200)
+    # moveu para posição de segurança, somente Z é não é alterado
+    dobot_controller.move_to(
+        Position(
+            item.get("x"),
+            item.get("y"),
+            dobot_controller.home_position.z,
+            item.get("r"),
+            linear=False,
+        ),
+        wait=200,
+    )
 
-    #moveu para o objeto, somente Z é alterado
-    dobot_controller.move_to(Position(item.get("x"), item.get("y"),
-    item.get("z"), item.get("r"), linear=True), wait=200)
+    # moveu para o objeto, somente Z é alterado
+    dobot_controller.move_to(
+        Position(
+            item.get("x"), item.get("y"), item.get("z"), item.get("r"), linear=True
+        ),
+        wait=200,
+    )
 
-     #liga ferramenta
+    # liga ferramenta
+    print('catching')
     dobot_controller.enable_tool()
 
-    #verifica se pegtimeou o objeto
-    caught_object = receive_signal()
-    if caught_object:
-        dobot_controller.move_to(Position(item.get("x"), item.get("y"),
-        dobot_controller.home_position.z, item.get("r"),linear=True), wait=200)
-        dobot_controller.move_to(Position(20, 0, 150, 0, linear=False), wait=200)
-        dobot_controller.disable_tool()
-        dobot_controller.move_to(Position(20, 0, 0, 0, linear=True), wait=200)
-        dobot_controller.move_to(Position(20, 0, 150, 0, linear=True),wait=200)
-        dobot_controller.move_to(Position(20, 0, 150, 0, linear=True),wait=200)
-        dobot_controller.home()
-        return True
-    return False
+    timeout = time.time() + 10
+    while not dobot_controller.caught_object:
+        time.sleep(0.5)
+        if time.time() > timeout:
+            print('fail to catch')
+            return False
 
-#endpoint para montar kit
-@app.route('/kit-order',methods=['POST'])
+    print('gotcha')
+
+    dobot_controller.move_to(
+        Position(
+            item.get("x"),
+            item.get("y"),
+            dobot_controller.home_position.z,
+            item.get("r"),
+            linear=True,
+        ),
+        wait=200,
+    )
+    dobot_controller.move_to(Position(20, 0, 150, 0, linear=False), wait=200)
+    dobot_controller.disable_tool()
+    dobot_controller.move_to(Position(20, 0, 0, 0, linear=True), wait=200)
+    dobot_controller.move_to(Position(20, 0, 150, 0, linear=True), wait=200)
+    dobot_controller.move_to(Position(20, 0, 150, 0, linear=True), wait=200)
+    dobot_controller.home()
+
+    return True
+
+
+# endpoint para montar kit
+@app.route("/kit-order", methods=["POST"])
 def try_caught_object():
-    #carregando json para o objeto
+    # carregando json para o objeto
     itens_kit_json = json.loads(request.json)
     for item in itens_kit_json:
-        position = str(item.get('position'))
+        position = str(item.get("position"))
         item = positions[position]
         resultado = move_item(item)
         if not resultado:
             for i in range(3):
                 resultado = move_item(item)
                 if resultado:
-                    break 
-    return "Funfou"
-        
-@app.route('/raspberry', methods=['POST'])
-def receive_signal ():
-    return True
+                    break
+    return "OK"
+
+
+@app.route("/raspberry-feed", methods=["POST"])
+def receive_signal():
     sensor_value = request.json.get("sensor_value")
-    return sensor_value > 25000 
-    
+    sensor_value = int(sensor_value)
+    print(sensor_value)
+    dobot_controller.set_caught_object(sensor_value < 25000)
+    return "OK"
+
+
 # sinal< 25000
 if __name__ == "__main__":
     available_ports = dobot_controller.list_ports()

@@ -92,5 +92,5 @@ class DobotController:
         self.dobot.wait(time_to_wait)
         self.tool_enabled = False
 
-    def set_caught_object(status):
+    def set_caught_object(self, status):
         self.caught_object = status
