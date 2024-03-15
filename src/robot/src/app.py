@@ -46,7 +46,7 @@ def move_item(item):
         Position(
             item.get("x"),
             item.get("y"),
-            dobot_controller.home_position.z,
+            item.get("z") + 120,
             item.get("r"),
             linear=False,
         ),
@@ -62,33 +62,30 @@ def move_item(item):
     )
 
     # liga ferramenta
-    print('catching')
+    print("catching")
     dobot_controller.enable_tool()
 
     timeout = time.time() + 10
     while not dobot_controller.caught_object:
         time.sleep(0.5)
         if time.time() > timeout:
-            print('fail to catch')
+            print("fail to catch")
             return False
 
-    print('gotcha')
+    print("gotcha")
 
     dobot_controller.move_to(
         Position(
             item.get("x"),
             item.get("y"),
-            dobot_controller.home_position.z,
+            item.get("z") + 120,
             item.get("r"),
             linear=True,
         ),
         wait=200,
     )
-    dobot_controller.move_to(Position(20, 0, 150, 0, linear=False), wait=200)
+    dobot_controller.move_to((Position(121.5785140991211, -248.98097229003906, 80.80499267578125, -63.973541259765625)), wait=200)
     dobot_controller.disable_tool()
-    dobot_controller.move_to(Position(20, 0, 0, 0, linear=True), wait=200)
-    dobot_controller.move_to(Position(20, 0, 150, 0, linear=True), wait=200)
-    dobot_controller.move_to(Position(20, 0, 150, 0, linear=True), wait=200)
     dobot_controller.home()
 
     return True
