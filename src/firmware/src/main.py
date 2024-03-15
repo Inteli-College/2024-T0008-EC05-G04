@@ -1,7 +1,6 @@
 import urequests as requests
 import network
 from machine import Pin
-from time import sleep
 import time
 
 import tokens
@@ -22,22 +21,23 @@ while not wlan.isconnected():
 print("Connected to wifi")
 
 # URL do endpoint local para enviar o POST
-local_url = '{tokens.BASE_URL}/raspberry'  # Replace with your local URL
+local_url = f"{tokens.BASE_URL}/raspberry-feed"  # Replace with your local URL
+print(local_url)
+
 
 # Função para enviar o POST com o valor do sensor
 def send_post(distance_measured):
-    payload = {'sensor_value': distance_measured}
-    try:
-        response = requests.post(local_url, json=payload)
-        print('Response:', response.text)
-    except Exception as e:
-        print('Error:', e)
+    payload = {"sensor_value": distance_measured}
+    print(payload)
+    response = requests.post(local_url, json=payload)
+    print(response.text)
+
 
 while True:
     distance_measured = pino_sensor.read_u16()
     print(distance_measured)
 
-    if distance_measured <= 25000:  
+    if distance_measured <= 25000:
         print("Objeto: Detectado")
         pino_led.on()
         pino_buz.on()
@@ -49,4 +49,4 @@ while True:
     # Send the sensor value to the local URL
     send_post(distance_measured)
 
-    utime.sleep(1)
+    time.sleep(1)
