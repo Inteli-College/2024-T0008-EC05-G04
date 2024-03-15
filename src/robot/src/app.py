@@ -15,6 +15,9 @@ dobot_controller = DobotController()
 app = Flask(__name__)
 CORS(app)
 
+with open("positions.json") as file:
+    positions = json.load(file) 
+
 def parse_position(data):
     return Position(
         data.get("x", 0),
@@ -57,16 +60,17 @@ def move_item(item):
         dobot_controller.move_to(Position(20, 0, 150, 0, linear=True),wait=200)
         dobot_controller.move_to(Position(20, 0, 150, 0, linear=True),wait=200)
         dobot_controller.home()
+        return True
     return False
 
 #endpoint para montar kit
 @app.route('/kit-order',methods=['POST'])
 def try_caught_object():
     #carregando json para o objeto
-    print(request.json)
-    input()
-    itens_kit = request.json.get("positions")
-    for item in itens_kit.values():
+    itens_kit_json = json.loads(request.json)
+    for item in itens_kit_json:
+        position = str(item.get('position'))
+        item = positions[position]
         resultado = move_item(item)
         if not resultado:
             for i in range(3):
@@ -83,7 +87,7 @@ def receive_signal ():
     
 # sinal< 25000
 if __name__ == "__main__":
-ports = dobot_controller.list_ports()
+    available_ports = dobot_controller.list_ports()
     port = inquirer.prompt(
         [inquirer.List("port", message="Select the port", choices=available_ports)]
     ).get("port")
