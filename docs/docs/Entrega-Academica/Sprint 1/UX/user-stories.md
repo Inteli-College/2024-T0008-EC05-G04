@@ -1,9 +1,9 @@
 # User Stories
 
-&emsp;As *user story* tratam-se de uma descrição simples e concisa de um recurso contado a partir da perspectiva de uma pessoa que deseja esse novo recurso, geralmente um usuário ou cliente do sistema. Elas são uma parte fundamental do desenvolvimento ágil e ajudam a criar uma visão simplificada de um requisito.<br />
+&emsp; As *user story* tratam-se de uma descrição simples e concisa de um recurso contado a partir da perspectiva de uma pessoa que deseja esse novo recurso, geralmente um usuário ou cliente do sistema. Elas são uma parte fundamental do desenvolvimento ágil e ajudam a criar uma visão simplificada de um requisito.<br />
 &emsp;Elas devem ser curtas e simples seguindo um formato que identifique quem será o usuário, qual será a ação executada e qual será o objetivo da ação.<br />
 
-&emsp;Além disso, elas devem ser:
+&emsp; Além disso, elas devem ser:
 
 **1. Independentes**: Cada *user story* deve ser autônoma, ou seja, deve ser possível desenvolvê-la e implementá-la independentemente das outras.
 
@@ -17,40 +17,7 @@
 
 **6. Testáveis**: Cada *user story* deve ser testável para garantir que o recurso foi implementado corretamente.
 
-&emsp;Existem ainda os **critérios de aceitação** que são um conjunto de parâmetros que definem se um produto, processo ou serviço atende aos requisitos especificados por empresas ou normas e são uma ferramenta importante para garantir que o produto final atenda às necessidades do cliente e esteja em conformidade com as normas e regulamentações aplicáveis. Nesse contexto, seguem as *user stories* referentes a cada persona no contexto do projeto:
-
-## **Persona: Renata Sanches, auxiliar de enfermagem**
-
-&emsp;**1.** Como auxiliar de enfermagem, quero ser capaz de identificar facilmente os medicamentos corretos no sistema para garantir a administração precisa e segura.<br />
-&emsp;**Critérios de Aceitação**
-    - O sistema deve exibir claramente os nomes e detalhes dos medicamentos.
-    - O sistema deve permitir a busca de medicamentos por nome ou código.
-    - O sistema deve exibir o rastreamento dos medicamentos.
-
-&emsp;**2.** Como auxiliar de enfermagem, quero que o software, o qual interage com o braço robótico, tenha interface da fácil usabilidade para permitir uma interação segura.<br />
-&emsp;**Critérios de Aceitação**
-    - O software deve ter uma interface intuitiva e fácil de usar. 
-    - O hardware deve operar de maneira segura para evitar qualquer dano ao paciente ou ao auxiliar de enfermagem.
-    - Deve haver recursos de treinamento disponíveis, como manuais do usuário, para ajudar os auxiliares de enfermagem a entenderem completamente o funcionamento do software e do hardware.
-    
-&emsp;**3.** Como auxiliar de enfermagem, quero que o sistema me permita registrar a administração de medicamentos para manter um registro preciso.<br />
-&emsp;**Critérios de Aceitação**<br />
-    - O sistema deve permitir o registro da data e hora da administração do medicamento.
-    - O sistema deve permitir a entrada de notas adicionais, se necessário.
-    - O sistema deve atualizar automaticamente o registro do paciente com as informações de administração do medicamento.
-   
-&emsp;**4.** Como auxiliar de enfermagem, quero que o sistema consiga se conectar aos demais softwares já utilizados pelo hospital Sírio Libanês para que possamos ter uma visão unificada e integrada de todas as operações. <br />
-&emsp;**Critérios de Aceitação**
-    - O sistema deve ser capaz de se conectar e integrar com os demais softwares já utilizados pelo hospital Sírio Libanês.
-    - A integração do sistema com os demais softwares não deve interromper ou prejudicar as operações existentes.
-    - O sistema deve fornecer uma visão unificada e integrada de todas as operações.
-
-&emsp;**5.** Como auxiliar de enfermagem, quero que o sistema me permita programar diferentes layouts de kits de emergência para que consiga adaptar os kits conforme a necessidade do paciente.<br />
-&emsp;**Critérios de Aceitação**<br />
-    - O sistema deve permitir que os auxiliares de enfermagem criem e salvem diferentes layouts de kits de emergência.
-    - O sistema deve ser capaz de adaptar os kits de emergência com base nas necessidades específicas do paciente.
-    - A interface do sistema para programar os layouts dos kits de emergência deve ser intuitiva e fácil de usar.
-
+&emsp; Existem ainda os **critérios de aceitação** que são um conjunto de parâmetros que definem se um produto, processo ou serviço atende aos requisitos especificados por empresas ou normas e são uma ferramenta importante para garantir que o produto final atenda às necessidades do cliente e esteja em conformidade com as normas e regulamentações aplicáveis. Nesse contexto, seguem as *user stories* referentes a cada persona no contexto do projeto:
 
 ## **Persona: Mayumi Tanaka, gestora Hospitalar**
 
@@ -85,5 +52,38 @@
     - A remontagem dos carrinhos de emergência pelo sistema não deve resultar em erros ou omissões de itens essenciais. 
     - O processo de remontagem pelo sistema deve resultar em carrinhos de emergência prontos para uso mais rapidamente do que o processo manual atual.
 
+## **Persona: Renata Sanches, auxiliar de enfermagem**
 
+&emsp;**1.** Como auxiliar de enfermagem, quero ser capaz de identificar facilmente os medicamentos corretos no sistema para garantir a administração precisa e segura.<br />
+&emsp;**Critérios de Aceitação**
+    - O sistema deve exibir claramente os nomes e detalhes dos medicamentos.
+    - O sistema deve permitir a busca de medicamentos por nome ou código.
+    - O sistema deve exibir o rastreamento dos medicamentos.
 
+&emsp;**2.** Como auxiliar de enfermagem, quero que o software, o qual interage com o braço robótico, tenha interface da fácil usabilidade para permitir uma interação segura.<br />
+&emsp;**Critérios de Aceitação**
+    - O software deve ter uma interface intuitiva e fácil de usar. 
+    - O hardware deve operar de maneira segura para evitar qualquer dano ao paciente ou ao auxiliar de enfermagem.
+    - Deve haver recursos de treinamento disponíveis, como manuais do usuário, para ajudar os auxiliares de enfermagem a entenderem completamente o funcionamento do software e do hardware.
+    
+&emsp;**3.** Como auxiliar de enfermagem, quero que o sistema me permita registrar a administração de medicamentos para manter um registro preciso.<br />
+&emsp;**Critérios de Aceitação**<br />
+    - O sistema deve permitir o registro da data e hora da administração do medicamento.
+    - O sistema deve permitir a entrada de notas adicionais, se necessário.
+    - O sistema deve atualizar automaticamente o registro do paciente com as informações de administração do medicamento.
+   
+&emsp;**4.** Como auxiliar de enfermagem, quero que o sistema consiga se conectar aos demais softwares já utilizados pelo Hospital Sírio Libanês para que possamos ter uma visão unificada e integrada de todas as operações. <br />
+&emsp;**Critérios de Aceitação**
+    - O sistema deve ser capaz de se conectar e integrar com os demais softwares já utilizados pelo Hospital Sírio Libanês.
+    - A integração do sistema com os demais softwares não deve interromper ou prejudicar as operações existentes.
+    - O sistema deve fornecer uma visão unificada e integrada de todas as operações.
+
+&emsp;**5.** Como auxiliar de enfermagem, quero que o sistema me permita programar diferentes layouts de kits de emergência para que consiga adaptar os kits conforme a necessidade do paciente.<br />
+&emsp;**Critérios de Aceitação**<br />
+    - O sistema deve permitir que os auxiliares de enfermagem criem e salvem diferentes layouts de kits de emergência.
+    - O sistema deve ser capaz de adaptar os kits de emergência com base nas necessidades específicas do paciente.
+    - A interface do sistema para programar os layouts dos kits de emergência deve ser intuitiva e fácil de usar.
+
+## **Conclusão**
+
+&emsp; Essas user stories detalham claramente as necessidades das personas no ambiente hospitalar, cobrindo gestão a administração de medicamentos. Seguindo princípios ágeis e critérios de aceitação, as equipes podem eficientemente atender às demandas dos usuários. A ênfase em aspectos cruciais das user stories torna possível o desenvolvimento de softwares voltados para o usuário, aprimorando os serviços de saúde prestados pelo Hospital Sírio-Libanês.

@@ -3,7 +3,7 @@
 
 &emsp; O braço robótico proposto é projetado com funcionalidades avançadas para automatizar a montagem de kits hospitalares, uma tarefa que requer precisão meticulosa. Ao integrar esta solução robótica, o Hospital Sírio-Libanês poderá não só otimizar o tempo e os recursos utilizados nesta atividade, mas também minimizar os riscos de contaminação e erros humanos, garantindo uma maior segurança para pacientes e profissionais da saúde. A proposta de valor, portanto, concentra-se em três pilares principais: eficiência operacional, precisão inigualável e a segurança do paciente.
 
-<p align="center"><b>Figura 1 - </b> Canva de proposta de valor</p>
+<p align="center"><b>Figura ? - </b> Canva de proposta de valor</p>
 
 ![Persona Gestora Hospitalar](/img/VPC.jpg)
 <p align="center">Fonte: Elaboração Grupo 4</p>
