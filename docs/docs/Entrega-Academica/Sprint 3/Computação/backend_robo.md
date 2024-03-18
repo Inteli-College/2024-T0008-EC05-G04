@@ -1,4 +1,4 @@
-# Controle do robõ através do BackEnd
+# Controle do robô através do BackEnd
 
 &emsp;Para conseguir controlar o robô através de uma aplicação web, além de um BackEnd que interage com o banco de dados, foi desenvolvido uma aplicação em python. Para realizar a tarefa, ela se conecta com o robô via cli, porém após isso inicia uma aplicação flask, permitindo receber requisições e enviando instruções ao robô.
 
