@@ -1,5 +1,6 @@
 from serial.tools import list_ports
 import pydobot
+from pydobot.enums import PTPMode
 import mock_pydobot
 
 from position import Position
@@ -9,10 +10,11 @@ class DobotController:
     def __init__(self):
         self.tool_enabled = False
         self.home_position = Position(240, 0, 150, 0, 0, 0, 0, 0, False, False)
+        self.caught_object = False
 
     def list_ports(self):
         ports = [port.device for port in list_ports.comports()]
-        ports.append('mock')
+        ports.append("mock")
 
         return ports
 
@@ -31,8 +33,32 @@ class DobotController:
         current_position.suction = self.tool_enabled
         return current_position
 
+    def move_linear(self, position, wait=True):
+        self.dobot._set_ptp_cmd(
+            position.x,
+            position.y,
+            position.z,
+            position.r,
+            mode=PTPMode.MOVL_XYZ,
+            wait=wait,
+        )
+
+    def move_joint(self, position, wait=True):
+        self.dobot._set_ptp_cmd(
+            position.x,
+            position.y,
+            position.z,
+            position.r,
+            mode=PTPMode.MOVJ_XYZ,
+            wait=wait,
+        )
+
     def move_to(self, position, wait=True):
-        self.dobot.move_to(*position.to_list(), wait=wait)
+        if position.linear:
+            self.move_linear(position, wait=wait)
+            return
+
+        self.move_joint(position, wait=wait)
 
     def move_by_axis(self, axis, distance, wait):
         move = Position(
@@ -65,3 +91,6 @@ class DobotController:
         self.dobot.suck(False)
         self.dobot.wait(time_to_wait)
         self.tool_enabled = False
+
+    def set_caught_object(self, status):
+        self.caught_object = status
