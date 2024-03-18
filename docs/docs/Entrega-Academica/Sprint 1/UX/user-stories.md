@@ -84,6 +84,39 @@
     - O sistema deve ser capaz de adaptar os kits de emergência com base nas necessidades específicas do paciente.
     - A interface do sistema para programar os layouts dos kits de emergência deve ser intuitiva e fácil de usar.
 
+## **Persona: Gabriel Menino, Auxiliar de Farmácia**
+
+&emsp;**1.** Como auxiliar de farmácia, quero que o sistema facilite a montagem dos kits hospitalares de forma automática, para reduzir o esforço físico e o risco de erros, sem a necessidade de ser significativamente mais rápido do que a montagem manual.<br />
+&emsp;**Critérios de Aceitação**
+    - O sistema deve ser capaz de montar automaticamente os kits hospitalares com precisão, incluindo todos os itens necessários.
+     - A montagem automática deve aliviar o esforço físico dos auxiliares de farmácia, comparável ao tempo gasto na montagem manual.
+     - O sistema deve minimizar os erros de montagem, proporcionando um método confiável e seguro.
+
+&emsp;**2.** Como auxiliar de farmácia, quero que o braço robótico integre um sistema de bipagem e rastreio de itens para assegurar a completa e correta montagem dos kits.<br />
+&emsp;**Critérios de Aceitação**
+    - Cada item adicionado ao kit pelo braço robótico deve ser bipado, garantindo sua inclusão no registro do sistema.
+     - O sistema deve oferecer rastreamento preciso de todos os itens para prevenir omissões ou duplicidades.
+     - Deve existir uma verificação final do kit montado para confirmar a precisão antes da liberação.
+    
+&emsp;**3.** Como auxiliar de farmácia, desejo uma interface do sistema intuitiva e de fácil utilização para poder acompanhar e intervir no processo de montagem dos kits, se necessário.<br />
+&emsp;**Critérios de Aceitação**<br />
+     - A interface do usuário deve ser simples e intuitiva, permitindo fácil acompanhamento do progresso da montagem.
+     - O sistema deve oferecer feedback visual ou auditivo sobre o andamento da montagem dos kits.
+     - Os usuários devem poder pausar, ajustar ou cancelar a montagem facilmente através da interface.
+   
+&emsp;**4.** Como auxiliar de farmácia, quero um sistema que minimize a pressão por precisão na montagem dos kits, fornecendo um método confiável que reduza o risco de erros. <br />
+&emsp;**Critérios de Aceitação**
+     - O sistema deve ter uma baixa taxa de erro, aumentando a confiança na precisão dos kits montados.
+     - Deve haver funcionalidades para detecção e alerta de discrepâncias durante a montagem.
+     - O sistema deve manter registros detalhados de cada montagem, facilitando futuras revisões e auditorias.
+
+
+&emsp;**5.** Como auxiliar de farmácia, preciso que o sistema se integre aos softwares de gestão de estoque da farmácia, para manter atualizadas as informações de estoque e demanda.<br />
+&emsp;**Critérios de Aceitação**<br />
+     - O sistema deve ser capaz de se integrar com o software de gestão de estoque existente, mantendo a consistência das informações.
+     - A integração deve oferecer uma visão completa do estoque, ajudando na gestão da demanda de kits.
+     - Atualizações automáticas do estoque, baseadas nos itens usados na montagem dos kits, devem garantir que os dados de estoque sejam precisos e confiáveis.
+
 ## **Conclusão**
 
 &emsp; Essas user stories detalham claramente as necessidades das personas no ambiente hospitalar, cobrindo gestão a administração de medicamentos. Seguindo princípios ágeis e critérios de aceitação, as equipes podem eficientemente atender às demandas dos usuários. A ênfase em aspectos cruciais das user stories torna possível o desenvolvimento de softwares voltados para o usuário, aprimorando os serviços de saúde prestados pelo Hospital Sírio-Libanês.
