@@ -9,7 +9,7 @@ module.exports = {
         'bgnd': '#333079',
         'greyb': '#717CB6',
         'txtg': '#EFF5FB',
-        'navblue': '#333079',
+        'navblue': '#1D375E',
       },
     },
   },

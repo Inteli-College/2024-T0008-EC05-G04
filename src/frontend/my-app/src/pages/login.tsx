@@ -14,7 +14,7 @@ const Login: React.FC = () => {
   return (
     
     <div className="flex h-screen">
-      <div className="w-2/5 bg-bgnd flex justify-center items-center">
+      <div className="w-2/5 bg-navblue flex justify-center items-center">
         <div className="text-white">
           <img src={Sirio} alt="Hospital Sírio Libanês" />
         </div>
@@ -50,7 +50,7 @@ const Login: React.FC = () => {
               </button>
               <button
                 type="submit"
-                className="w-6/12 text-xl bg-greyb text-white px-6 py-3 rounded-xl hover:bg-bgnd transition duration-300"
+                className="w-6/12 text-xl bg-greyb text-white px-6 py-3 rounded-xl hover:bg-navblue transition duration-300"
               >
                 Login
               </button>
