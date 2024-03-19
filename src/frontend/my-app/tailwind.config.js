@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         'bgnd': '#333079',
         'greyb': '#717CB6',
-        'txtg': '#EFF5FB'
+        'txtg': '#EFF5FB',
+        'navblue': '#333079',
       },
     },
   },
