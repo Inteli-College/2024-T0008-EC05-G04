@@ -102,7 +102,7 @@ const VisuPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col pt-16 h-screen">
       <div className="flex-grow bg-gray-100">
         <Navbar />
         <div className="max-w-6xl mx-auto py-20">
