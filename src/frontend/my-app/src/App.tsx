@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login';
 import Menu from './pages/menuFunc';
+import VisuKits from './pages/visualKits'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login/>} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/visuKits" element={<VisuKits />} />
         // Add more routes as needed
       </Routes>
     </Router>
