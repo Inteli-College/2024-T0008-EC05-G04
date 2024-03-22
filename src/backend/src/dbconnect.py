@@ -1,10 +1,10 @@
-
 import asyncio
 import asyncpg
 from tokens import DATABASE_URL
 import nest_asyncio
 
 nest_asyncio.apply()
+
 
 class ConnPostgres:
     _instance = None
@@ -23,36 +23,32 @@ class ConnPostgres:
     async def _init_connection(self):
         self.__database_url = DATABASE_URL
 
-        #print(f"Connecting to database at {self.__database_url}")
+        # print(f"Connecting to database at {self.__database_url}")
 
         self.conn = None
 
         if not await self.start_conn():
-            raise Exception("Unable to connect to database, please check your credentials")
+            raise Exception(
+                "Unable to connect to database, please check your credentials"
+            )
         else:
-            
             print("Database connection established")
-
 
     async def start_conn(self) -> bool:
         try:
             print("Connecting to database...")
-            self.conn = await asyncpg.connect(
-                self.__database_url
-            )
-            self.conn.execute("SET TIME ZONE 'America/Sao_Paulo'") 
+            self.conn = await asyncpg.connect(self.__database_url)
+            self.conn.execute("SET TIME ZONE 'America/Sao_Paulo'")
             return True
         except Exception as e:
             print(f"Database connection error: {e}")
             self.conn = None
             return False
 
-
     async def close_conn(self):
         if self.conn:
             await self.conn.close()
             self.conn = None
-
 
     async def is_connection_open(self) -> bool:
         if not self.conn:
@@ -65,10 +61,10 @@ class ConnPostgres:
         except:
             return False
 
-
     def __getattr__(self, name):
         loop = asyncio.get_event_loop()
-        if str(name) == 'conn': return self.conn
+        if str(name) == "conn":
+            return self.conn
 
         if self.conn is not None:
             if loop.run_until_complete(self.is_connection_open()):
@@ -78,7 +74,9 @@ class ConnPostgres:
                 if loop.run_until_complete(self.start_conn()):
                     return getattr(self.conn, name)
                 else:
-                    raise Exception("Fatal error during reconnection attempt, maybe database down?")
+                    raise Exception(
+                        "Fatal error during reconnection attempt, maybe database down?"
+                    )
         else:
             raise Exception("Connection object is not initialized")
 

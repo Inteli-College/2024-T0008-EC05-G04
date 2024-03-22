@@ -48,7 +48,10 @@ async def create_kit_order(kit_order: KitOrderCreate):
                 """
 
                 id_of_new_kit_order = await conn_postgres.fetchval(
-                    query, "pending", kit_order.kit_id, kit_order.requested_by
+                    query,
+                    "pending",
+                    kit_order.kit_id,
+                    kit_order.requested_by
                 )
 
                 return {
