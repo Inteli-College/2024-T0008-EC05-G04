@@ -1,18 +1,6 @@
 from datetime import date, datetime
 from pydantic import BaseModel
 
-"""
-Table kit_order{
-  id serial [pk]
-  robot_id integer
-  status enum
-  kit_id integer
-  start_date timestamp
-  end_date timestamp
-  requested_by integer
-}
-"""
-
 
 class KitOrderSchema(BaseModel):
     id: int
