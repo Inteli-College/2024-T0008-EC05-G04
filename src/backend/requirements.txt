@@ -12,3 +12,5 @@ starlette==0.36.3
 typing_extensions==4.10.0
 uvicorn==0.28.1
 requests==2.31.0
+asyncpg==0.29.0
+nest_asyncio==1.6.0

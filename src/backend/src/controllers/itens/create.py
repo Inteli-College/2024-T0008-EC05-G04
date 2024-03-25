@@ -1,19 +1,23 @@
 from models.itens import ItemCreate
-from dbconnect import (
-    conn_postgres,
-)
+from dbconnect import conn_postgres
+
+from .get import get_by_id
 
 
-async def register_item(item: ItemCreate):
+async def create(item: ItemCreate):
     async with conn_postgres.transaction():
         try:
             query = """
             INSERT INTO itens (name, expire, manufacturer, batch) 
-            VALUES ($1, $2, $3, $4) RETURNING id;
+            VALUES ($1, $2, $3, $4)
+            RETURNING id;
             """
-            # Execute a consulta passando os valores diretamente
-            id_of_new_item = await conn_postgres.fetchval(query, item.name)
-            # Retorna uma resposta de sucesso com o ID do novo item
-            return {"detail": "Item added successfully", "id": id_of_new_item}
-        except:
-            return {"detail": "Error adding item"}
+            item_id = await conn_postgres.execute(
+                query, item.name, item.expire, item.manufacturer, item.batch
+            )
+
+            return await get_by_id(item_id)
+
+        except Exception as e:
+            print(f"Error adding item: {str(e)}")
+            return None

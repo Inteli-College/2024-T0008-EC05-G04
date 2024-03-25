@@ -2,8 +2,8 @@ from typing import Optional
 import requests
 
 from dbconnect import conn_postgres
-from models.kit_order import KitOrderCreate, KitOrderSchema
-from get import get_kit_order_by_id
+from models.kit_orders import KitOrderCreate, KitOrderSchema
+from .get import get_by_id
 import tokens
 
 
@@ -27,7 +27,7 @@ async def send_kit_order_to_robot(kit_id: int):
     return response
 
 
-async def create_kit_order(kit_order: KitOrderCreate) -> Optional[KitOrderSchema]:
+async def create(kit_order: KitOrderCreate) -> Optional[KitOrderSchema]:
     async with conn_postgres.transaction():
         query = """
             INSERT INTO kit_order (status, kit_id, date, requested_by)
@@ -41,6 +41,6 @@ async def create_kit_order(kit_order: KitOrderCreate) -> Optional[KitOrderSchema
         robot_response = await send_kit_order_to_robot(kit_order_id)
 
         if robot_response.status_code == 200:
-            return await get_kit_order_by_id(kit_order_id)
+            return await get_by_id(kit_order_id)
 
         return None
