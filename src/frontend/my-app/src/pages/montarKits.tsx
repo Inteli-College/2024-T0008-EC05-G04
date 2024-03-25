@@ -15,20 +15,20 @@ const PageContent: React.FC = () => {
       <Navbar />
       <div className="grid grid-cols-4 gap-2 p-4 mt-10 mx-auto">
         {items.map((item, index) => (
-          <div key={index} className="border-4 border-gray-200 rounded-lg flex justify-center items-center" style={itemStyle}>
+          <div key={index} className="border-4 rounded-lg flex justify-center items-center" style={itemStyle}>
             {item}
           </div>
         ))}
-        <div className="mt-auto bg-white p-4">
-        <div className="flex justify-between">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      </div>
+      <div className="mt-auto bg-white p-8 flex justify-center">
+        <div>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded mr-4">
             Confirmar
           </button>
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-16 rounded">
             Cancelar
           </button>
         </div>
-      </div>
       </div>
     </div>
   );
