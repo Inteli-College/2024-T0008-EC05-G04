@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Sirio from '../static/logoS.svg'
 import Logo from '../static/logo.svg'
 
 const Login: React.FC = () => {
+  const navigate = useNavigate(); // Initialize the navigate function
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Implement the login logic here
+  };
+
+  const handleLoginClick = (path: string) => {
+    navigate(path);
   };
 
   return (
@@ -43,7 +49,7 @@ const Login: React.FC = () => {
             <div className="flex flex-col justify-center items-center space-y-10">
               <button
                 className="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                onClick={() => { /* Função a ser chamada ao clicar no botão */ }}
+                onClick={() => handleLoginClick('/menu')}
                 type="button"
               >
                 Esqueci minha senha
@@ -51,6 +57,7 @@ const Login: React.FC = () => {
               <button
                 type="submit"
                 className="w-6/12 text-xl bg-greyb text-white px-6 py-3 rounded-xl hover:bg-navblue transition duration-300"
+                onClick={() => handleLoginClick('/menu')}
               >
                 Login
               </button>
