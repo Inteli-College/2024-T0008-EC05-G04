@@ -10,6 +10,7 @@ module.exports = {
         'greyb': '#717CB6',
         'txtg': '#EFF5FB',
         'navblue': '#1D375E',
+        'buttongrey': '#DEDEDE'
       },
     },
   },
