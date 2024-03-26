@@ -5,16 +5,37 @@ import Autocomplete from '@mui/material/Autocomplete';
 
 export default function RobotSelection() {
   return (
-    <div className='flex justify-center my-2'>    
+    <div className="flex justify-center my-4">    
       <Autocomplete
         disablePortal
         id="combo-box-demo"
         options={mock_robot}
-        renderInput={(params) => <TextField {...params} label="Selecione o robô" />}
-        className='size-1/4'
+        sx={{
+          width: 600, // Defina a largura de acordo com o seu design do Figma
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+              borderColor: "#1D375E", // Cor da borda conforme seu Figma
+              borderWidth: '4px', // Grossura da borda
+              borderRadius: '8px' // Curvatura do input
+            },
+            "&:hover fieldset": {
+              borderColor: "#1D375E", // Cor da borda em hover
+            },
+            "&.Mui-focused fieldset": {
+              borderColor: "#1D375E", // Cor da borda quando focado
+            }
+          }
+        }}
+        renderInput={(params) => (
+          <TextField 
+            {...params} 
+            label="Digite o kit a ser feito" 
+            className="bg-white text-base"
+          />
+        )}
       />
     </div>
-
   );
 }
-const mock_robot = ["Robot_1","Robot_2","Mock_Robot"]
+
+const mock_robot = ["Robot_1", "Robot_2", "Mock_Robot"];
