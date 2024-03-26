@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/navbar';
+import KitDropdown from '../components/dropdown';
 import RobotSelection from '../components/searchKit'; 
 
 const MontarKits: React.FC = () => {
@@ -15,7 +16,7 @@ const MontarKits: React.FC = () => {
     <div>
     <Navbar />
     <div className="flex flex-col h-screen pt-32">
-      <RobotSelection />
+      <KitDropdown />
       <div className="grid grid-cols-4 gap-2 p-4 mt-4 mx-auto">
         {items.map((item, index) => (
           <div key={index} className="border-4 rounded-lg flex justify-center items-center" style={itemStyle}>
@@ -23,6 +24,7 @@ const MontarKits: React.FC = () => {
           </div>
         ))}
       </div>
+      <RobotSelection />
       <div className="bg-white p-8 flex justify-center">
         <div>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded mr-4">

@@ -11,25 +11,25 @@ export default function RobotSelection() {
         id="combo-box-demo"
         options={mock_robot}
         sx={{
-          width: 600, // Defina a largura de acordo com o seu design do Figma
+          width: 300, 
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
-              borderColor: "#1D375E", // Cor da borda conforme seu Figma
-              borderWidth: '4px', // Grossura da borda
-              borderRadius: '8px' // Curvatura do input
+              borderColor: "#1D375E", 
+              borderWidth: '2px',
+              borderRadius: '8px'
             },
             "&:hover fieldset": {
-              borderColor: "#1D375E", // Cor da borda em hover
+              borderColor: "#1D375E", 
             },
             "&.Mui-focused fieldset": {
-              borderColor: "#1D375E", // Cor da borda quando focado
+              borderColor: "#1D375E",
             }
           }
         }}
         renderInput={(params) => (
           <TextField 
             {...params} 
-            label="Digite o kit a ser feito" 
+            label="Selecione o robô" 
             className="bg-white text-base"
           />
         )}
