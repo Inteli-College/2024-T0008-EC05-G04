@@ -17,7 +17,7 @@ async def get_all_itens():
     return itens_list
 
 
-@router.get("/{item_id}", response_model=ItemSchema)
+@router.get("/{item_id}", response_model=List[ItemSchema])
 async def get_item(item_id: int):
     item = await itens.get_by_id(item_id)
 
