@@ -25,12 +25,15 @@ const MontarKits: React.FC = () => {
         ))}
       </div>
       <RobotSelection />
-      <div className="bg-white p-8 flex justify-center">
+      <div className="bg-white p-4 flex justify-center">
         <div>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded mr-4">
+          <button
+            className="bg-[#1D375E] hover:bg-blue-700 text-white font-bold py-2 px-16 rounded mr-4"
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#B6D1E9'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#1D375E'} >
             Confirmar
           </button>
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-16 rounded">
+          <button className="bg-red-600 hover:bg-red-300 text-white font-bold py-2 px-16 rounded">
             Cancelar
           </button>
         </div>
