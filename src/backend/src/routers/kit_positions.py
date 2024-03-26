@@ -2,7 +2,7 @@ from fastapi import HTTPException, APIRouter, status
 from typing import List
 
 from controllers import kit_positions
-from models.kit_positions import KitPositionSchema
+from models.kit_positions import KitPositionSchema, KitPositionCreate
 
 router = APIRouter()
 
@@ -28,7 +28,7 @@ async def get_kit_positions(kit_id: int):
 
 
 @router.post("/", status_code=status.HTTP_201_CREATED)
-async def create_kit_position(data: KitPositionSchema):
+async def create_kit_position(data: KitPositionCreate):
     kit_position = await kit_positions.create(data)
 
     if not kit_position:

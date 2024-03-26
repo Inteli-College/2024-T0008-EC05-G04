@@ -1,7 +1,7 @@
 from typing import List, Optional
 from models.kit_positions import KitPositionSchema
 from dbconnect import conn_postgres
-from schemas import ItemSchema
+from models.itens import ItemSchema
 
 
 async def get_all() -> Optional[List[KitPositionSchema]]:

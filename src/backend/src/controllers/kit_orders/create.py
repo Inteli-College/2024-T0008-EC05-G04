@@ -1,8 +1,9 @@
 from typing import Optional
 import requests
-
+import json
 from dbconnect import conn_postgres
 from models.kit_orders import KitOrderCreate, KitOrderSchema
+from models.kit_positions import KitPositionSchema
 from .get import get_by_id
 import tokens
 
@@ -29,13 +30,14 @@ async def send_kit_order_to_robot(kit_id: int):
 
 async def create(kit_order: KitOrderCreate) -> Optional[KitOrderSchema]:
     async with conn_postgres.transaction():
+        initital_status = "pending"
         query = """
-            INSERT INTO kit_order (status, kit_id, date, requested_by)
+            INSERT INTO kit_order (status, kit_id, start_date, requested_by)
             VALUES ($1, $2, NOW(), $3) RETURNING id;
         """
 
         kit_order_id = await conn_postgres.fetchval(
-            query, kit_order.status, kit_order.kit_id, kit_order.requested_by
+            query, initital_status, kit_order.kit_id, kit_order.requested_by
         )
 
         robot_response = await send_kit_order_to_robot(kit_order_id)

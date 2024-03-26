@@ -38,7 +38,7 @@ class ConnPostgres:
         try:
             print("Connecting to database...")
             self.conn = await asyncpg.connect(self.__database_url)
-            self.conn.execute("SET TIME ZONE 'America/Sao_Paulo'")
+            await self.conn.execute("SET TIME ZONE 'America/Sao_Paulo'")
             return True
         except Exception as e:
             print(f"Database connection error: {e}")
