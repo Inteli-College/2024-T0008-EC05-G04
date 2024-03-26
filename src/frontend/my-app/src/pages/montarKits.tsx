@@ -1,7 +1,9 @@
 import React from 'react';
-import Navbar from '../components/navbar'; // Assuming Navbar is in the same directory
+import Navbar from '../components/navbar';
+import KitDropdown from '../components/dropdown';
+import RobotSelection from '../components/searchKit'; 
 
-const PageContent: React.FC = () => {
+const MontarKits: React.FC = () => {
   const items = ['Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item'];
 
   const itemStyle = {
@@ -11,27 +13,34 @@ const PageContent: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
-      <Navbar />
-      <div className="grid grid-cols-4 gap-2 p-4 mt-10 mx-auto">
+    <div>
+    <Navbar />
+    <div className="flex flex-col h-screen pt-32">
+      <KitDropdown />
+      <div className="grid grid-cols-4 gap-2 p-4 mt-4 mx-auto">
         {items.map((item, index) => (
           <div key={index} className="border-4 rounded-lg flex justify-center items-center" style={itemStyle}>
             {item}
           </div>
         ))}
       </div>
-      <div className="mt-auto bg-white p-8 flex justify-center">
+      <RobotSelection />
+      <div className="bg-white p-4 flex justify-center">
         <div>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded mr-4">
+          <button
+            className="bg-[#1D375E] hover:bg-blue-700 text-white font-bold py-2 px-16 rounded mr-4"
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#B6D1E9'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#1D375E'} >
             Confirmar
           </button>
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-16 rounded">
+          <button className="bg-red-600 hover:bg-red-300 text-white font-bold py-2 px-16 rounded">
             Cancelar
           </button>
         </div>
       </div>
     </div>
+    </div>
   );
 };
 
-export default PageContent;
+export default MontarKits;

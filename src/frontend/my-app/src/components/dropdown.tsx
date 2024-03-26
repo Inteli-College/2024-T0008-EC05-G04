@@ -9,6 +9,22 @@ export default function KitDropdown() {
         disablePortal
         id="combo-box-demo"
         options={kits}
+        sx={{
+          width: 600,
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+              borderColor: "#1D375E",
+              borderWidth: '2px', 
+              borderRadius: '8px' 
+            },
+            "&:hover fieldset": {
+              borderColor: "#1D375E", 
+            },
+            "&.Mui-focused fieldset": {
+              borderColor: "#1D375E", 
+            }
+          }
+        }}
         renderInput={(params) => <TextField {...params} label="Selecione o Kit" />}
         className='size-3/4 '
         />
