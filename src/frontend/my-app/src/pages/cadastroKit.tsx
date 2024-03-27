@@ -12,14 +12,14 @@ const CadastroKit: React.FC = () =>{
             <div className="w-full flex flex-col items-center">
                 <InputCadastroKits props="w-[760px]" text="Nome do Kit" label="Digite o nome do kit"/>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0">
-                    <CardItem title="Item 1"/>
-                    <CardItem title="Item 2"/>
-                    <CardItem title="Item 3"/>
-                    <CardItem title="Item 4"/>
-                    <CardItem title="Item 5"/>
-                    <CardItem title="Item 6"/>
-                    <CardItem title="Item 7"/>
-                    <CardItem title="Item 8"/>  
+                    <CardItem number= {1} />
+                    <CardItem number= {2}/>
+                    <CardItem number= {3}/>
+                    <CardItem number= {4}/>
+                    <CardItem number= {5}/>
+                    <CardItem number= {6}/>
+                    <CardItem number= {7}/>
+                    <CardItem number= {8}/>  
                 </div>
             <div className="mt-4 flex gap-24">
                 <InputCadastroKits props="w-72"text="Item" label="Digite o item a ser adicionado"/>

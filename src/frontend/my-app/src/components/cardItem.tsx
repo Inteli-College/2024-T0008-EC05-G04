@@ -1,16 +1,21 @@
 import React from 'react';
 
 interface CardItemProps{
-    title: string
+    number: number
 }
 
-const CardItem: React.FC<CardItemProps>  = ({title}) => {
+const CardItem: React.FC<CardItemProps>  = ({number}) => {
+    
+    function clickItem(){
+        
+
+    }
     return(
         <div>
-            <div className="bg-white rounded-lg border border-black shadow w-52 h-52 flex items-center justify-center">
-                <p className="text-[22px] black">
-                    {title}
-                </p>
+            <div className="bg-white rounded-lg border border-black shadow w-52 h-52 flex items-center justify-center transition duration-500  hover:text-violet-600" onClick={clickItem}>
+                    <p className="text-[22px] black">
+                        item {number}
+                    </p>
             </div>
         </div>
     );
