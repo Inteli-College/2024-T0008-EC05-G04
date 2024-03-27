@@ -1,9 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Navbar from '../components/navbar';
-import BarChart from '../components/graph1'
-import PieChart from '../components/graph2';
-import BarChart2 from '../components/graph3';
-import BarChart3 from '../components/graph4';
+import BarChart from '../components/bar-chart-2'
+import PieChart from '../components/pie-chart';
+import BarChart2 from '../components/bar-chart-kits';
+
 
 
 interface ContentBlockProps {
@@ -21,31 +22,28 @@ const ContentBlock: React.FC<ContentBlockProps> = ({ children }) => {
 };
 
 const Dashboards: React.FC = () => {
-  
+  const navigate = useNavigate(); // Initialize the navigate function
   return (
     
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen overflow-y-scroll no-scrollbar">
       <div className="flex-grow bg-gray-100 pt-28">
         <Navbar />
         <div className="flex-grow container mx-auto px-4 flex flex-col justify-center">
           <div className="text-center my-6">
             <h1 className="text-3xl my-6">Estatísticas</h1>
             <div className="flex justify-center gap-44 my-20">
-              <button className=" transition duration-500 hover:bg-buttongrey text-black py-2 px-4 rounded-3xl">
+              <button onClick={() => navigate('/tables')} className=" transition duration-500 hover:bg-buttongrey text-black py-2 px-4 rounded-3xl">
                 Tabelas
               </button>
-              <button className="transition duration-500 hover:bg-buttongrey text-black py-2 px-4 rounded-3xl">
+              <button className="transition duration-500 hover:bg-buttongrey text-black text-opacity-50 py-2 px-4 rounded-3xl">
                 Dashboards
-              </button>
-              <button className="transition duration-500 hover:bg-buttongrey text-black py-2 px-4 rounded-3xl">
-                Relatórios
               </button>
             </div>
           </div>
           <div className="grid grid-flow-row-dense grid-cols-2 md:grid-cols-2 gap-10 mb-20">
             <div className='col-span-1 row-span-1'>
               <ContentBlock>
-                {<BarChart />}
+                {<BarChart2 />}
               </ContentBlock>
             </div>
             <div className='col-span-1 row-span-2'>

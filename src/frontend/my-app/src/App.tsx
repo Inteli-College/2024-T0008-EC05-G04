@@ -4,6 +4,7 @@ import Login from './pages/login';
 import Menu from './pages/menuFunc';
 import VisuKits from './pages/visualKits'
 import Dashboards from './pages/dashboards';
+import Tables from './pages/tables'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/visuKits" element={<VisuKits />} />
         <Route path="/dashboards" element={<Dashboards />} />
-        // Add more routes as needed
+        <Route path="/tables" element={<Tables />} />
       </Routes>
     </Router>
   );

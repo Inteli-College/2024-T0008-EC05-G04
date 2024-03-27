@@ -102,8 +102,8 @@ const VisuPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
-      <div className="flex-grow bg-gray-100">
+    <div className="flex flex-col h-screen overflow-y-scroll no-scrollbar">
+      <div className="flex-grow bg-gray-100 pt-28">
         <Navbar />
         <div className="max-w-6xl mx-auto py-20">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
