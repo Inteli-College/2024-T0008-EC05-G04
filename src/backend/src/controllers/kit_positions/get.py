@@ -1,7 +1,6 @@
 from typing import List, Optional
 from models.kit_positions import KitPositionSchema
 from dbconnect import conn_postgres
-from models.itens import ItemSchema
 
 
 async def get_all() -> Optional[List[KitPositionSchema]]:
@@ -20,7 +19,7 @@ async def get_all() -> Optional[List[KitPositionSchema]]:
         return kit_positions
 
 
-async def get_by_id(kit_id: int) -> Optional[List[ItemSchema]]:
+async def get_by_id(kit_id: int) -> Optional[List[KitPositionSchema]]:
     async with conn_postgres.transaction():
         query = """
         SELECT * FROM kit_positions WHERE id = $1;

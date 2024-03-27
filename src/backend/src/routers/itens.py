@@ -38,3 +38,16 @@ async def register_item(data: ItemCreate):
         "message": "Item created successfully",
         "item": item,
     }
+
+
+@router.delete("/{item_id}", status_code=status.HTTP_200_OK)
+async def delete_item(item_id: int):
+    deleted = await itens.delete(item_id)
+
+    if not deleted:
+        raise HTTPException(status_code=404, detail="Item not found")
+
+    return {
+        "message": "Item deleted successfully",
+        "item_id": item_id,
+    }

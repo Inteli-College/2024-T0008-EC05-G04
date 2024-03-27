@@ -38,3 +38,13 @@ async def create_kit_position(data: KitPositionCreate):
         "message": "Kit position created successfully",
         "kit_position": kit_position,
     }
+
+
+@router.delete("/{item_id}", status_code=status.HTTP_200_OK)
+async def delete_kit_position(item_id: int):
+    deleted = await kit_positions.delete(item_id)
+
+    if not deleted:
+        raise HTTPException(status_code=404, detail="Kit position could not be deleted")
+
+    return {"message": "Kit position deleted successfully", "item_id": item_id}

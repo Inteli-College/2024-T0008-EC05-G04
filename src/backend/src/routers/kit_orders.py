@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, status
 from typing import List
 
 from controllers import kit_orders
-from models.kit_orders import KitOrderSchema, KitOrderCreate
+from models.kit_orders import KitOrderSchema, KitOrderCreate, KitOrderUpdate
 
 router = APIRouter()
 
@@ -37,4 +37,30 @@ async def create_kit_order(data: KitOrderCreate):
     return {
         "message": "Kit order created successfully",
         "kit_order": order,
+    }
+
+
+@router.put("/{order_id}", status_code=status.HTTP_200_OK)
+async def update_kit_order(order_id: int, data: KitOrderUpdate):
+    updated = await kit_orders.update(order_id, data)
+
+    if not updated:
+        raise HTTPException(status_code=404, detail="Kit order not found")
+
+    return {
+        "message": "Kit order updated successfully",
+        "order_id": order_id,
+    }
+
+
+@router.delete("/{order_id}", status_code=status.HTTP_200_OK)
+async def delete_kit_order(order_id: int):
+    deleted = await kit_orders.delete(order_id)
+
+    if not deleted:
+        raise HTTPException(status_code=404, detail="Kit order not found")
+
+    return {
+        "message": "Kit order deleted successfully",
+        "order_id": order_id,
     }

@@ -8,13 +8,11 @@ async def create(item: ItemCreate):
     async with conn_postgres.transaction():
         try:
             query = """
-            INSERT INTO itens (name, expire, manufacturer, batch) 
-            VALUES ($1, $2, $3, $4)
+            INSERT INTO itens (name)
+            VALUES ($1)
             RETURNING id;
             """
-            item_id = await conn_postgres.execute(
-                query, item.name, item.expire, item.manufacturer, item.batch
-            )
+            item_id = await conn_postgres.fetchval(query, item.name)
 
             return await get_by_id(item_id)
 

@@ -8,7 +8,7 @@ async def create(kit_position: KitPositionCreate):
     async with conn_postgres.transaction():
         try:
             query = """
-            INSERT INTO kit_positions (kit_id, position, item_id) 
+            INSERT INTO kit_positions (kit_id, position, item_id)
             VALUES ($1, $2, $3) RETURNING id;
             """
             kit_position_id = await conn_postgres.fetchval(

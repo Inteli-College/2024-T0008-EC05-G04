@@ -32,17 +32,19 @@ async def create(kit_order: KitOrderCreate) -> Optional[KitOrderSchema]:
     async with conn_postgres.transaction():
         initital_status = "pending"
         query = """
-            INSERT INTO kit_order (status, kit_id, start_date, requested_by)
-            VALUES ($1, $2, NOW(), $3) RETURNING id;
+            INSERT INTO kit_order (status, kit_id, start_date, requested_by, robot_id)
+            VALUES ($1, $2, NOW(), $3, $4) RETURNING id;
         """
 
         kit_order_id = await conn_postgres.fetchval(
-            query, initital_status, kit_order.kit_id, kit_order.requested_by
+            query, initital_status, kit_order.kit_id, kit_order.requested_by, kit_order.robot_id
         )
 
         robot_response = await send_kit_order_to_robot(kit_order_id)
 
         if robot_response.status_code == 200:
-            return await get_by_id(kit_order_id)
+            returned_kit_order = await get_by_id(kit_order_id)
+
+            return returned_kit_order
 
         return None
