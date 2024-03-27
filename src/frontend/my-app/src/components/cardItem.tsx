@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const CardItem = () => {
+interface CardItemProps{
+    title: string
+}
+
+const CardItem: React.FC<CardItemProps>  = ({title}) => {
     return(
         <div>
-            <div className="bg-white rounded-lg border border-black shadow p-10 w-64 h-64"><a href="/" className="text-black text-xl block p-4 me-5">Item</a>
+            <div className="bg-white rounded-lg border border-black shadow w-52 h-52 flex items-center justify-center">
+                <p className="text-[22px] black">
+                    {title}
+                </p>
             </div>
-
         </div>
     );
 };
 
-export default CardItem;
+export default CardItem

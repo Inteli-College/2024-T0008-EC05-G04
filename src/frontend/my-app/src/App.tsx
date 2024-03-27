@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login';
 import Menu from './pages/menuFunc';
 import CadastroKit from './pages/cadastroKit';
+import Page from './components/Pages';
 
 function App() {
   return (
@@ -10,7 +11,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Login/>} />
         <Route path="/menu" element={<Menu/>} />
-        <Route path="/cadastroKit" element={<CadastroKit/>} />
+        <Route 
+          path="/cadastroKit" 
+          element={
+            <Page>
+              <CadastroKit/> 
+            </Page>
+          }
+        />
       </Routes>
     </Router>
   );

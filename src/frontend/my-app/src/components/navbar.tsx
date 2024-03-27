@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div>
       {/* Navbar */}
-      <nav className="bg-navblue text-white p-4">
+      <nav className="bg-navblue text-white p-4 mb-0">
         <div className="mx-auto flex justify-between items-center">
           <img className="transition duration-700 hover:scale-105 object-center ms-10 1/14" src={Logo} alt="Logo" />
           <div className="flex">
