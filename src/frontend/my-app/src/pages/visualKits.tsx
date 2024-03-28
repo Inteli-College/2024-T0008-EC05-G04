@@ -102,11 +102,11 @@ const VisuPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
-      <div className="flex-grow bg-gray-100">
+    <div className="flex flex-col h-screen overflow-y-scroll no-scrollbar">
+      <div className="flex-grow bg-gray-100 pt-28">
         <Navbar />
         <div className="max-w-6xl mx-auto py-20">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {cardData.map((card, index) => (
               <div key={index} onClick={() => handleCardClick(card)} className="transition duration-700 hover:scale-105 border rounded-lg shadow-lg p-4 bg-white cursor-pointer">
                 <div className="aspect-w-1 aspect-h-1 bg-gray-300 rounded-t-lg overflow-hidden">
