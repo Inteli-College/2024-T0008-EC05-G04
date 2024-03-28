@@ -1,40 +1,24 @@
-from fastapi import APIRouter, HTTPException, status, Query
-from typing import List, Optional
-
-from controllers import kits
-from models.kits import KitSchema, KitCreate
+from fastapi import APIRouter, HTTPException, Path
+from typing import List
+from schemas.kits import KitSchema, KitCreate
+from controllers import kits_controller as kits 
 
 router = APIRouter()
 
 
 @router.get("/", response_model=List[KitSchema])
 async def get_all_kits():
-    kits_list = await kits.get_all()
-
-    if not kits_list:
-        raise HTTPException(status_code=404, detail="No kits found")
-
-    return kits_list
+    return await kits.get_all()
 
 
 @router.get("/{kit_id}", response_model=KitSchema)
-async def get_kit(kit_id: int):
-    kit = await kits.get_by_id(kit_id)
-
+async def get_kit(kit_id: int = Path(..., title="The ID of the kit to retrieve")):
+    kit = await kits.get(kit_id)
     if not kit:
         raise HTTPException(status_code=404, detail="Kit not found")
-
     return kit
 
 
-@router.post("/", status_code=status.HTTP_201_CREATED)
-async def register_kit(data: KitCreate):
-    kit = await kits.create(data)
-
-    if not kit:
-        raise HTTPException(status_code=400, detail="Kit could not be created")
-
-    return {
-        "message": "Kit created successfully",
-        "kit": kit,
-    }
+@router.post("/", response_model=KitSchema, status_code=201)
+async def create_kit(kit: KitCreate):
+    return await kits.create(kit)
