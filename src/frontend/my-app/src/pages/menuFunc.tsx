@@ -16,7 +16,7 @@ const MainPage: React.FC = () => {
     {
       title: 'Criar Kit',
       content: '',
-      path: '/',
+      path: '/montarKits',
     },
     {
       title: 'Estatísticas',

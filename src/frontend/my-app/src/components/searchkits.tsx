@@ -1,5 +1,4 @@
 
-
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -11,7 +10,12 @@ interface Kit {
   name: string;
 }
 
-export default function KitDropdown() {
+// Add a prop for the selection callback
+interface KitDropdownProps {
+  onSelectKit: (id: number | null) => void;
+}
+
+export default function KitDropdown({ onSelectKit }: KitDropdownProps) {
   const [kits, setKits] = useState<Kit[]>([]); // Use a state hook for the kits
 
   // Fetch kits from the endpoint when the component mounts
@@ -36,6 +40,7 @@ export default function KitDropdown() {
         id="combo-box-demo"
         options={kits}
         getOptionLabel={(option: Kit) => option.name} // Use the name property for the label
+        onChange={(event, value) => onSelectKit(value ? value.id : null)} // Use the onChange event to call onSelectKit
         sx={{
           width: 600,
           "& .MuiOutlinedInput-root": {
@@ -58,6 +63,7 @@ export default function KitDropdown() {
     </div>
   );
 }
+
 
 
 

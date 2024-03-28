@@ -4,27 +4,28 @@ import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 
-
-
 interface Robot {
   id: number;
   name: string;
   route: string;
 }
 
-export default function RobotSelection() {
+// Add a prop for the selection callback
+interface RobotSelectionProps {
+  onSelectRobot: (id: number | null) => void; // The callback function type
+}
 
-  const [robots, setRobots] = useState<Robot[]>([]); // Use a state hook for the kits
+export default function RobotSelection({ onSelectRobot }: RobotSelectionProps) {
+  const [robots, setRobots] = useState<Robot[]>([]);
 
-  // Fetch kits from the endpoint when the component mounts
   useEffect(() => {
     const fetchRobots = async () => {
       try {
         const response = await fetch('http://localhost:8000/api/kit');
         const data = await response.json();
-        setRobots(data); // Assuming the endpoint returns an array of kits
+        setRobots(data);
       } catch (error) {
-        console.error('Failed to fetch kits:', error);
+        console.error('Failed to fetch robots:', error);
       }
     };
 
@@ -37,7 +38,8 @@ export default function RobotSelection() {
         disablePortal
         id="combo-box-demo"
         options={robots}
-        getOptionLabel={(option: Robot) => option.name} // Use the name property for the label
+        getOptionLabel={(option: Robot) => option.name}
+        onChange={(event, value) => onSelectRobot(value ? value.id : null)} // Use the onChange event to call onSelectRobot
         sx={{
           width: 300, 
           "& .MuiOutlinedInput-root": {
@@ -65,4 +67,3 @@ export default function RobotSelection() {
     </div>
   );
 }
-
