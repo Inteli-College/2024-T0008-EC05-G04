@@ -46,8 +46,6 @@ export default function KitDropdown({ onSelectKit }: KitDropdownProps) {
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
               borderColor: "#1D375E",
-              borderWidth: '2px', 
-              borderRadius: '8px' 
             },
             "&:hover fieldset": {
               borderColor: "#1D375E", 

@@ -12,7 +12,7 @@ const MontarKits: React.FC = () => {
   const itemStyle = {
     width: '240px',
     height: '240px',
-    borderColor: '#1D375E'
+    borderColor: '#989898'
   };
 
   // Assuming 'endpoint' is your target URL
@@ -54,7 +54,7 @@ const MontarKits: React.FC = () => {
         <SearchKit onSelectKit={setKitId} />
         <div className="grid grid-cols-4 gap-2 p-4 mt-4 mx-auto">
           {items.map((item, index) => (
-            <div key={index} className="border-4 rounded-lg flex justify-center items-center" style={itemStyle}>
+            <div key={index} className="border-2 flex justify-center items-center rounded-lg" style={itemStyle}>
               {item}
             </div>
           ))}
@@ -63,13 +63,13 @@ const MontarKits: React.FC = () => {
         <div className="bg-white p-4 flex justify-center">
           <div>
             <button
-              className="bg-[#1D375E] hover:bg-blue-700 text-white font-bold py-2 px-16 rounded mr-4"
+              className="bg-[#1D375E] hover:bg-blue-700 text-white py-2 px-16 rounded mr-4"
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#B6D1E9'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#1D375E'}
               onClick={handleConfirm}>
               Confirmar
             </button>
-            <button className="bg-red-600 hover:bg-red-300 text-white font-bold py-2 px-16 rounded">
+            <button className="bg-red-600 hover:bg-red-300 text-white py-2 px-16 rounded">
               Cancelar
             </button>
           </div>
