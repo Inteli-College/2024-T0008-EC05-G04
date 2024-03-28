@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Path
 
-from typing import List, Optional
+from typing import List
 
 from models.robots import RobotSchema, RobotCreate
 from controllers import robots

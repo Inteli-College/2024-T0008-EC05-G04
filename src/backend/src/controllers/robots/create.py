@@ -9,11 +9,11 @@ async def create(robot: RobotCreate) -> Optional[RobotSchema]:
     async with conn_postgres.transaction():
         try:
             query = """
-            INSERT INTO robots (name, model)
+            INSERT INTO robots (name, route)
             VALUES ($1, $2)
             RETURNING id;
             """
-            robot_id = await conn_postgres.fetchval(query, robot.name, robot.model)
+            robot_id = await conn_postgres.fetchval(query, robot.name, robot.route)
 
             return await get_by_id(robot_id)
 

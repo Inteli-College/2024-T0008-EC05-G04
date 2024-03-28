@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Optional
+from pydantic import BaseModel 
 
 
 class RobotSchema(BaseModel):
