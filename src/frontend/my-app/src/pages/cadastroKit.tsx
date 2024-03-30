@@ -1,8 +1,9 @@
 import CardItem from "../components/cardItem";
+import SearchBar from '../components/autocomple';
 import InputCadastroKits from "../components/inputCadastroKits";
 import ButtonMedio from "../components/button";
 import Navbar from "../components/navbar";
-import useFetchItems from '../hooks/useFetchItems'
+import useFetch from '../hooks/useFetch'
 import {useState, useEffect} from 'react';
 
 const CadastroKit: React.FC = () =>{
@@ -21,21 +22,31 @@ const CadastroKit: React.FC = () =>{
         }    
     }
 
-    interface item{
+    interface Item{
         name: string,
         id: number
-        
     }
 
-    const [kitItems,setKitItems] = useState<itemKit[]>([])
-    const [num, setNumber] = useState<number>(0)
-    const [name,setName] = useState<string>("")
-    const [quantity, setQuantity] = useState<number>(0)
-    const items = useFetchItems();
+    const item = useFetch<Item[]>('http://localhost:8000/api/item');
+    console.log(item)
 
-    function selectionItem(item:number){
+    const [kitItems,setKitItems] = useState<itemKit[]>([])
+
+    const [num, setNumber] = useState<number>(0)
+    
+    const [itemSelected,setItemSelected] = useState<number>(0)
+    
+    const [quantity, setQuantity] = useState<number>(0)
+    
+    function selectionPosition(item:number){
         setNumber(item)
     }       
+
+    function selectionItem(id:number | null){
+        if (id !== null){
+            setItemSelected(id)
+        }
+    }
 
     function addItem(event: React.MouseEvent<HTMLDivElement, MouseEvent>){    
         // Check if an item with the same index already exists
@@ -45,7 +56,7 @@ const CadastroKit: React.FC = () =>{
             const newItem: itemKit = {
                 kit_id: 0,
                 position: num,
-                item_id: 1,
+                item_id: itemSelected,
                 quantity: quantity
             };
             setKitItems([...kitItems,newItem])
@@ -103,17 +114,17 @@ const CadastroKit: React.FC = () =>{
                     <div className="w-full flex flex-col items-center">
                         <InputCadastroKits props="w-[760px]" text="Nome do Kit" label="Digite o nome do kit"/>
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0">
-                            <CardItem item= {1}  onSelectItem={selectionItem} num = {num} />
-                            <CardItem item= {2}  onSelectItem={selectionItem} num = {num} />
-                            <CardItem item= {3}  onSelectItem={selectionItem} num = {num} />
-                            <CardItem item= {4}  onSelectItem={selectionItem} num = {num} />
-                            <CardItem item= {5}  onSelectItem={selectionItem} num = {num} />
-                            <CardItem item= {6}  onSelectItem={selectionItem} num = {num} />
-                            <CardItem item= {7}  onSelectItem={selectionItem} num = {num} />
-                            <CardItem item= {8}  onSelectItem={selectionItem} num = {num} />  
+                            <CardItem item= {1}  onSelectItem={selectionPosition} num = {num} />
+                            <CardItem item= {2}  onSelectItem={selectionPosition} num = {num} />
+                            <CardItem item= {3}  onSelectItem={selectionPosition} num = {num} />
+                            <CardItem item= {4}  onSelectItem={selectionPosition} num = {num} />
+                            <CardItem item= {5}  onSelectItem={selectionPosition} num = {num} />
+                            <CardItem item= {6}  onSelectItem={selectionPosition} num = {num} />
+                            <CardItem item= {7}  onSelectItem={selectionPosition} num = {num} />
+                            <CardItem item= {8}  onSelectItem={selectionPosition} num = {num} />  
                         </div>
                     <div className="mt-4 flex gap-24">
-                        <InputCadastroKits props="w-72"text="Nome do Item" label="Digite o nome item a ser adicionado" onChangeFunc={(value) => setName(value)} />
+                        <SearchBar items = {item} text = {"Quer teste?"} size={300} onChangeValue ={(value) => selectionItem(value)}/>
                         <InputCadastroKits props="w-60"text="Quantidade" label="Digite a quantidade do item" onChangeFunc={(value) => setQuantity(parseInt(value))}/>
                     </div>
                     <div className="flex gap-40 mb-4">
