@@ -2,8 +2,8 @@ import CardItem from "../components/cardItem";
 import InputCadastroKits from "../components/inputCadastroKits";
 import ButtonMedio from "../components/button";
 import Navbar from "../components/navbar";
+import useFetchItems from '../hooks/useFetchItems'
 import {useState, useEffect} from 'react';
-import { number } from "yargs";
 
 const CadastroKit: React.FC = () =>{
     // Define the types that will be used
@@ -31,27 +31,8 @@ const CadastroKit: React.FC = () =>{
     const [num, setNumber] = useState<number>(0)
     const [name,setName] = useState<string>("")
     const [quantity, setQuantity] = useState<number>(0)
-    
-    const [items, setItems] = useState<item[]>([])
-    const getItems =  () => {
-        useEffect(() => {
-            const fetchItems = async ()=> {
-                try{
-                    const response = await fetch('http://localhost:8000/api/api/item');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                setItems(data);
-                } 
-                catch (error) {
-                    console.error('Failed to fetch data:', error);
-                }
-            };
-            fetchItems();
-        },[]) 
-    }
-    console.log(items);
+    const items = useFetchItems();
+
     function selectionItem(item:number){
         setNumber(item)
     }       
