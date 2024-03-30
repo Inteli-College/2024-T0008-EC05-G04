@@ -1,5 +1,5 @@
 import CardItem from "../components/cardItem";
-import SearchBar from '../components/autocomple';
+import SearchBar from '../components/searchBar';
 import InputCadastroKits from "../components/inputCadastroKits";
 import ButtonMedio from "../components/button";
 import Navbar from "../components/navbar";
@@ -28,7 +28,6 @@ const CadastroKit: React.FC = () =>{
     }
 
     const item = useFetch<Item[]>('http://localhost:8000/api/item');
-    console.log(item)
 
     const [kitItems,setKitItems] = useState<itemKit[]>([])
 
@@ -48,11 +47,10 @@ const CadastroKit: React.FC = () =>{
         }
     }
 
-    function addItem(event: React.MouseEvent<HTMLDivElement, MouseEvent>){    
+    function addItem(){    
         // Check if an item with the same index already exists
         const itemExists = kitItems.some(item => item.position === num);
-
-        if(kitItems?.length < 8 && itemExists){
+        if(kitItems?.length < 8 && !itemExists){
             const newItem: itemKit = {
                 kit_id: 0,
                 position: num,
@@ -96,6 +94,7 @@ const CadastroKit: React.FC = () =>{
                 // Handle successful response if needed
                 const data = await createKit.json();
                 console.log('Response:', data);
+                setKitItems([])
             }
             catch (error) {
                 console.error('Error:', error);
@@ -114,24 +113,24 @@ const CadastroKit: React.FC = () =>{
                     <div className="w-full flex flex-col items-center">
                         <InputCadastroKits props="w-[760px]" text="Nome do Kit" label="Digite o nome do kit"/>
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0">
-                            <CardItem item= {1}  onSelectItem={selectionPosition} num = {num} />
-                            <CardItem item= {2}  onSelectItem={selectionPosition} num = {num} />
-                            <CardItem item= {3}  onSelectItem={selectionPosition} num = {num} />
-                            <CardItem item= {4}  onSelectItem={selectionPosition} num = {num} />
-                            <CardItem item= {5}  onSelectItem={selectionPosition} num = {num} />
-                            <CardItem item= {6}  onSelectItem={selectionPosition} num = {num} />
-                            <CardItem item= {7}  onSelectItem={selectionPosition} num = {num} />
-                            <CardItem item= {8}  onSelectItem={selectionPosition} num = {num} />  
+                            <CardItem item= {1}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems}  />
+                            <CardItem item= {2}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem item= {3}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem item= {4}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem item= {5}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem item= {6}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem item= {7}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem item= {8}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />  
                         </div>
                     <div className="mt-4 flex gap-24">
-                        <SearchBar items = {item} text = {"Quer teste?"} size={300} onChangeValue ={(value) => selectionItem(value)}/>
+                        <SearchBar items = {item} text = {"Item:"} label = {"Selecione o item"} size={300} onChangeValue ={(value) => selectionItem(value)}/>
                         <InputCadastroKits props="w-60"text="Quantidade" label="Digite a quantidade do item" onChangeFunc={(value) => setQuantity(parseInt(value))}/>
                     </div>
                     <div className="flex gap-40 mb-4">
-                        <div onClick={addItem}>
-                            <ButtonMedio title="Salvar" props="bg-blue-900 w-28"/>
+                        <div >
+                            <ButtonMedio title="Salvar" props="bg-blue-900 w-28" onChangeValue={(addItem)} />
                         </div>
-                            <ButtonMedio title="Cancelar" props="bg-red-500 w-36"/>
+                            <ButtonMedio title="Cancelar" props="bg-red-500 w-36" onChangeValue={()=>{}} />
                         </div>
                     </div>
                 </div>    
