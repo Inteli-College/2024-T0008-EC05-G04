@@ -2,7 +2,7 @@ import CardItem from "../components/cardItem";
 import InputCadastroKits from "../components/inputCadastroKits";
 import ButtonMedio from "../components/button";
 import Navbar from "../components/navbar";
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { number } from "yargs";
 
 const CadastroKit: React.FC = () =>{
@@ -21,11 +21,37 @@ const CadastroKit: React.FC = () =>{
         }    
     }
 
+    interface item{
+        name: string,
+        id: number
+        
+    }
+
     const [kitItems,setKitItems] = useState<itemKit[]>([])
     const [num, setNumber] = useState<number>(0)
     const [name,setName] = useState<string>("")
     const [quantity, setQuantity] = useState<number>(0)
     
+    const [items, setItems] = useState<item[]>([])
+    const getItems =  () => {
+        useEffect(() => {
+            const fetchItems = async ()=> {
+                try{
+                    const response = await fetch('http://localhost:8000/api/api/item');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                setItems(data);
+                } 
+                catch (error) {
+                    console.error('Failed to fetch data:', error);
+                }
+            };
+            fetchItems();
+        },[]) 
+    }
+    console.log(items);
     function selectionItem(item:number){
         setNumber(item)
     }       
@@ -44,47 +70,51 @@ const CadastroKit: React.FC = () =>{
             setKitItems([...kitItems,newItem])
         }
         else if(kitItems?.length == 8){
-            const fetchData = async () => {
-                try {
-                    const response = await fetch('http://localhost:8000/api/kit',{
-                    method:'POST',
-                    body: "Quarto-Socorros"});
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    const kitCreated:ResponseKitCreated  = await response.json();
-                    const kitCreatedId:number = kitCreated.kit.id;
-                   
-                } catch (error) {
-                  console.error('Failed to fetch data:', error);
+            const fetchData = createKit();
+        }
+    }
+
+    async function createKit() {
+        try {
+            const response = await fetch('http://localhost:8000/api/kit',{
+            method:'POST',
+            body: "Quarto-Socorros"});
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const kitCreated:ResponseKitCreated  = await response.json();
+            const kitCreatedId:number = kitCreated.kit.id;
+            createKitPositions(kitCreatedId)
+        } 
+        catch (error) {
+            console.error('Failed to fetch data:', error);
+        }
+    }
+
+    async function createKitPositions(kitCreatedId: number) {  
+        for (const kit of kitItems){
+            kit.kit_id = kitCreatedId;
+            try {
+                const createKit = await fetch('http://localhost:8000/api/kit-position',{
+                method:'POST',
+                body: JSON.stringify(kit)});
+                if (!createKit.ok) {
+                    throw new Error(`HTTP error! Status: ${createKit.status}`);
                 }
+                // Handle successful response if needed
+                const data = await createKit.json();
+                console.log('Response:', data);
+            }
+            catch (error) {
+                console.error('Error:', error);
             }
         }
     }
 
-    async function processKitItems(kitItems: itemKit[], kitCreatedId: number) {  
-    for (const kit of kitItems){
-        kit.kit_id = kitCreatedId;
-        try {
-            const createKit = await fetch('http://localhost:8000/api/kit-position',{
-            method:'POST',
-            body: JSON.stringify(kit)});
-            if (!createKit.ok) {
-                throw new Error(`HTTP error! Status: ${createKit.status}`);
-            }
-            // Handle successful response if needed
-            const data = await createKit.json();
-            console.log('Response:', data);
-        }
-        catch (error) {
-            console.error('Error:', error);
-        }
-    })
-
     return (
         <div className="flex flex-col h-screen overflow-y-scroll no-scrollbar">
             <div className="flex-grow bg-gray-100 pt-32">
-                <Navbar />
+                <Navbar/>
                 <div className="flex justify-center">
                     <h1 className="font-bold text-[28px] mb-0">Cadastrar Layout</h1>
                 </div>
