@@ -64,6 +64,7 @@ const CadastroKit: React.FC = () =>{
         }
     }
 
+
     async function createKit() {
         try {
             const response = await fetch('http://localhost:8000/api/kit',{
@@ -113,17 +114,22 @@ const CadastroKit: React.FC = () =>{
                     <div className="w-full flex flex-col items-center">
                         <InputCadastroKits props="w-[760px]" text="Nome do Kit" label="Digite o nome do kit"/>
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0">
-                            <CardItem item= {1}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems}  />
-                            <CardItem item= {2}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem item= {3}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem item= {4}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem item= {5}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem item= {6}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem item= {7}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem item= {8}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />  
+                            <CardItem position= {1}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems}  />
+                            <CardItem position= {2}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem position= {3}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem position= {4}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem position= {5}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem position= {6}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem position= {7}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem position= {8}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />  
                         </div>
                     <div className="mt-4 flex gap-24">
-                        <SearchBar items = {item} text = {"Item:"} label = {"Selecione o item"} size={300} onChangeValue ={(value) => selectionItem(value)}/>
+                        <SearchBar 
+                            items = {item} 
+                            text = {"Item:"} 
+                            label = {"Selecione o item"} 
+                            size={300}  
+                            onChangeValue ={(value) => selectionItem(value)}/>
                         <InputCadastroKits props="w-60"text="Quantidade" label="Digite a quantidade do item" onChangeFunc={(value) => setQuantity(parseInt(value))}/>
                     </div>
                     <div className="flex gap-40 mb-4">
