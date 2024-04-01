@@ -3,7 +3,7 @@ slug: /
 sidebar_position: "1"
 ---
 # Grupo 4
-&emsp; Devido à constante procura e necessidade de agilizar processos no setor de saúde, o Hospital Sírio-Libanês identificou a chance de aprimorar a montagem dos kits hospitalares de emergência. O grupo 4U, em parceria com o Alma Sírio-Libanês, vertente de tecnologia do hospital, desenvolveu um projeto de um sistema de automação, para que esse processo se torne mais eficiente. 
+Devido à constante procura e necessidade de agilizar processos no setor de saúde, o Hospital Sírio-Libanês identificou a chance de aprimorar a montagem dos kits hospitalares de emergência. O grupo 4U, em parceria com o Alma Sírio-Libanês, vertente de tecnologia do hospital, desenvolveu um projeto de um sistema de automação, para que esse processo se torne mais eficiente. 
 
 &emsp; Esse projeto não apenas tem como objetivo acelerar a montagem dos kits, mas também assegurar a a segurança necessária para atender as diversas demandas emergenciais. Ao aliviar a equipe de saúde das tarefas operacionais, o sistema permite que estes profissionais se concentrem no que realmente importa: prestar um atendimento rápido e cuidadoso aos pacientes. A expectativa é que essa inovação não só eleve o padrão dos serviços oferecidos, mas também otimize a utilização dos recursos, minimize os tempos de resposta em situações críticas e reforce a segurança dos pacientes.
 
