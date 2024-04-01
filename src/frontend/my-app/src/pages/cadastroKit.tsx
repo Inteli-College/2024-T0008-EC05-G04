@@ -18,7 +18,9 @@ const CadastroKit: React.FC = () =>{
     const [itemSelected,setItemSelected] = useState<number>(0)
     
     const [quantity, setQuantity] = useState<number>(0)
-    
+
+    const [name,setName] = useState<string>("")
+
     function selectionPosition(item:number){
         setNumber(item)
     }       
@@ -52,10 +54,9 @@ const CadastroKit: React.FC = () =>{
 
     async function createKit() {
         try {
-            console.log(JSON.stringify({ name: "Quartos-Socorros" }));
             const response = await fetch('http://localhost:8000/api/kit', {
                 method: 'POST',
-                body: JSON.stringify({ name: "Quinto-Socorros" }),
+                body: JSON.stringify({ name }),
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -104,7 +105,7 @@ const CadastroKit: React.FC = () =>{
                 </div>
                 <div className="flex flex-col items-center">
                     <div className="w-full flex flex-col items-center">
-                        <InputCadastroKits props="w-[760px]" text="Nome do Kit" label="Digite o nome do kit"/>
+                        <InputCadastroKits props="w-[760px]" text="Nome do Kit" label="Digite o nome do kit" onChangeFunc={(value) => setName(value)}/>
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0">
                             <CardItem position= {1}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems}  />
                             <CardItem position= {2}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
