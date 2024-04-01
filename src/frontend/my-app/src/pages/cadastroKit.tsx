@@ -28,6 +28,12 @@ const CadastroKit: React.FC = () =>{
             setItemSelected(id)
         }
     }
+    
+    useEffect(() => {
+        if(kitItems?.length == 8 ){
+            createKit();
+        }
+    }, [kitItems])
 
     function addItem(){    
         // Check if an item with the same index already exists
@@ -40,9 +46,6 @@ const CadastroKit: React.FC = () =>{
                 quantity: quantity
             };
             setKitItems([...kitItems,newItem])
-        }
-        else if(kitItems?.length == 8){
-            createKit();
         }
     }
 
