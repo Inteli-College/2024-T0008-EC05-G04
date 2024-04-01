@@ -42,25 +42,29 @@ const CadastroKit: React.FC = () =>{
             setKitItems([...kitItems,newItem])
         }
         else if(kitItems?.length == 8){
-            const fetchData = createKit();
+            createKit();
         }
     }
 
 
     async function createKit() {
         try {
-            const response = await fetch('http://localhost:8000/api/kit',{
-            method:'POST',
-            body: "Quarto-Socorros"});
+            console.log(JSON.stringify({ name: "Quartos-Socorros" }));
+            const response = await fetch('http://localhost:8000/api/kit', {
+                method: 'POST',
+                body: JSON.stringify({ name: "Quinto-Socorros" }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            const kitCreated:ResponseKitCreated  = await response.json();
-            const kitCreatedId:number = kitCreated.kit.id;
-            createKitPositions(kitCreatedId)
-        } 
-        catch (error) {
-            console.error('Failed to fetch data:', error);
+            const kitCreated = await response.json();
+            const kitCreatedId = kitCreated.kit.id;
+            createKitPositions(kitCreatedId); // Await if createKitPositions is asynchronous
+        } catch (error) {
+            console.error("Error creating kit:", error);
         }
     }
 
@@ -70,7 +74,10 @@ const CadastroKit: React.FC = () =>{
             try {
                 const createKit = await fetch('http://localhost:8000/api/kit-position',{
                 method:'POST',
-                body: JSON.stringify(kit)});
+                body: JSON.stringify(kit),
+                headers: {
+                    'Content-Type': 'application/json'
+                }});
                 if (!createKit.ok) {
                     throw new Error(`HTTP error! Status: ${createKit.status}`);
                 }
