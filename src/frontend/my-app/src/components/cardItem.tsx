@@ -1,12 +1,5 @@
 import { useEffect, useState } from "react";
-
-
-interface itemKit {
-    kit_id: number
-    position: number
-    item_id: number
-    quantity: number
-}
+import { itemKit } from "../interfaces/interfaces";
 interface CardItemProps{
     position: number
     onSelectItem: (item: number) => void;

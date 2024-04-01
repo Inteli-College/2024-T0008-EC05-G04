@@ -5,28 +5,10 @@ import ButtonMedio from "../components/button";
 import Navbar from "../components/navbar";
 import useFetch from '../hooks/useFetch'
 import {useState, useEffect} from 'react';
+import { Item, itemKit, ResponseKitCreated } from "../interfaces/interfaces";
 
 const CadastroKit: React.FC = () =>{
     // Define the types that will be used
-    interface itemKit {
-        kit_id: number
-        position: number
-        item_id: number
-        quantity: number
-    }
-    interface ResponseKitCreated{
-        message: string
-        kit: {
-            id: number
-            name: string
-        }    
-    }
-
-    interface Item{
-        name: string,
-        id: number
-    }
-
     const item = useFetch<Item[]>('http://localhost:8000/api/item');
 
     const [kitItems,setKitItems] = useState<itemKit[]>([])
