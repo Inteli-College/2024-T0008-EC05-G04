@@ -34,14 +34,14 @@ const Login: React.FC = () => {
           <form className="space-y-10" onSubmit={handleLogin}>
             <input
               type="text"
-              placeholder="Username"
+              placeholder="Email"
               className="w-full text-xl px-4 py-3 rounded-xl bg-txtg"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Senha"
               className="w-full text-xl px-4 py-3 rounded-xl bg-txtg" 
               value={password}
               onChange={(e) => setPassword(e.target.value)}

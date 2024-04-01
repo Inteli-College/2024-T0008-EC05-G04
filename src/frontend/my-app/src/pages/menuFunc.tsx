@@ -14,7 +14,7 @@ const MainPage: React.FC = () => {
       path: '/visuKits', // Destination path when this card is clicked
     },
     {
-      title: 'Criar Kit',
+      title: 'Montar Kit',
       content: '',
       path: '/montarKits',
     },
