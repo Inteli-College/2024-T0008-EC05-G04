@@ -2,21 +2,10 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Label } from '@mui/icons-material';
-
-interface Robot {
-    id: number;
-    name: string;
-    route: string;
-  }
-
-
-interface Item {
-id: number;
-name: string;
-}
+import { Item, Robot } from '../interfaces/interfaces';
 
 interface Props {
-  items: Item[] | null | Robot[];
+  items: Item[] |  Robot[] | null;
   text: string;
   label: string;
   size: number;
