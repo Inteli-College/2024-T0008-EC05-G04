@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface ButtonMedioProps{
     title: string
     props:string
