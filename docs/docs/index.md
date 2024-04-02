@@ -26,3 +26,9 @@ O principal objetivo é automatizar o processo essencial de montagem de kits hos
 
 ## Apresentação 2 
 *[Link da Apresentação](https://www.canva.com/design/DAF-AQ4RheE/ggb-ee-xurrqUNH54pyqrQ/view?utm_content=DAF-AQ4RheE&utm_campaign=designshare&utm_medium=link&utm_source=editor)*
+
+## Apresentação 3
+*[Link da Apresentação](https://www.canva.com/design/DAGBRegsR4w/DJQbpK3XvQMyLqRGSaT6BQ/edit?utm_content=DAGBRegsR4w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)*
+
+## Apresentação 4
+*[Link da Apresentação](https://www.canva.com/design/DAGBRg1nqOs/VLHcuQ6Xt12G8VU2W6NBYQ/edit?utm_content=DAGBRg1nqOs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)*
