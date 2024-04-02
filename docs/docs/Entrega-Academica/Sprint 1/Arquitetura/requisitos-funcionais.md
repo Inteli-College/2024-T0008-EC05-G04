@@ -1,6 +1,6 @@
 # Requisitos funcionais
 
-; Os requisitos funcionais "é um requisito que se refere a um resultado de comportamento que deve ser provido por uma funcionalidade do sistema"[1]. Ou seja, os requisitos funcionais buscam explicar quais são as capacidades do sistema. Sendo assim, eles são considerados a base do projeto, pois guiaram as funcionalidades que a plataforma terá.
+Os requisitos funcionais "é um requisito que se refere a um resultado de comportamento que deve ser provido por uma funcionalidade do sistema"[1]. Ou seja, os requisitos funcionais buscam explicar quais são as capacidades do sistema. Sendo assim, eles são considerados a base do projeto, pois guiaram as funcionalidades que a plataforma terá.
  
 
 | Requisitos Funcionais | Descrição  |
@@ -13,22 +13,22 @@
 | RF06 | O sistema deve ser capaz de interagir com diferentes itens para a montagem do kit. |
 
 ### RF01 - O sistema deve possuir um banco de dados para armazenar os kits. 
-; Deve haver um banco de dados, capaz de armazenar os layouts dos kits, permitindo gravar tanto a posição do item no layout de entrada, quanto no layout de saída. Além disso, é necessário permite gravar quais são os itens, integrando com o sistema utilizado para controle atualmente. 
+Deve haver um banco de dados, capaz de armazenar os layouts dos kits, permitindo gravar tanto a posição do item no layout de entrada, quanto no layout de saída. Além disso, é necessário permite gravar quais são os itens, integrando com o sistema utilizado para controle atualmente. 
 
 ### RF02 - A aplicação web deve permitir salvar novos layouts de kits.
-; A aplicação web deve possuir uma funcionalidade permitindo inserir novos registros de kits no banco de dados. Assim, possibilitando a criação de um novo kit ainda não cadastro no software ser montado pelo braço mecânico.
+A aplicação web deve possuir uma funcionalidade permitindo inserir novos registros de kits no banco de dados. Assim, possibilitando a criação de um novo kit ainda não cadastro no software ser montado pelo braço mecânico.
 
 ### RF03 -  A aplicação web deve ter uma funcionalidade de edição de layout. 
-; O site deve permitir a alteração de um layout, caso haja a necessidade de modificar um layout de kit já existente ou seus itens. Ademais, o layout deve ser salvo no banco de dados, para permitir que seja carregado no robô.
+O site deve permitir a alteração de um layout, caso haja a necessidade de modificar um layout de kit já existente ou seus itens. Ademais, o layout deve ser salvo no banco de dados, para permitir que seja carregado no robô.
 
 ### RF04 - A aplicação web deve registrar os itens utilizados na montagem de um determinado kit.
-; A aplicação web tem que ser capaz de permitir o usuário selecionar todos os itens utilizados em um kit, assim como salvar essas informações no banco de dados.
+A aplicação web tem que ser capaz de permitir o usuário selecionar todos os itens utilizados em um kit, assim como salvar essas informações no banco de dados.
 
 ### RF05 - O sistema deve ser capaz de montar o kit selecionado pelo usuário.
-; O braço robótico deve ser capaz de realizar a montagem do kit.
+O braço robótico deve ser capaz de realizar a montagem do kit.
 
 ### RF06 - O sistema deve ser capaz de interagir com diferentes itens para a montagem do kit.
-; O braço robótico deve ser capaz de interagir com vários tipos de objetos, devido a diversidade de itens presentes nos diferentes kits.
+O braço robótico deve ser capaz de interagir com vários tipos de objetos, devido a diversidade de itens presentes nos diferentes kits.
 
 ## Referências
 [1] ENGENHARIA de Requisitos. [S. l.]: Soluções Educacionais Integradas, [2020]. Disponível em: https://integrada.minhabiblioteca.com.br/reader/books/9786556900674/pageid/34. Acesso em: 15 fev. 2024.
