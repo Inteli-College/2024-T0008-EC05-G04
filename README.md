@@ -92,7 +92,7 @@ nas variáveis é preciso colocar as informações de acesso do seu backend e a 
 Para rodar o frontend, execute os comandos abaixo
 
 ```sh
-cd src/frontend
+cd src/frontend/my-app
 npm i
 npm start
 ```
