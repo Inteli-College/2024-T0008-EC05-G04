@@ -1,0 +1,19 @@
+{
+    "kitName": "Kit de Remédios",
+    "kitDescription": "Kit de remédios para primeiros socorros",
+    "kitOrderNumber": 1,
+    "positions": {
+        "remedio1": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "r": 0
+        },
+        "remedio2": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "r": 0
+        }
+    }
+}

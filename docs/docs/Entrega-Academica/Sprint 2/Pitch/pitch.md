@@ -1,6 +1,6 @@
-# Pitch - Sprint 2 
+# Pitch 
 
-&emsp; Nessa apresentação foi mostrada o desenvolvimento do fluxo de usuário, juntamente ao wireframe. Além disso, foram mostrados vídeos da solução já funcionando, integrado ao uma CLI (Command Line Interface). Os vídeos estão disponíveis no arquivo "CLI - Interface de Linha de Comando"
+Nessa apresentação foi mostrada o desenvolvimento do fluxo de usuário, juntamente ao wireframe. Além disso, foram mostrados vídeos da solução já funcionando, integrado ao uma CLI (Command Line Interface). Os vídeos estão disponíveis no arquivo "CLI - Interface de Linha de Comando"
  
 ## Apresentação
 

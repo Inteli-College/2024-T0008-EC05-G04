@@ -1,3 +1,5 @@
+from pydobot.enums import PTPMode
+
 __mocked__ = True
 
 
@@ -24,13 +26,18 @@ class Dobot:
     def close(self):
         print("Closing connection to Dobot")
 
-    def move_to(self, x, y, z, r, wait=False):
+    def _set_ptp_cmd(self, x, y, z, r, mode, wait):
         self.x = x
         self.y = y
         self.z = z
         self.r = r
 
-        print(f"Moving to ({x}, {y}, {z}, {r})", end="")
+        print("Moving ", end="")
+
+        if mode == PTPMode.MOVL_XYZ:
+            print("linearly", end="")
+
+        print(f" to ({x}, {y}, {z}, {r})", end="")
 
         if wait:
             print(" and waiting")
