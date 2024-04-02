@@ -1,5 +1,8 @@
 # Comparação Frontend e Wireframe
 
+## Introdução
+Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no frontend e o wireframe feito préviamente pelo grupo. Serão avaliados diversos aspectos, como legibilidade, posicionamento e estilo dos botões, layout geral, paleta de cores e consistência visual. O objetivo é verificar se a implementação está alinhada com a proposta de design, garantindo uma experiência de usuário intuitiva e agradável.
+
 ## Tela de Login
 ### Frontend
 ![Frontend Login](/img/front-login.png)
@@ -129,3 +132,6 @@
 **Botões e Links:** Não são aplicáveis nesta tela.
 
 **Layout e Estrutura:** O layout é preservado na transição do wireframe para o frontend, mantendo uma distribuição organizada dos elementos gráficos. No frontend, essa estrutura é aprimorada com a adição de elementos visuais. Esse processo de evolução do design assegura que a interface final mantenha-se fiel à estrutura planejada, ao mesmo tempo em que incorpora detalhes visuais e funcionais que aprimoram a experiência do usuário.
+
+## Conclusão
+A comparação entre as telas do wireframe e do frontend revelou algumas diferenças pontuais, embora a estrutura principal e a maioria dos componentes estejam alinhados com a proposta de design do wireframe. Nota-se que as mudanças foram feitas visando melhorar a experiência do usuário e garantir uma interface que seja tanto funcional, quanto acessível.
