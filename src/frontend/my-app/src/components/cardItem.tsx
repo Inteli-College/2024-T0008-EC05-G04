@@ -21,11 +21,13 @@ const CardItem: React.FC<CardItemProps>  = ({position,onSelectItem, num, kitItem
     }, [num])
 
     useEffect(() =>{
-        kitItems.map(item => {
-            if (item.position === position){
-                setBackgroundStyle("bg-violet-600 text-white shadow")
-            }
-        })
+        const foundItem = kitItems.find(item => item.position === position);
+        if (foundItem) {
+            setBackgroundStyle("bg-violet-600 text-white shadow");
+        }
+        if (!foundItem){
+            setBackgroundStyle("bg-white hover:text-violet-600 text text-slate-900");
+        }
     }, [kitItems])
     
     return(

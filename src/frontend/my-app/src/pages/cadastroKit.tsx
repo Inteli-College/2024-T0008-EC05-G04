@@ -18,7 +18,9 @@ const CadastroKit: React.FC = () =>{
     const [itemSelected,setItemSelected] = useState<number>(0)
     
     const [quantity, setQuantity] = useState<number>(0)
-    
+
+    const [name,setName] = useState<string>("")
+
     function selectionPosition(item:number){
         setNumber(item)
     }       
@@ -28,6 +30,12 @@ const CadastroKit: React.FC = () =>{
             setItemSelected(id)
         }
     }
+    
+    useEffect(() => {
+        if(kitItems?.length == 8 ){
+            createKit();
+        }
+    }, [kitItems])
 
     function addItem(){    
         // Check if an item with the same index already exists
@@ -41,26 +49,26 @@ const CadastroKit: React.FC = () =>{
             };
             setKitItems([...kitItems,newItem])
         }
-        else if(kitItems?.length == 8){
-            const fetchData = createKit();
-        }
     }
 
 
     async function createKit() {
         try {
-            const response = await fetch('http://localhost:8000/api/kit',{
-            method:'POST',
-            body: "Quarto-Socorros"});
+            const response = await fetch('http://localhost:8000/api/kit', {
+                method: 'POST',
+                body: JSON.stringify({ name }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            const kitCreated:ResponseKitCreated  = await response.json();
-            const kitCreatedId:number = kitCreated.kit.id;
-            createKitPositions(kitCreatedId)
-        } 
-        catch (error) {
-            console.error('Failed to fetch data:', error);
+            const kitCreated = await response.json();
+            const kitCreatedId = kitCreated.kit.id;
+            createKitPositions(kitCreatedId); // Await if createKitPositions is asynchronous
+        } catch (error) {
+            console.error("Error creating kit:", error);
         }
     }
 
@@ -70,7 +78,10 @@ const CadastroKit: React.FC = () =>{
             try {
                 const createKit = await fetch('http://localhost:8000/api/kit-position',{
                 method:'POST',
-                body: JSON.stringify(kit)});
+                body: JSON.stringify(kit),
+                headers: {
+                    'Content-Type': 'application/json'
+                }});
                 if (!createKit.ok) {
                     throw new Error(`HTTP error! Status: ${createKit.status}`);
                 }
@@ -94,7 +105,7 @@ const CadastroKit: React.FC = () =>{
                 </div>
                 <div className="flex flex-col items-center">
                     <div className="w-full flex flex-col items-center">
-                        <InputCadastroKits props="w-[760px]" text="Nome do Kit" label="Digite o nome do kit"/>
+                        <InputCadastroKits props="w-[760px]" text="Nome do Kit" label="Digite o nome do kit" onChangeFunc={(value) => setName(value)}/>
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0">
                             <CardItem position= {1}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems}  />
                             <CardItem position= {2}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />

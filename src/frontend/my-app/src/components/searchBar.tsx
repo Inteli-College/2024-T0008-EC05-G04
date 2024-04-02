@@ -5,7 +5,7 @@ import { Label } from '@mui/icons-material';
 import { Item, Robot } from '../interfaces/interfaces';
 
 interface Props {
-  items: Item[] |  Robot[] | null;
+  items: Item[] | Robot[] | null;
   text: string;
   label: string;
   size: number;
