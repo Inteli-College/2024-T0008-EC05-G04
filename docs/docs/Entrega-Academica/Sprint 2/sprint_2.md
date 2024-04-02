@@ -1,0 +1,8 @@
+# Sprint 2
+Na primeira etapa do desenvolvimento, concentramo-nos em várias áreas-chave:
+
+## Computação:
+Na parte técnica do projeto focamos principalmente no desenvolvimento dos movimentos do robô. Assim, por meio de uma interface de linha de comando (CLI) controlamos o robô usando o módulo DobotController. Ele lista uma série de comandos disponíveis, incluindo Move, Move To, Home, Enable Tool, Disable Tool, Current, Save, Run e Control, junto com suas descrições, usos e demonstrações em vídeo. Cada comando tem uma função específica, como mover o robô para uma posição específica, ativar ou desativar a ferramenta do robô, exibir a posição atual do robô, salvar e executar listas de posições de arquivos, e abrir uma interface de controle para seleção interativa de comandos.
+
+## User Experience:
+No entendimento de UX desenvolvemos os fluxos de utilização das personas. Foram desenvolvidos dois fluxos de utilização da solução: um para a gestora hospitalar e outro para o auxiliar de farmácia. Para a gestora hospitalar, o fluxo começa com o login no software e apresenta opções para visualizar kits, criar/editar kits e acessar estatísticas. Cada opção oferece funcionalidades específicas, como visualizar detalhes dos kits, compor novos conjuntos de materiais e acessar informações estratégicas por meio de tabelas, dashboards e relatórios. Para o auxiliar de farmácia, o fluxo também inicia com o login e inclui etapas de calibração do robô, seleção do kit a ser produzido, confirmação da quantidade de kits e monitoramento da produção. Ao finalizar, o usuário pode optar por iniciar uma nova produção ou encerrar a atividade. Esses fluxos são acompanhados de wireframes que ilustram as telas e interações do software para cada persona.
