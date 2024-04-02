@@ -77,6 +77,26 @@ pip install -r requirements.txt
 python3 src/main.py
 ```
 
+Além disso, é necessária a criação de um arquivo `tokens.py` com o seguinte conteúdo
+
+```py
+DATABASE_URL = ''
+
+ROBOT_URL = '' 
+```
+
+nas variáveis é preciso colocar as informações de acesso do seu backend e a url que o robô está rodando.
+
+### Frontend
+
+Para rodar o frontend, execute os comandos abaixo
+
+```sh
+cd src/frontend/my-app
+npm i
+npm start
+```
+
 ## Objetivo do Projeto
 
 ## Equipe de Desenvolvimento

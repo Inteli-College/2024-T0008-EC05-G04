@@ -1,6 +1,6 @@
 # Pitch 
 
-&emsp; Nessa apresentação foi realizada a identificação do problema, sendo assim trabalhamos especialmente com o entendimento do negócio e de seus stakeholders. Durante a sprint foram desenvolvidos, na parte de negócios: Value Proposition Canvas, Matriz de Risco, Matriz de Oceano azul e uma análise financeira. Já na parte de UX foram desenvolvidas duas personas, também foram desenvolvidas jornadas do usuário e user Stories para melhorar o entendimento das personas. Por fim, foi realizada a idealização de uma arquitetura de solução, integrada com requisitos funcionais e requisitos não funcionais.  
+Nessa apresentação foi realizada a identificação do problema, sendo assim trabalhamos especialmente com o entendimento do negócio e de seus stakeholders. Durante a sprint foram desenvolvidos, na parte de negócios: Value Proposition Canvas, Matriz de Risco, Matriz de Oceano azul e uma análise financeira. Já na parte de UX foram desenvolvidas duas personas, também foram desenvolvidas jornadas do usuário e user Stories para melhorar o entendimento das personas. Por fim, foi realizada a idealização de uma arquitetura de solução, integrada com requisitos funcionais e requisitos não funcionais.  
 
 ## Apresentação
 
