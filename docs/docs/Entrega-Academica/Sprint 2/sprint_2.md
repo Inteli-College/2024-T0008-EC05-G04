@@ -1,5 +1,5 @@
 # Sprint 2
-Na primeira etapa do desenvolvimento, concentramo-nos em várias áreas-chave:
+Nesta sprint, concentramo-nos em várias áreas-chave:
 
 ## Computação:
 Na parte técnica do projeto focamos principalmente no desenvolvimento dos movimentos do robô. Assim, por meio de uma interface de linha de comando (CLI) controlamos o robô usando o módulo DobotController. Ele lista uma série de comandos disponíveis, incluindo Move, Move To, Home, Enable Tool, Disable Tool, Current, Save, Run e Control, junto com suas descrições, usos e demonstrações em vídeo. Cada comando tem uma função específica, como mover o robô para uma posição específica, ativar ou desativar a ferramenta do robô, exibir a posição atual do robô, salvar e executar listas de posições de arquivos, e abrir uma interface de controle para seleção interativa de comandos.

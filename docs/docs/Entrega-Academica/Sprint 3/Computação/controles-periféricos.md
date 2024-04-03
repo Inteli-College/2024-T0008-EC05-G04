@@ -1,6 +1,6 @@
 # Controles Periféricos 
 ## Introdução
-A integração de sensores periféricos representa uma adição significativa à solução em desenvolvimento para o Hospital Sírio Libanês. A inclusão do sensor infravermelho especificamente tem sido uma escolha crucial, pois eleva a confiabilidade na montagem dos kits, pois devido a esse sensor em funcionamento, quando o robô é programado para pegar um objeto em uma posição específica, podemos garantir que o objeto correto tenha sido efetivamente agarrado pelo braço mecânico. Isso se deve à capacidade do sensor de detectar a presença do objeto, conferindo uma validação adicional ao processo de montagem.
+A integração de sensores periféricos representa uma adição significativa à solução em desenvolvimento para o Hospital Sírio Libanês. A inclusão do sensor infravermelho especificamente tem sido uma escolha crucial, pois eleva a confiabilidade na montagem dos kits, pois devido a esse sensor em funcionamento, quando o robô é programado para pe\ar um objeto em uma posição específica, podemos garantir que o objeto correto tenha sido efetivamente agarrado pelo braço mecânico. Isso se deve à capacidade do sensor de detectar a presença do objeto, conferindo uma validação adicional ao processo de montagem.
 
 ### Explicação do código (pasta *firmware*)
 #### Arquivo: main.py e app.py
