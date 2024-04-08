@@ -30,7 +30,7 @@ async def send_kit_order_to_robot(kit_id: int):
 
 async def create(kit_order: KitOrderCreate) -> Optional[KitOrderSchema]:
     async with conn_postgres.transaction():
-        initital_status = "pending"
+        initital_status = "requested"
         query = """
             INSERT INTO kit_order (status, kit_id, start_date, requested_by, robot_id)
             VALUES ($1, $2, NOW(), $3, $4) RETURNING id;
@@ -48,3 +48,4 @@ async def create(kit_order: KitOrderCreate) -> Optional[KitOrderSchema]:
             return returned_kit_order
 
         return None
+
