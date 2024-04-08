@@ -84,7 +84,17 @@ def move_item(item):
         ),
         wait=200,
     )
-    dobot_controller.move_to((Position(121.5785140991211, -248.98097229003906, 80.80499267578125, -63.973541259765625)), wait=200)
+    dobot_controller.move_to(
+        (
+            Position(
+                121.5785140991211,
+                -248.98097229003906,
+                80.80499267578125,
+                -63.973541259765625,
+            )
+        ),
+        wait=200,
+    )
     dobot_controller.disable_tool()
     dobot_controller.home()
 

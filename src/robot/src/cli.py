@@ -2,11 +2,6 @@ import json
 import typer
 import inquirer
 from yaspin import yaspin
-from qreader import QReader
-import cv2
-
-qreader = QReader()
-
 
 from typing_extensions import Annotated
 from dobotController import DobotController
@@ -79,6 +74,7 @@ def disable_tool(
     Disable the tool
     """
     dobot_controller.disable_tool(time_to_wait)
+
 
 @app.command()
 def current():
