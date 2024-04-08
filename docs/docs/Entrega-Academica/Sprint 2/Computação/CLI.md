@@ -4,11 +4,12 @@ Um CLI ou Command Line Interface é, como o nome sugere, uma interface que permi
 
 Este CLI fornece comandos para controlar um robô usando o módulo DobotController. Abaixo estão os comandos disponíveis juntamente com suas descrições e uso.
 
-# Estrutura de pastas
+# Estrutura de pastas e arquivos
 
-## Main.py
-
-Esse é o arquivo principal, funciona como um maestro da CLI
+- `dobotController.py`: Responsável por ser uma camada de abstração entre o alto nível do código e a movimentação do robô. Os outros arquivos chamam ele para executar as tarefas.
+- `mock_pydobot.py`: Responsável por _mockar_ o comportamento do robô, facilitando os testes e melhorias quando não temos acesso ao robô. Ele funciona imprimindo a saída no console, simulando os posicionamentos.
+- `position.py`: Responsável por definir a classe que representa uma posição, ajudando na transferência de dados entre os programas e facilitando operações matemáticas.
+- `positions.json`: Responsável pela calibração do robô, ele é quem dita quais são as posições dos slots dos kits.
 
 # Comandos
 
