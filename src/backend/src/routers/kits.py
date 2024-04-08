@@ -7,7 +7,7 @@ from models.kits import KitSchema, KitCreate
 router = APIRouter()
 
 
-@router.get("/", response_model=List[KitSchema])
+@router.get("/")
 async def get_all_kits():
     kits_list = await kits.get_all()
 
