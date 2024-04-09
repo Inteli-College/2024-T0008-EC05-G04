@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 import Logo from '../static/logoNav.svg';
-import MenuIcon from '@mui/icons-material/Menu';
 
-import { Hamburger } from './navbarMenu';
 
 const Navbar = () => {
   /// State to control the visibility of the mobile menu
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleHamburgerClick = () => {
-      // Toggle the state that controls the mobile menu visibility
-      setIsMenuOpen(prevState => !prevState);
-  };
-
   return (
     <div className="fixed top-0 w-full z-50">
       {/* Navbar */}
