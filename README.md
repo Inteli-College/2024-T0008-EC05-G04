@@ -14,6 +14,10 @@
 <h1 align="center">4U</h1>
 <p align="center"><b>Inteli 2024-T0008-EC05-G04.</b></p>
 
+## Descrição do Projeto
+
+Devido à constante procura e necessidade de agilizar processos no setor de saúde, o Hospital Sírio-Libanês identificou a chance de aprimorar a montagem dos kits hospitalares de emergência. O grupo 4U, em parceria com o Alma Sírio-Libanês, vertente de tecnologia do hospital, desenvolveu um projeto de um sistema de automação, para que esse processo se torne mais eficiente.
+
 ## Estrutura do Projeto
 
 O projeto está estruturado de acordo com as seguintes pastas:
@@ -99,6 +103,10 @@ npm start
 
 ## Objetivo do Projeto
 
+Esse projeto não apenas tem como objetivo acelerar a montagem dos kits, mas também assegurar a a segurança necessária para atender as diversas demandas emergenciais. Ao aliviar a equipe de saúde das tarefas operacionais, o sistema permite que estes profissionais se concentrem no que realmente importa: prestar um atendimento rápido e cuidadoso aos pacientes. A expectativa é que essa inovação não só eleve o padrão dos serviços oferecidos, mas também otimize a utilização dos recursos, minimize os tempos de resposta em situações críticas e reforce a segurança dos pacientes. 
+
+Tais objetivos são atingidos por meio da implementação de um braço robótico acompanhado de uma interface gráfica de operação, a qual permite que kits sejam cadastrados e o processo de operação do robô para montagem do kit possa ser realizado com pouquíssimo treinamento.
+
 ## Equipe de Desenvolvimento
 
 | ![Cecília Gonçalves](https://media.licdn.com/dms/image/D4E03AQHFDADl2nqTcA/profile-displayphoto-shrink_400_400/0/1680660675815?e=1715817600&v=beta&t=BFo5ZLvGmbYiAuvyB4BM-VPZ-AZNbZuFUXstYD2TbEo) | ![Eduardo Barreto](https://media.licdn.com/dms/image/D4D03AQHcmdXszbRiEA/profile-displayphoto-shrink_400_400/0/1674764017034?e=1715817600&v=beta&t=yEZlT7csCzV9X5hPPXbEMFqodOQdWPqENCtDb4j9KXQ) | ![Fernando Vasconcelos](https://media.licdn.com/dms/image/D4D03AQG_T8Nvtk_lNg/profile-displayphoto-shrink_400_400/0/1677155884081?e=1715817600&v=beta&t=jeDWU5tQBxQTaGhNIdBPU6Bggcj_Tft4LcbllaIcN4c) | ![Lidia Mariano](https://media.licdn.com/dms/image/D4D03AQG56mwRJ4G55g/profile-displayphoto-shrink_400_400/0/1675023865459?e=1715817600&v=beta&t=A8-s9zf8_CMeBnfyaOvnKUlDTuGIjnsBKYFkEa2FE84) | ![Luan Ramos](https://media.licdn.com/dms/image/D4D03AQF5k4FEfaI4mg/profile-displayphoto-shrink_400_400/0/1698150342373?e=1715817600&v=beta&t=B498NfoBN5UtE0gVYnZ6a9CMnkhLvvvjaugz0V2n2us) | ![Murilo Prianti](https://media.licdn.com/dms/image/D4D35AQG6W_7TsJCfoQ/profile-framedphoto-shrink_400_400/0/1655926445979?e=1711051200&v=beta&t=DtVZslhMKVngcGdEoaossz4GnvXq8cZiQDrwi2mGIgY) | ![Ólin Costa](https://media.licdn.com/dms/image/D4D03AQHMcFlvJWMv_Q/profile-displayphoto-shrink_400_400/0/1707441102331?e=1715817600&v=beta&t=BrXbtUAef7Uf0tw-Q4n2QY8lAeyA6r1sKx0hanrs0KA) |
@@ -108,7 +116,3 @@ npm start
 ## Licença
 
 Este projeto está licenciado sob a Licença CC-0. Veja o arquivo `LICENSE` para mais detalhes.
-
-## Documentação
-
-A documentação do projeto está disponível no [Github Pages](https://inteli-college.github.io/2024-T0008-EC05-G04/).
