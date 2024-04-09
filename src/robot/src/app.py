@@ -9,6 +9,13 @@ from dobotController import DobotController
 from position import Position
 
 ROBOT_ID = "001"
+SAFE_Z_TRESHOLD = 120
+BAG_POSITION = Position(
+    121.5785140991211,
+    -248.98097229003906,
+    80.80499267578125,
+    -63.973541259765625,
+)
 
 dobot_controller = DobotController()
 
@@ -36,33 +43,25 @@ def parse_position(data):
 
 
 def register_robot():
-    # registra o robô no backend
     pass
 
 
-def move_item(item):
-    # moveu para posição de segurança, somente Z é não é alterado
+def move_item(item_position):
+    item_position.z += SAFE_Z_TRESHOLD
     dobot_controller.move_to(
-        Position(
-            item.get("x"),
-            item.get("y"),
-            item.get("z") + 120,
-            item.get("r"),
-            linear=False,
-        ),
-        wait=200,
+        item_position,
+        wait=True,
     )
 
-    # moveu para o objeto, somente Z é alterado
+    item_position.z -= SAFE_Z_TRESHOLD
+
     dobot_controller.move_to(
-        Position(
-            item.get("x"), item.get("y"), item.get("z"), item.get("r"), linear=True
-        ),
-        wait=200,
+        item_position,
+        wait=True,
     )
 
-    # liga ferramenta
     print("catching")
+
     dobot_controller.enable_tool()
 
     timeout = time.time() + 10
@@ -74,47 +73,44 @@ def move_item(item):
 
     print("gotcha")
 
+    item_position.z += SAFE_Z_TRESHOLD
+
     dobot_controller.move_to(
-        Position(
-            item.get("x"),
-            item.get("y"),
-            item.get("z") + 120,
-            item.get("r"),
-            linear=True,
-        ),
-        wait=200,
+        item_position,
+        wait=True,
     )
-    dobot_controller.move_to(
-        (
-            Position(
-                121.5785140991211,
-                -248.98097229003906,
-                80.80499267578125,
-                -63.973541259765625,
-            )
-        ),
-        wait=200,
-    )
+
+    dobot_controller.move_to(BAG_POSITION, wait=True)
+
     dobot_controller.disable_tool()
     dobot_controller.home()
 
     return True
 
 
-# endpoint para montar kit
 @app.route("/kit-order", methods=["POST"])
 def try_caught_object():
-    # carregando json para o objeto
-    itens_kit_json = json.loads(request.json)
-    for item in itens_kit_json:
-        position = str(item.get("position"))
-        item = positions[position]
-        resultado = move_item(item)
-        if not resultado:
-            for i in range(3):
-                resultado = move_item(item)
-                if resultado:
-                    break
+    kit_order = request.json
+
+    itens = kit_order.get("kit").get("itens")
+
+    for item in itens:
+        item_position = str(item.get("item_position"))
+        raw_position = positions[item_position]
+
+        position = Position(
+            raw_position.get("x"), raw_position.get("y"), raw_position.get("z")
+        )
+
+        catched = False
+        try_counts = 0
+        while not catched:
+            catched = move_item(position)
+
+            try_counts += 1
+            if try_counts > 3:
+                break
+
     return "OK"
 
 
@@ -127,7 +123,6 @@ def receive_signal():
     return "OK"
 
 
-# sinal< 25000
 if __name__ == "__main__":
     available_ports = dobot_controller.list_ports()
     port = inquirer.prompt(
