@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Navbar from '../components/navbar';
+import ButtonMedio from "../components/button";
 import Placeholder from '../static/placeholder.webp';
+
 // import { useState } from 'react';
 
 const VisuPage: React.FC = () => {
@@ -101,11 +103,18 @@ const VisuPage: React.FC = () => {
     setModalOpen(false);
   };
 
+  function navigateLayout(){
+    navigate('/cadastroKit')
+  };
+
   return (
     <div className="flex flex-col h-screen overflow-y-scroll no-scrollbar">
       <div className="flex-grow bg-gray-100 pt-28">
         <Navbar />
         <div className="max-w-6xl mx-auto py-20">
+            <div className="flex justify-end">
+                <ButtonMedio title="Adicionar layout" props="transition duration-700 hover:scale-105 bg-blue-900 font-semibold w-40 mb-8" onChangeValue={navigateLayout} />
+            </div>
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {cardData.map((card, index) => (
               <div key={index} onClick={() => handleCardClick(card)} className="transition duration-700 hover:scale-105 border rounded-lg shadow-lg p-4 bg-white cursor-pointer">
