@@ -24,7 +24,7 @@ const autocomplete: React.FC<Props> = ({ items, text, label ,size,onChangeValue 
       }
     }
     return (
-      <div className='flex items-center mb-4 ml-0'>
+      <div className='flex items-center mb-4 ml-6 mr-6'>
         <div className='text-[16px] mr-12'>
             <p className= "font-medium text-[16px]" >{text}</p> 
         </div> 

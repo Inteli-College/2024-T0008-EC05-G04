@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import SearchBar from '../components/searchBar';
 import CardItem from '../components/cardItem';
-import { Kit } from '../interfaces/interfaces';
+import { Kit, Robot } from '../interfaces/interfaces';
 import useFetch from '../hooks/useFetch';
 
 const MontarKits: React.FC = () => {
   const items = ['Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item'];
   const kit = useFetch<Kit[]>('http://localhost:8000/api/kit');
   const [selectedKit, setSelectedKit] = useState<Kit | null>(null);
-  const [robotId, setRobotId] = useState<number | null>(null);  
+  const robots = useFetch<Robot[]>('http://localhost:8000/api/robot');
+  const [selectedRobot, setSelectedRobot] = useState<number | null>(null);
 
   console.log(kit);
 
@@ -17,18 +18,19 @@ const MontarKits: React.FC = () => {
   const postEndpoint = 'http://localhost:8000/api/kit-order';
 
   function getSelectedKit(value: number) {
-    if(value){
+    if (value) {
       kit?.map((kit) => {
-      if (kit.id === value) {
-        setSelectedKit(kit);
-      }
-    })}
-    else{setSelectedKit(null)}
+        if (kit.id === value) {
+          setSelectedKit(kit);
+        }
+      })
+    }
+    else { setSelectedKit(null) }
   }
   console.log(selectedKit)
 
   const handleConfirm = async () => {
-    if (!robotId || !selectedKit) {
+    if (!selectedRobot || !selectedKit) {
       alert('Please select both a robot and a kit.');
       return;
     }
@@ -39,7 +41,7 @@ const MontarKits: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ robot_id: robotId, kit_id: selectedKit.id }),
+        body: JSON.stringify({ robot_id: selectedRobot, kit_id: selectedKit.id }),
       });
 
       if (!response.ok) {
@@ -58,22 +60,22 @@ const MontarKits: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col items-center h-screen pt-32 bg-gray-100">
-        {/* Pass setKitId and setRobotId as props to be called with the selected IDs */}
-        <SearchBar items = {kit} text = {"Kit a ser montado:"} label = {"Selecione o kit"} size={300}  onChangeValue ={(value) => getSelectedKit(value)} />
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0">
-            <CardItem text={selectedKit?.itens[0].item_name} position= {1} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
-            <CardItem text={selectedKit?.itens[1]?.item_name} position= {2} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
-            <CardItem text={selectedKit?.itens[2]?.item_name} position= {3} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
-            <CardItem text={selectedKit?.itens[3]?.item_name} position= {4} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
-            <CardItem text={selectedKit?.itens[4]?.item_name} position= {5} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
-            <CardItem text={selectedKit?.itens[5]?.item_name} position= {6} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
-            <CardItem text={selectedKit?.itens[6]?.item_name} position= {7} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
-            <CardItem text={selectedKit?.itens[7]?.item_name} position= {8} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
-
+      <div className="flex flex-col justify-center items-center h-screen pt-28 bg-gray-100 ">
+        <div className='flex'>
+          <SearchBar items={kit} text={"Kit a ser montado:"} label={"Selecione o kit"} size={300} onChangeValue={(value) => getSelectedKit(value)} />
+          <SearchBar items={robots} text={"Robô:"} label={"Selecione o robô"} size={300} onChangeValue={(value) => setSelectedRobot(value)} />
         </div>
-      
-        <div className=" p-4 flex justify-center bg-gray-100">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0 mb-0">
+          <CardItem text={selectedKit?.itens[0].item_name} position={1} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKit?.itens[1]?.item_name} position={2} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKit?.itens[2]?.item_name} position={3} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKit?.itens[3]?.item_name} position={4} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKit?.itens[4]?.item_name} position={5} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKit?.itens[5]?.item_name} position={6} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKit?.itens[6]?.item_name} position={7} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKit?.itens[7]?.item_name} position={8} onSelectItem={() => { }} num={null} kitItems={[]} />
+        </div>
+        <div className="m-4 flex justify-center bg-gray-100">
           <div>
             <button
               className="bg-[#1D375E] hover:bg-blue-700 text-white py-2 px-16 rounded mr-4"
