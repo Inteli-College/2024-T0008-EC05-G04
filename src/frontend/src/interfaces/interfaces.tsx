@@ -16,10 +16,23 @@ export interface itemKit {
     quantity: number
 }
 
+export interface Items {
+    item_id: number;
+    item_name: string;
+    item_position: number;
+    quantity: number;
+}
+
 export interface ResponseKitCreated{
     message: string
     kit: {
         id: number
         name: string
     }    
+}
+
+export interface Kit{
+    id: number;
+    name: string;
+    itens: Items[];
 }
