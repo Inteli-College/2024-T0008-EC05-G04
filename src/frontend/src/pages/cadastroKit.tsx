@@ -107,7 +107,7 @@ const CadastroKit: React.FC = () =>{
                     <div className="w-full flex flex-col items-center">
                         <InputCadastroKits props="w-[760px]" text="Nome do Kit" label="Digite o nome do kit" onChangeFunc={(value) => setName(value)}/>
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0">
-                            <CardItem position= {1}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems}  />
+                            <CardItem text={"Posição 1"} position= {1}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems}  />
                             <CardItem position= {2}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
                             <CardItem position= {3}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
                             <CardItem position= {4}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />

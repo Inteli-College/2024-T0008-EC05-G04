@@ -2,10 +2,10 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Label } from '@mui/icons-material';
-import { Item, Robot } from '../interfaces/interfaces';
+import { Item, Robot, Kit } from '../interfaces/interfaces';
 
 interface Props {
-  items: Item[] | Robot[] | null;
+  items: Item[] | Robot[] | Kit | null;
   text: string;
   label: string;
   size: number;
@@ -13,11 +13,13 @@ interface Props {
 }
 
 const autocomplete: React.FC<Props> = ({ items, text, label ,size,onChangeValue }) => {
-    let combinedOptions: (Item | Robot)[] = [];
+    let combinedOptions: (Item | Robot | Kit)[] = [];
     if (items) {
       if ((items as Item[]).length > 0) {
         combinedOptions = items as Item[];
       } else if ((items as Robot[]).length > 0) {
+        combinedOptions = items as Robot[];
+      }  else if ((items as Robot[]).length > 0) {
         combinedOptions = items as Robot[];
       }
     }
@@ -30,7 +32,7 @@ const autocomplete: React.FC<Props> = ({ items, text, label ,size,onChangeValue 
           disablePortal
           id="combo-box-demo"
           options={combinedOptions|| []}
-          getOptionLabel={(option: Item | Robot) => option.name}
+          getOptionLabel={(option: Item | Robot | Kit) => option.name}
           onChange={(event, value) => onChangeValue(value ? value.id : 0)} // Use the onChange event to call onSelectRobot
           sx={{
             width: size, 
