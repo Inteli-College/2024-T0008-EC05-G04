@@ -5,7 +5,7 @@ interface CardItemProps{
     onSelectItem: (item: number) => void | null;
     num: number | null
     kitItems: itemKit[] | null
-    text: string
+    text: string | undefined
 }
 
 const CardItem: React.FC<CardItemProps>  = ({position,onSelectItem, num, kitItems, text}) => {

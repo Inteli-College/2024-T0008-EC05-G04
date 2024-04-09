@@ -34,5 +34,5 @@ export interface ResponseKitCreated{
 export interface Kit{
     id: number;
     name: string;
-    items: Items[];
+    itens: Items[];
 }

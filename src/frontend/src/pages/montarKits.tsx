@@ -7,39 +7,48 @@ import useFetch from '../hooks/useFetch';
 
 const MontarKits: React.FC = () => {
   const items = ['Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item'];
-  const [kit, setKit] = useState<Kit | null>(null);
-  const [kitId, setKitId] = useState<number | null>(null);
+  const kit = useFetch<Kit[]>('http://localhost:8000/api/kit');
+  const [selectedKit, setSelectedKit] = useState<Kit | null>(null);
   const [robotId, setRobotId] = useState<number | null>(null);  
 
-  useEffect(() => {
-    const fetchKit = useFetch<Kit>('http://localhost:8000/api/item');
-  }, []);
+  console.log(kit);
 
   // Assuming 'endpoint' is your target URL
   const postEndpoint = 'http://localhost:8000/api/kit-order';
 
+  function getSelectedKit(value: number) {
+    if(value){
+      kit?.map((kit) => {
+      if (kit.id === value) {
+        setSelectedKit(kit);
+      }
+    })}
+    else{setSelectedKit(null)}
+  }
+  console.log(selectedKit)
+
   const handleConfirm = async () => {
-    if (!robotId || !kit) {
+    if (!robotId || !selectedKit) {
       alert('Please select both a robot and a kit.');
       return;
     }
 
     try {
-      // const response = await fetch(postEndpoint, {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ robot_id: robotId, kit_id: kitId }),
-      // });
+      const response = await fetch(postEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ robot_id: robotId, kit_id: selectedKit.id }),
+      });
 
-      // if (!response.ok) {
-      //   throw new Error('Network response was not ok');
-      // }
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
 
-      // const data = await response.json();
-      // console.log(data); // Process your response here
-      // alert('Success!');
+      const data = await response.json();
+      console.log(data); // Process your response here
+      alert('Success!');
     } catch (error) {
       console.error('Error:', error);
       alert('An error occurred, please try again.');
@@ -51,16 +60,17 @@ const MontarKits: React.FC = () => {
       <Navbar />
       <div className="flex flex-col items-center h-screen pt-32 bg-gray-100">
         {/* Pass setKitId and setRobotId as props to be called with the selected IDs */}
-        <SearchBar items = {kit} text = {"Kit a ser montado:"} label = {"Selecione o kit"} size={300}  onChangeValue ={(value) => setKitId(value)} />
+        <SearchBar items = {kit} text = {"Kit a ser montado:"} label = {"Selecione o kit"} size={300}  onChangeValue ={(value) => getSelectedKit(value)} />
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0">
-            <CardItem text={String(kit?.items[0].item_name)} position= {1} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
-            <CardItem text={String(kit?.items[1].item_name)} position= {2} onSelectItem={()=>{}} num = {null} kitItems = {[]} />
-            <CardItem text={String(kit?.items[2].item_name)} position= {3} onSelectItem={()=>{}} num = {null} kitItems = {[]} />
-            <CardItem text={String(kit?.items[3].item_name)} position= {4} onSelectItem={()=>{}} num = {null} kitItems = {[]} />
-            <CardItem text={String(kit?.items[4].item_name)} position= {5} onSelectItem={()=>{}} num = {null} kitItems = {[]} />
-            <CardItem text={String(kit?.items[5].item_name)} position= {6} onSelectItem={()=>{}} num = {null} kitItems = {[]} />
-            <CardItem text={String(kit?.items[6].item_name)} position= {7} onSelectItem={()=>{}} num = {null} kitItems = {[]} />
-            <CardItem text={String(kit?.items[7].item_name)} position= {8} onSelectItem={()=>{}} num = {null} kitItems = {[]} />  
+            <CardItem text={selectedKit?.itens[0].item_name} position= {1} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
+            <CardItem text={selectedKit?.itens[1]?.item_name} position= {2} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
+            <CardItem text={selectedKit?.itens[2]?.item_name} position= {3} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
+            <CardItem text={selectedKit?.itens[3]?.item_name} position= {4} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
+            <CardItem text={selectedKit?.itens[4]?.item_name} position= {5} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
+            <CardItem text={selectedKit?.itens[5]?.item_name} position= {6} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
+            <CardItem text={selectedKit?.itens[6]?.item_name} position= {7} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
+            <CardItem text={selectedKit?.itens[7]?.item_name} position= {8} onSelectItem={()=>{}} num = {null} kitItems = {[]}/>
+
         </div>
       
         <div className=" p-4 flex justify-center bg-gray-100">
