@@ -10,9 +10,8 @@ const MontarKits: React.FC = () => {
   const kit = useFetch<Kit[]>('http://localhost:8000/api/kit/');
   const robots  = useFetch<Robot[]>('http://localhost:8000/api/robot/');
   const [selectedKit, setSelectedKit] = useState<Kit | null>(null);
+  const [selectedKitOrdered, setSelectedKitOrdered] = useState<Kit | null>(null);
   const [selectedRobot, setSelectedRobot] = useState<number | null>(null);  
-
-  console.log(kit);
 
   // Assuming 'endpoint' is your target URL
   const postEndpoint = 'http://localhost:8000/api/kit-order';
@@ -27,11 +26,10 @@ const MontarKits: React.FC = () => {
     }
     else { setSelectedKit(null) }
   }
-  console.log(selectedKit)
 
   const handleConfirm = async () => {
     if (!selectedRobot || !selectedKit) {
-      alert('Please select both a robot and a kit.');
+      alert('Selecione um kit e um robô!.');
       return;
     }
 
@@ -41,7 +39,7 @@ const MontarKits: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ robot_id: selectedRobot, kit_id: selectedKit.id }),
+        body: JSON.stringify({ robot_id: selectedRobot, kit_id: selectedKit.id , requested_by: 1}),
       });
 
       if (!response.ok) {
@@ -57,6 +55,15 @@ const MontarKits: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    if(selectedKit){
+      const sortedItems = [...selectedKit.itens].sort((a, b) => a.item_position - b.item_position);
+      // Process the sorted items here
+      setSelectedKitOrdered({ ...selectedKit, itens: sortedItems });
+    }
+
+  }, [selectedKit]);
+
   return (
     <div>
       <Navbar />
@@ -66,14 +73,14 @@ const MontarKits: React.FC = () => {
           <SearchBar items={robots} text={"Robô:"} label={"Selecione o robô"} size={300} onChangeValue={(value) => setSelectedRobot(value)} />
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0 mb-0">
-          <CardItem text={selectedKit?.itens[0].item_name} position={1} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[1]?.item_name} position={2} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[2]?.item_name} position={3} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[3]?.item_name} position={4} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[4]?.item_name} position={5} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[5]?.item_name} position={6} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[6]?.item_name} position={7} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[7]?.item_name} position={8} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKitOrdered?.itens[0].item_name} position={1} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKitOrdered?.itens[1]?.item_name} position={2} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKitOrdered?.itens[2]?.item_name} position={3} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKitOrdered?.itens[3]?.item_name} position={4} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKitOrdered?.itens[4]?.item_name} position={5} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKitOrdered?.itens[5]?.item_name} position={6} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKitOrdered?.itens[6]?.item_name} position={7} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={selectedKitOrdered?.itens[7]?.item_name} position={8} onSelectItem={() => { }} num={null} kitItems={[]} />
         </div>
         <div className="m-4 flex justify-center bg-gray-100">
           <div>
