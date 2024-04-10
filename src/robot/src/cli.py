@@ -1,4 +1,6 @@
 import json
+
+from flask import copy_current_request_context
 import typer
 import inquirer
 from yaspin import yaspin
@@ -120,6 +122,84 @@ def run(
         current_position.load_from_dict(position)
         dobot_controller.move_to(current_position, wait=True)
         spinner.stop()
+
+
+@app.command()
+def calibrate():
+    """
+    Calibrate the robot
+    """
+    positions = {}
+    number_of_positions = typer.prompt(
+        "Enter the number of positions to calibrate", type=int
+    )
+
+    for i in range(number_of_positions):
+        typer.echo(f"\nMove the robot to the desired {i+1}ª position")
+        input("Press Enter when ready...")
+
+        current_position = dobot_controller.pose()
+        print(current_position)
+        positions.update({i: current_position.to_dict()})
+
+    typer.echo("Move the robot to the target position")
+    input("Press Enter when ready...")
+
+    positions.update({"target": dobot_controller.pose().to_dict()})
+
+    typer.echo("\nCalibration finished!\n")
+
+    file_path = typer.prompt("Enter the file path to save the calibration", type=str)
+
+    print(positions)
+
+    with open(file_path, "w") as file:
+        json.dump(positions, file, indent=4)
+
+
+@app.command()
+def test_calibration():
+    """
+    Test the calibration
+    """
+
+    home()
+
+    file_path = typer.prompt("Enter the file path with the calibration", type=str)
+
+    with open(file_path, "r") as file:
+        data = json.load(file)
+
+    for key, value in data.items():
+        if key == "target":
+            continue
+
+        spinner = yaspin(text=f"Moving to {key}...")
+        spinner.start()
+        current_position = Position()
+        current_position.load_from_dict(value)
+
+        current_position.z += 80 
+        dobot_controller.move_to(current_position, wait=True)
+        current_position.z -= 80 
+        dobot_controller.move_to(current_position, wait=True)
+        current_position.z += 80 
+        dobot_controller.move_to(current_position, wait=True)
+
+        spinner.stop()
+
+    spinner = yaspin(text="Moving to the home position...")
+    dobot_controller.move_to(Position(0, 0, 0, 0), wait=True)
+    spinner.stop()
+
+    spinner = yaspin(text="Moving to the target position...")
+    target_position = Position()
+    target_position.load_from_dict(data["target"])
+    target_position.z += 80
+    dobot_controller.move_to(target_position, wait=True)
+    target_position.z -= 80
+    dobot_controller.move_to(target_position, wait=True)
+    spinner.stop()
 
 
 @app.command()

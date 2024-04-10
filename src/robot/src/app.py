@@ -22,7 +22,7 @@ dobot_controller = DobotController()
 app = Flask(__name__)
 CORS(app)
 
-with open("positions.json") as file:
+with open("calibration.json") as file:
     positions = json.load(file)
 
 
