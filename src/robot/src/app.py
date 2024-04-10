@@ -9,7 +9,7 @@ from dobotController import DobotController
 from position import Position
 
 ROBOT_ID = "001"
-SAFE_Z_TRESHOLD = 120
+SAFE_Z_TRESHOLD = 80
 BAG_POSITION = Position(
     121.5785140991211,
     -248.98097229003906,
@@ -64,7 +64,7 @@ def move_item(item_position):
 
     dobot_controller.enable_tool()
 
-    timeout = time.time() + 10
+    timeout = time.time() + 5
     while not dobot_controller.caught_object:
         time.sleep(0.5)
         if time.time() > timeout:
@@ -79,6 +79,12 @@ def move_item(item_position):
         item_position,
         wait=True,
     )
+
+    time.sleep(1)
+
+    if not dobot_controller.caught_object:
+        print("fail to catch")
+        return False
 
     dobot_controller.move_to(BAG_POSITION, wait=True)
 
