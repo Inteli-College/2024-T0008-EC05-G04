@@ -13,8 +13,8 @@ const InputBottomCadastroKits: React.FC<InputBottomCadastroKitsProps>  = ({text,
     return(
         <div>
             <div className='flex items-center mb-4 ml-0'>
-                <div className='text-[16px]'>
-                    <p className= "font-medium text-[16px]" >{text}</p> 
+                <div className=''>
+                    <p className= "font-medium text-xl" >{text}</p> 
                 </div>
                 <div className='ml-12 w-1/2'>
                     <TextField id="outlined-basic" label={label} className={`${props}`} onChange={(event)=>  onChangeFunc && onChangeFunc(event.target.value)}/>
