@@ -7,7 +7,7 @@ from models.kit_orders import KitOrderSchema, KitOrderCreate, KitOrderUpdate
 router = APIRouter()
 
 
-@router.get("/", response_model=List[KitOrderSchema])
+@router.get("/")
 async def get_all_kit_orders():
     orders = await kit_orders.get_all()
 

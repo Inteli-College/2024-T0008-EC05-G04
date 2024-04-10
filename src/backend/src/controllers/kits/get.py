@@ -31,12 +31,6 @@ async def get_all():
                 kits.id;
         """
 
-        rows = await conn_postgres.fetch(query)
-
-        rows = [json.loads(row["kit"]) for row in rows]
-
-        return rows
-
 
 async def get_by_id(kit_id: int) -> Optional[KitSchema]:
     query = "SELECT * FROM kits WHERE id = $1;"
