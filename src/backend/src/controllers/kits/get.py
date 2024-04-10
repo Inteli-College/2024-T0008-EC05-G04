@@ -67,8 +67,6 @@ async def get_by_id(kit_id: int):
 
     row = await conn_postgres.fetchrow(query, kit_id)
 
-    print(row)
-
     if not row:
         return None
 
