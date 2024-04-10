@@ -7,10 +7,10 @@ import useFetch from '../hooks/useFetch';
 
 const MontarKits: React.FC = () => {
   const items = ['Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item'];
-  const kit = useFetch<Kit[]>('http://localhost:8000/api/kit');
+  const kit = useFetch<Kit[]>('http://localhost:8000/api/kit/');
+  const robots  = useFetch<Robot[]>('http://localhost:8000/api/robot/');
   const [selectedKit, setSelectedKit] = useState<Kit | null>(null);
-  const robots = useFetch<Robot[]>('http://localhost:8000/api/robot');
-  const [selectedRobot, setSelectedRobot] = useState<number | null>(null);
+  const [selectedRobot, setSelectedRobot] = useState<number | null>(null);  
 
   console.log(kit);
 
