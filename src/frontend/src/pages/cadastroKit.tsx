@@ -129,7 +129,7 @@ const CadastroKit: React.FC = () =>{
                         <div >
                             <ButtonMedio title="Salvar" props="bg-blue-900 w-28" onChangeValue={(addItem)} />
                         </div>
-                            <ButtonMedio title="Cancelar" props="bg-red-500 w-36" onChangeValue={()=>{}} />
+                            <ButtonMedio title="Cancelar" props="bg-red-500 w-36" onChangeValue={()=>{kitItems.pop()}} />
                         </div>
                     </div>
                 </div>    
