@@ -179,11 +179,11 @@ def test_calibration():
         current_position = Position()
         current_position.load_from_dict(value)
 
-        current_position.z += 80 
+        current_position.z += 80
         dobot_controller.move_to(current_position, wait=True)
-        current_position.z -= 80 
+        current_position.z -= 80
         dobot_controller.move_to(current_position, wait=True)
-        current_position.z += 80 
+        current_position.z += 80
         dobot_controller.move_to(current_position, wait=True)
 
         spinner.stop()
