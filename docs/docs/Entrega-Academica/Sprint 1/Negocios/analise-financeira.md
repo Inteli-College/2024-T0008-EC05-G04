@@ -15,3 +15,5 @@ Decidimos que o braço robótico Dobot CR3-1300 e quatro funcionários na área 
 Planilha completa no link abaixo
 
 [Planilha no docs](https://docs.google.com/spreadsheets/d/1nstWvWUKMwlCGVw10XaUPamvqKuEAugm/edit?usp=sharing&ouid=111546217831868931141&rtpof=true&sd=true)
+
+A análise financeira para o projeto de automação destaca um planejamento cuidadoso para equilibrar os investimentos em tecnologia avançada e capital humano qualificado. A implementação do braço robótico Dobot CR3-1300 e a contratação de especialistas em regime CLT são centrais para o sucesso do projeto, enfatizando a necessidade de uma gestão rigorosa dos recursos para assegurar a execução eficiente e dentro dos prazos estipulados, garantindo assim o retorno desejado sobre o investimento.
