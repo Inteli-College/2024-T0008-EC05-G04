@@ -71,7 +71,7 @@ Por fim, o terceiro card conduz à seção de estatísticas, oferecendo à gesto
 <!-- ![Tela de estatísticas em formato de relatórios](/img/estatisticas-relatorios.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
-O Hospital Sírio Libanês busca automatizar a montagem dos carrinhos de emergência, enfrentando o desafio de layouts variados e modificações frequentes. O objetivo é criar um sistema flexível que permita ajustes e integrações futuras. Com isso, espera-se reduzir o tempo de montagem e gerar relatórios detalhados dos itens utilizados. O projeto envolve a construção de um sistema automatizado capaz de montar diferentes layouts de carrinhos, rastrear os itens e integrar-se com outras soluções. Restrições incluem o uso limitado de uma base robótica em escala reduzida e a não integração com sistemas de login de terceiros.
+O Hospital Sírio-Libanês busca automatizar a montagem dos carrinhos de emergência, enfrentando o desafio de layouts variados e modificações frequentes. O objetivo é criar um sistema flexível que permita ajustes e integrações futuras. Com isso, espera-se reduzir o tempo de montagem e gerar relatórios detalhados dos itens utilizados. O projeto envolve a construção de um sistema automatizado capaz de montar diferentes layouts de carrinhos, rastrear os itens e integrar-se com outras soluções. Restrições incluem o uso limitado de uma base robótica em escala reduzida e a não integração com sistemas de login de terceiros.
 
 
 ## Fluxo do auxiliar de farmácia
@@ -164,4 +164,12 @@ Ao finalizar todos os kits solicitados pelo usuário, essa tela aparecerá e o u
     ![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png)
 </div>
 <!-- ![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png) -->
+
+<p align="center"><b>Figura 16 - </b> Wireframe - Tela final</p>
+<p align="center">Fonte: Elaboração Grupo 4</p>
+
+## Conclusão
+O Fluxo de Utilização da Solução demonstra uma interação intuitiva e segura com o sistema de automação, permitindo aos usuários, desde gestores hospitalares a auxiliares de farmácia, realizarem suas tarefas com eficácia. As funcionalidades do sistema, calibradas para atender as demandas específicas do hospital, oferecem uma operacionalização simplificada e eficiente, contribuindo para a melhoria contínua da gestão de kits de emergência e da qualidade dos serviços de saúde.
+
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
