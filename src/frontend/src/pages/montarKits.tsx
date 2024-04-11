@@ -35,6 +35,8 @@ const MontarKits: React.FC = () => {
       return;
     }
 
+    alert('Enviado!')
+
     try {
       const response = await fetch(postEndpoint, {
         method: 'POST',

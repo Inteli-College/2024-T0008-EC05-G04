@@ -40,11 +40,34 @@ async def create(kit_order: KitOrderCreate) -> Optional[KitOrderSchema]:
             kit_order.robot_id,
         )
 
+        query = """
+                UPDATE kit_order
+                SET status = 'processing'
+                WHERE id = $1;
+            """
+        await conn_postgres.execute(query, kit_order_id)
+
         robot_response = await send_kit_order_to_robot(kit_order.kit_id, kit_order_id)
 
         if robot_response.status_code == 200:
             returned_kit_order = await get_by_id(kit_order_id)
 
+            query = """
+                UPDATE kit_order
+                SET status = 'completed'
+                WHERE id = $1;
+            """
+            await conn_postgres.execute(query, kit_order_id)
+
+            query = """
+                UPDATE kit_order
+                SET end_date = NOW()
+                WHERE id = $1;
+            """
+            await conn_postgres.execute(query, kit_order_id)
+
+
             return returned_kit_order
+        
 
         return None
