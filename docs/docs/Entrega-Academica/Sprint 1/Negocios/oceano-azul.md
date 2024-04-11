@@ -34,11 +34,15 @@ Desenvolver capacidades de integração com os sistemas já existentes no hospit
 Criar uma interface de usuário intuitiva para configuração, operação e dashboard do sistema não apenas simplifica sua utilização, mas também reduz a necessidade de aprendizado prévio. Isso distingue a solução da concorrência, garantindo que seja acessível a todos os usuários, inclusive os membros das equipes médicas que não possuem habilidade técnica. 
 
 ## Matriz Oceano Azul 
+<p align="center">
 ![Persona Auxiliar de Enfermagem](/img/matriz-oceano.png)
-<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+<h6> Fonte: Elaboração Grupo 4U </h6>
+</p>
 
+<p align="center">
 ![Persona Auxiliar de Enfermagem](/img/grafico-oceano.png)
-<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+<h6> Fonte: Elaboração Grupo 4U </h6>
+</p>
 
 
 - **Intervenção Humana:** Nota 5 para o grupo 4U e 9 para o Molde atual sugere que, enquanto o molde atual requer muita intervenção humana, o grupo 4U reconhece a necessidade de reduzi-la.

@@ -97,11 +97,16 @@ Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no f
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ### Wireframe
+<p align="center">
 ![Wireframe Montar](/img/wire-montar.png)
-<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+<h6> Fonte: Elaboração Grupo 4U </h6>
+</p>
 
+<p align="center">
 ![Wireframe Montar](/img/wire-montar1.png)
-<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+<h6> Fonte: Elaboração Grupo 4U </h6>
+</p>
+
 
 ### Comparação
 **Paleta de Cores:** A paleta de cores utilizada em ambas as telas é a mesma, trabalhando com tons de azul, branco e cinza, mantendo a consistência visual.
@@ -124,8 +129,11 @@ Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no f
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ### Wireframe
+<p align="center">
 ![Wireframe Tabela](/img/wire-tabela.png)
-<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+<h6> Fonte: Elaboração Grupo 4U </h6>
+</p>
+
 
 ### Comparação
 **Paleta de Cores:** As duas telas são muito semelhantes em termos de paleta de cores, utilizando tons de azul e branco em ambas as versões, mantendo a consistência visual.
@@ -145,12 +153,17 @@ Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no f
 ![Frontend Dashboard](/img/front-dashboard.jpg)
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
+
 ![Frontend Dashboard](/img/front-dashboard1.jpg)
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ### Wireframe
+<p align="center">
 ![Wireframe Dashboard](/img/wire-dashboard.png)
-<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+<h6> Fonte: Elaboração Grupo 4U </h6>
+</p>
+
+
 
 ### Comparação
 **Paleta de Cores:** As duas telas são muito semelhantes em termos de paleta de cores, utilizando tons de azul e branco em ambas as versões, mantendo a consistência visual.
