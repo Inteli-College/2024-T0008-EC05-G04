@@ -16,6 +16,8 @@ Esse fluxo é referente à persona da Gestora Hospitalar, ele destina-se a ilust
 
 A interação entre a gestora hospitalar e a solução é fundamental para garantir não apenas a segurança dos kits montados, mas também para explorar os dados armazenados pela plataforma, visando a geração de insights que otimizem a administração hospitalar. O wireframe da Mayumi apresenta uma tela inicial, oferecendo funcionalidades essenciais para a gestão eficaz. Dentre essas funcionalidades, destacam-se a visualização de kits, a criação de novos kits e o acesso às estatísticas.
 
+### Telas 1 e 2 - Login
+
 A Mayumi começa fazendo o login no software, segue para um menu de funcionalidades no qual ela pode escolher o que deseja ver aquele momento no site. Após a escolha ser feita ela será redirecionada para a tela incial.
 <div className = "borda_imagens">
     ![Tela de Login](/img/wireframe-login.png)
@@ -29,6 +31,8 @@ A Mayumi começa fazendo o login no software, segue para um menu de funcionalida
 <!-- ![Tela de Login 2](/img/wireframe-login-email.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
+### Tela 3 - Menu de funcionalidades
+
 Ao acessar a tela inicial, a gestora depara-se com três opções principais, cada uma abrindo caminho para diferentes aspectos da gestão de kits e dados. O primeiro card conduz à tela de visualização de kits, onde a gestora pode examinar detalhadamente os componentes de cada kit disponível. Essa jornada específica será melhor explorada em na explicação da jornada da persona do auxiliar de farmácia, uma vez que se alinha de forma mais precisa com as necessidades e fluxo de trabalho da persona Gabriel Menino.
 
 <div className = "borda_imagens">
@@ -37,7 +41,11 @@ Ao acessar a tela inicial, a gestora depara-se com três opções principais, ca
 <!-- ![Tela inicial de funcionalidades](/img/wireframe-funcionalidade.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
+### Telas 4 e 5 - Criação de kits
+
 O segundo card direciona à tela de criação e edição de kits, fornecendo à gestora uma interface intuitiva para compor novos conjuntos de materiais. Neste processo, ela é guiada a selecionar a posição de cada item no carrinho e a preencher os campos necessários, como o nome do kit, os itens a serem incluídos e as quantidades desejadas. Todos os campos são automaticamente preenchidos, simplificando a tarefa. Após a conclusão, ao clicar no botão "Salvar", um pop-up confirma a criação do kit, garantindo um feedback claro e imediato sobre a ação realizada.
+
+#### Tela 4 - Criar kit
 
 <div className = "borda_imagens">
     ![Tela de criar/editar kit](/img/editar-kit.png)
@@ -45,13 +53,19 @@ O segundo card direciona à tela de criação e edição de kits, fornecendo à 
 <!-- ![Tela de criar/editar kit](/img/editar-kit.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
+#### Tela 5 - Modal de confirmação
+
 <div className = "borda_imagens">
     ![Pop up da tela de criar/editar kit](/img/editar-kit-popup.png)
 </div>
 <!-- ![Pop up da tela de criar/editar kit](/img/editar-kit-popup.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
+### Tela 6, 7 e 8 - Estatísticas
+
 Por fim, o terceiro card conduz à seção de estatísticas, oferecendo à gestora acesso a informações cruciais para a gestão estratégica. Dentro desta seção, há três subseções distintas: tabelas, dashboards e relatórios. Nas tabelas, os kits podem ser visualizados de forma tabular, facilitando a análise detalhada dos componentes e quantidades. Além disso, a opção de exportar os dados para CSV permite uma manipulação mais ampla e personalizada. Os dashboards apresentam os dados das tabelas em formato gráfico, fornecendo uma visualização dinâmica e intuitiva das tendências e padrões. Isso permite à gestora extrair insights valiosos para otimizar a gestão hospitalar. Por fim, os relatórios oferecem uma síntese dos dados mais relevantes em formato PDF, acessíveis através de filtros de datas, tornando-os úteis para apresentações e tomadas de decisão estratégicas. Essa variedade de ferramentas proporciona à gestora hospitalar uma visão abrangente e detalhada de sua operação, capacitando-a a tomar decisões informadas e eficazes.
+
+#### Tela 6 - Tabela de estatísticas
 
 <div className = "borda_imagens">
     ![Tela de estatísticas em formato de tabela](/img/estatisticas-tabelas.png)
@@ -59,11 +73,15 @@ Por fim, o terceiro card conduz à seção de estatísticas, oferecendo à gesto
 <!-- ![Tela de estatísticas em formato de tabela](/img/estatisticas-tabelas.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
+#### Tela 7 - Dashboards
+
 <div className = "borda_imagens">
     ![Tela de estatísticas em formato de dashboards](/img/estatisticas-dashboards.png)
 </div>
 <!-- ![Tela de estatísticas em formato de dashboards](/img/estatisticas-dashboards.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
+#### Tela 8 - Relatórios
 
 <div className = "borda_imagens">
     ![Tela de estatísticas em formato de relatórios](/img/estatisticas-relatorios.png)
@@ -164,12 +182,8 @@ Ao finalizar todos os kits solicitados pelo usuário, essa tela aparecerá e o u
     ![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png)
 </div>
 <!-- ![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png) -->
-
-<p align="center"><b>Figura 16 - </b> Wireframe - Tela final</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ## Conclusão
 O Fluxo de Utilização da Solução demonstra uma interação intuitiva e segura com o sistema de automação, permitindo aos usuários, desde gestores hospitalares a auxiliares de farmácia, realizarem suas tarefas com eficácia. As funcionalidades do sistema, calibradas para atender as demandas específicas do hospital, oferecem uma operacionalização simplificada e eficiente, contribuindo para a melhoria contínua da gestão de kits de emergência e da qualidade dos serviços de saúde.
-
-<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 

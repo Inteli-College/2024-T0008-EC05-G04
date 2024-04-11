@@ -21,19 +21,18 @@ E -- atualiza e consome --> B
 E -- controla --> D
 ```
 
-## Página Web:
-
+## Página Web
 Cumpre os requisitos funcionais RF01, RF02, RF03 e RF04, permitindo o armazenamento, edição e registro de itens nos kits, bem como a interação com o backend por meio de requisições.
 
-## Backend com API:
+## Backend com API
 Atende aos requisitos funcionais RF01, RF02, RF03 e RF04, possibilitando o armazenamento, edição, registro e recuperação de informações sobre os kits, além de enviar comandos para o braço robótico e consultar o banco de dados. É o cérebro de toda a operação.
 
-## Braço Robótico:
+## Braço Robótico
 Cumpre os requisitos funcionais RF06 e RF07, sendo capaz de montar os kits selecionados e pegar diferentes tipos de itens para a montagem.
 
-## Banco de Dados:
+## Banco de Dados
 Permite atender ao requisito funcional RF04, armazenando as informações sobre os kits e os itens utilizados na montagem.
 
-## Raspberry Pi:
+## Raspberry Pi
 Integra o sistema, permitindo a comunicação e o controle do braço robótico.
 
