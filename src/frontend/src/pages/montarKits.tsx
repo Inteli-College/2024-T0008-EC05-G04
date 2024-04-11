@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import SearchBar from '../components/searchBar';
 import CardItem from '../components/cardItem';
-import { Kit, Robot } from '../interfaces/interfaces';
+import { TextCard, Kit, Robot } from '../interfaces/interfaces';
 import useFetch from '../hooks/useFetch';
+import { useNavigate } from 'react-router-dom';
 
 const MontarKits: React.FC = () => {
-  const items = ['Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item'];
-  const kit = useFetch<Kit[]>('http://localhost:8000/api/kit');
+  const navigate = useNavigate();
+  const kit = useFetch<Kit[]>('http://localhost:8000/api/kit/');
+  const robots = useFetch<Robot[]>('http://localhost:8000/api/robot/');
   const [selectedKit, setSelectedKit] = useState<Kit | null>(null);
-  const robots = useFetch<Robot[]>('http://localhost:8000/api/robot');
+  const [selectedKitOrdered, setSelectedKitOrdered] = useState<Kit | null>(null);
   const [selectedRobot, setSelectedRobot] = useState<number | null>(null);
-
-  console.log(kit);
+  const [itensArray, setItensArray] = useState<TextCard[]>([]); // This should be an array of items, not a function
 
   // Assuming 'endpoint' is your target URL
   const postEndpoint = 'http://localhost:8000/api/kit-order';
@@ -27,11 +28,10 @@ const MontarKits: React.FC = () => {
     }
     else { setSelectedKit(null) }
   }
-  console.log(selectedKit)
 
   const handleConfirm = async () => {
     if (!selectedRobot || !selectedKit) {
-      alert('Please select both a robot and a kit.');
+      alert('Selecione um kit e um robô!.');
       return;
     }
 
@@ -41,7 +41,7 @@ const MontarKits: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ robot_id: selectedRobot, kit_id: selectedKit.id }),
+        body: JSON.stringify({ robot_id: selectedRobot, kit_id: selectedKit.id, requested_by: 1 }),
       });
 
       if (!response.ok) {
@@ -57,6 +57,16 @@ const MontarKits: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    if (selectedKit) {
+      const sortedItems = [...selectedKit.itens].sort((a, b) => a.item_position - b.item_position);
+      setItensArray(selectedKit.itens?.map((item) => ({ name: item.item_name, quantity: item.quantity })));
+      // Process the sorted items here
+      setSelectedKitOrdered({ ...selectedKit, itens: sortedItems });
+    }
+
+  }, [selectedKit]);
+
   return (
     <div>
       <Navbar />
@@ -66,14 +76,14 @@ const MontarKits: React.FC = () => {
           <SearchBar items={robots} text={"Robô:"} label={"Selecione o robô"} size={300} onChangeValue={(value) => setSelectedRobot(value)} />
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0 mb-0">
-          <CardItem text={selectedKit?.itens[0].item_name} position={1} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[1]?.item_name} position={2} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[2]?.item_name} position={3} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[3]?.item_name} position={4} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[4]?.item_name} position={5} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[5]?.item_name} position={6} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[6]?.item_name} position={7} onSelectItem={() => { }} num={null} kitItems={[]} />
-          <CardItem text={selectedKit?.itens[7]?.item_name} position={8} onSelectItem={() => { }} num={null} kitItems={[]} />
+          <CardItem text={itensArray[0]?.name} position={1} onSelectItem={() => { }} num={null} quantity={itensArray[0]?.quantity} kitItems={[]} />
+          <CardItem text={itensArray[1]?.name} position={2} onSelectItem={() => { }} num={null} quantity={itensArray[1]?.quantity} kitItems={[]} />
+          <CardItem text={itensArray[2]?.name} position={3} onSelectItem={() => { }} num={null} quantity={itensArray[2]?.quantity} kitItems={[]} />
+          <CardItem text={itensArray[3]?.name} position={4} onSelectItem={() => { }} num={null} quantity={itensArray[3]?.quantity} kitItems={[]} />
+          <CardItem text={itensArray[4]?.name} position={5} onSelectItem={() => { }} num={null} quantity={itensArray[4]?.quantity} kitItems={[]} />
+          <CardItem text={itensArray[5]?.name} position={6} onSelectItem={() => { }} num={null} quantity={itensArray[5]?.quantity} kitItems={[]} />
+          <CardItem text={itensArray[6]?.name} position={7} onSelectItem={() => { }} num={null} quantity={itensArray[6]?.quantity} kitItems={[]} />
+          <CardItem text={itensArray[7]?.name} position={8} onSelectItem={() => { }} num={null} quantity={itensArray[7]?.quantity} kitItems={[]} />
         </div>
         <div className="m-4 flex justify-center bg-gray-100">
           <div>
@@ -84,7 +94,7 @@ const MontarKits: React.FC = () => {
               onClick={handleConfirm}>
               Confirmar
             </button>
-            <button className="bg-red-600 hover:bg-red-300 text-white py-2 px-16 rounded">
+            <button className="bg-red-600 hover:bg-red-300 text-white py-2 px-16 rounded" onClick={() => { navigate('/menu') }} >
               Cancelar
             </button>
           </div>
