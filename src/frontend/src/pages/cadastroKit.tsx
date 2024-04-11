@@ -107,14 +107,14 @@ const CadastroKit: React.FC = () =>{
                     <div className="w-full flex flex-col items-center">
                         <InputCadastroKits props="w-[760px]" text="Nome do Kit" label="Digite o nome do kit" onChangeFunc={(value) => setName(value)}/>
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-0">
-                            <CardItem text={"Posição 1"} position= {1}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems}  />
-                            <CardItem text={"Posição 2"} position= {2}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem text={"Posição 3"} position= {3}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem text={"Posição 4"} position= {4}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem text={"Posição 5"} position= {5}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem text={"Posição 6"} position= {6}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem text={"Posição 7"} position= {7}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
-                            <CardItem text={"Posição 8"} position= {8}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />  
+                            <CardItem quantity={null} text={"Posição 1"} position= {1}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems}  />
+                            <CardItem quantity={null} text={"Posição 2"} position= {2}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem quantity={null} text={"Posição 3"} position= {3}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem quantity={null} text={"Posição 4"} position= {4}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem quantity={null} text={"Posição 5"} position= {5}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem quantity={null} text={"Posição 6"} position= {6}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem quantity={null} text={"Posição 7"} position= {7}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />
+                            <CardItem quantity={null} text={"Posição 8"} position= {8}  onSelectItem={selectionPosition} num = {num} kitItems = {kitItems} />  
                         </div>
                     <div className="mt-4 flex gap-24">
                         <SearchBar 

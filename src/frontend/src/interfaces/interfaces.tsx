@@ -1,3 +1,5 @@
+import CardItem from "../components/cardItem";
+
 export interface Robot {
     id: number;
     name: string;
@@ -35,4 +37,9 @@ export interface Kit{
     id: number;
     name: string;
     itens: Items[];
+}
+
+export interface TextCard{
+    name: string;
+    quantity: number | null;
 }
