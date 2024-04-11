@@ -9,3 +9,4 @@ O braço robótico proposto é projetado com funcionalidades avançadas para aut
 <p align="center">Fonte: Elaboração Grupo 4</p>
 
 A seção "Canvas de Proposta de Valor" do projeto enfatiza a importância da inovação tecnológica e do alinhamento com as necessidades específicas do ambiente hospitalar. A introdução do braço robótico de alta precisão para a montagem de kits hospitalares representa um avanço significativo na operacionalização do Hospital Sírio-Libanês, atendendo aos desafios críticos com soluções que elevam a eficiência e a segurança do processo. O projeto demonstra um compromisso com a qualidade e a integridade dos serviços hospitalares, refletindo uma proposta de valor robusta centrada na otimização operacional, precisão detalhada e, primordialmente, na segurança do paciente.
+

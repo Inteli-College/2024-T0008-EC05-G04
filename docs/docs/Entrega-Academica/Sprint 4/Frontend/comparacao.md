@@ -6,8 +6,12 @@ Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no f
 ## Tela de Login
 ### Frontend
 ![Frontend Login](/img/front-login.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Wireframe
 ![Wireframe Login](/img/wire-login.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Comparação
 **Paleta de Cores:** As duas telas são muito semelhantes em termos de paleta de cores, utilizando tons de azul e branco em ambas as versões, mantendo a consistência visual.
 
@@ -24,8 +28,12 @@ Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no f
 ## Tela de Menu de Funcionalidades
 ### Frontend
 ![Frontend Menu de Funcionalidades](/img/front-menufunc.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Wireframe
 ![Wireframe Menu de Funcionalidades](/img/wire-menufunc.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Comparação
 **Paleta de Cores:** A paleta de cores utilizada em ambas as telas é a mesma, trabalhando com os mesmos tons de azul, branco e cinza, mantendo a consistência visual.
 
@@ -42,8 +50,12 @@ Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no f
 ## Tela de Layouts
 ### Frontend
 ![Frontend Visualizar Layouts](/img/front-layouts.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Wireframe
 ![Wireframe Visualizar Layouts](/img/wire-layouts.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Comparação
 **Paleta de Cores:** Ambas as telas seguem o padrão da identidade visual, com tons de azul, branco e cinza.
 
@@ -60,8 +72,12 @@ Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no f
 ## Modal dos Layouts
 ### Frontend
 ![Frontend Modal](/img/front-modal.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Wireframe
 ![Wireframe Modal](/img/wire-modal.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Comparação
 **Paleta de Cores:** Ambas as telas seguem o padrão da identidade visual, com tons de azul, branco e cinza.
 
@@ -78,9 +94,15 @@ Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no f
 ## Tela de Montar Kits
 ### Frontend
 ![Frontend Montar](/img/front-montar.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Wireframe
 ![Wireframe Montar](/img/wire-montar.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ![Wireframe Montar](/img/wire-montar1.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Comparação
 **Paleta de Cores:** A paleta de cores utilizada em ambas as telas é a mesma, trabalhando com tons de azul, branco e cinza, mantendo a consistência visual.
 
@@ -99,8 +121,12 @@ Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no f
 ## Tela de Estatísticas (Tabela)
 ### Frontend
 ![Frontend Tabela](/img/front-tabela.jpg)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Wireframe
 ![Wireframe Tabela](/img/wire-tabela.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Comparação
 **Paleta de Cores:** As duas telas são muito semelhantes em termos de paleta de cores, utilizando tons de azul e branco em ambas as versões, mantendo a consistência visual.
 
@@ -117,9 +143,15 @@ Nesta seção, tem-se uma análise comparativa entre as telas desenvolvidas no f
 ## Tela de Estatísticas (Dashboard)
 ### Frontend
 ![Frontend Dashboard](/img/front-dashboard.jpg)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ![Frontend Dashboard](/img/front-dashboard1.jpg)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Wireframe
 ![Wireframe Dashboard](/img/wire-dashboard.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ### Comparação
 **Paleta de Cores:** As duas telas são muito semelhantes em termos de paleta de cores, utilizando tons de azul e branco em ambas as versões, mantendo a consistência visual.
 
