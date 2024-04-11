@@ -1,61 +1,96 @@
-import React from 'react';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
+import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
-import { faker } from '@faker-js/faker';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+// Register Chart.js components
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top' as const,
+interface Kit {
+  robot_name: string;
+}
+
+// Define a type for the chart data state
+interface ChartDataState {
+  labels: string[];
+  datasets: [{
+    label: string;
+    data: number[];
+    backgroundColor: string;
+    borderColor: string;
+    borderWidth: number;
+  }];
+}
+
+const BarGraph: React.FC = () => {
+  const [chartData, setChartData] = useState<ChartDataState>({
+    labels: [],
+    datasets: [
+      {
+        label: 'Quantidade',
+        data: [],
+        backgroundColor: 'rgba(153, 102, 255, 0.5)',
+        borderColor: 'rgba(153, 102, 255, 1)',
+        borderWidth: 1,
+      },
+    ],
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/kit-order');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const kits: Kit[] = await response.json();
+
+        // Count occurrences of each name
+        const nameCounts = kits.reduce((acc, { robot_name }) => {
+          acc[robot_name] = (acc[robot_name] || 0) + 1;
+          return acc;
+        }, {} as Record<string, number>);
+
+        const labels = Object.keys(nameCounts);
+        const data = Object.values(nameCounts);
+
+        // Directly use the structured data in setState
+        setChartData({
+          labels,
+          datasets: [
+            { ...chartData.datasets[0], data },
+          ],
+        });
+      } catch (error) {
+        console.error('Failed to fetch data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const options = {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
     },
-    title: {
-      display: true,
-      text: 'Chart.js Bar Chart',
+    plugins: {
+      title: {
+        display: true,
+        text: 'Ocorrências de cada Robô',
+        font: {
+          size: 20
+        },
+        color: '#333'
+      }
     },
-  },
+  };
+
+  return (
+    <div>
+      <Bar data={chartData} options={options} />
+    </div>
+  );
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      label: 'Dataset 2',
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
-};
-
-// Changed to Chart and made it the default export
-export default function BarChart() {
-    return (
-        <div>
-            <Bar options={options} data={data} />
-        </div>
-    );
-};
+export default BarGraph;

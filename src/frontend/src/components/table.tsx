@@ -22,9 +22,9 @@ ChartJS.register(
 
 interface Task {
   id: number;
-  robot_id: number;
+  robot_name: string;
   status: string;
-  kit_id: number;
+  kit_name: string;
   start_date: string;
   end_date: string;
   requested_by: number;
@@ -63,21 +63,19 @@ const TableWithChart: React.FC = () => {
         <table className="table-auto w-full text-left">
           <thead>
             <tr>
-              <th className="px-4 py-2">Kit ID</th>
-              <th className="px-4 py-2">Robot ID</th>
+              <th className="px-4 py-2">Kit</th>
+              <th className="px-4 py-2">Robot</th>
               <th className="px-4 py-2">Status</th>
-              <th className="px-4 py-2">Start Date</th>
-              <th className="px-4 py-2">End Date</th>
+              <th className="px-4 py-2">Date</th>
             </tr>
           </thead>
           <tbody>
             {tasks.map((task, index) => (
               <tr key={task.id} className={`${index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}`}>
-                <td className="border px-4 py-2">{task.kit_id}</td>
-                <td className="border px-4 py-2">{task.robot_id}</td>
+                <td className="border px-4 py-2">{task.kit_name}</td>
+                <td className="border px-4 py-2">{task.robot_name}</td>
                 <td className="border px-4 py-2">{task.status}</td>
                 <td className="border px-4 py-2">{formatDate(task.start_date)}</td>
-                <td className="border px-4 py-2">{formatDate(task.end_date)}</td>
               </tr>
             ))}
           </tbody>

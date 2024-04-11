@@ -6,8 +6,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 interface Kit {
-  id: number;
-  name: string;
+  kit_name: string;
 }
 
 // Define a type for the chart data state
@@ -39,15 +38,15 @@ const BarGraph: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/kit');
+        const response = await fetch('http://localhost:8000/api/kit-order');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const kits: Kit[] = await response.json();
 
         // Count occurrences of each name
-        const nameCounts = kits.reduce((acc, { name }) => {
-          acc[name] = (acc[name] || 0) + 1;
+        const nameCounts = kits.reduce((acc, { kit_name }) => {
+          acc[kit_name] = (acc[kit_name] || 0) + 1;
           return acc;
         }, {} as Record<string, number>);
 
