@@ -10,8 +10,7 @@ Esse fluxo é referente à persona da Gestora Hospitalar, ele destina-se a ilust
     ![Fluxo Gestora Hospitalar](/img/fluxo-mayumi.png)
 </div>
 <!-- ![Fluxo Gestora Hospitalar](/img/fluxo-mayumi.png) -->
-<p align="center"><b>Figura 1 - </b> Fluxo Gestora Hospitalar</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ## Wireframe da Gestora Hospitalar
 
@@ -22,15 +21,13 @@ A Mayumi começa fazendo o login no software, segue para um menu de funcionalida
     ![Tela de Login](/img/wireframe-login.png)
 </div>
 <!-- ![Tela de Login 1](/img/wireframe-login.png) -->
-<p align="center"><b>Figura 2 - </b> Tela de Login</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 <div className = "borda_imagens">
     ![Tela de Login 2](/img/wireframe-login-email.png)
 </div>
 <!-- ![Tela de Login 2](/img/wireframe-login-email.png) -->
-<p align="center"><b>Figura 3 - </b> Tela de Login Email e Senha</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 Ao acessar a tela inicial, a gestora depara-se com três opções principais, cada uma abrindo caminho para diferentes aspectos da gestão de kits e dados. O primeiro card conduz à tela de visualização de kits, onde a gestora pode examinar detalhadamente os componentes de cada kit disponível. Essa jornada específica será melhor explorada em na explicação da jornada da persona do auxiliar de farmácia, uma vez que se alinha de forma mais precisa com as necessidades e fluxo de trabalho da persona Gabriel Menino.
 
@@ -38,8 +35,7 @@ Ao acessar a tela inicial, a gestora depara-se com três opções principais, ca
     ![Tela inicial de funcionalidades](/img/wireframe-funcionalidade.png)
 </div>
 <!-- ![Tela inicial de funcionalidades](/img/wireframe-funcionalidade.png) -->
-<p align="center"><b>Figura 4 - </b> Tela inicial de funcionalidades</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 O segundo card direciona à tela de criação e edição de kits, fornecendo à gestora uma interface intuitiva para compor novos conjuntos de materiais. Neste processo, ela é guiada a selecionar a posição de cada item no carrinho e a preencher os campos necessários, como o nome do kit, os itens a serem incluídos e as quantidades desejadas. Todos os campos são automaticamente preenchidos, simplificando a tarefa. Após a conclusão, ao clicar no botão "Salvar", um pop-up confirma a criação do kit, garantindo um feedback claro e imediato sobre a ação realizada.
 
@@ -47,15 +43,13 @@ O segundo card direciona à tela de criação e edição de kits, fornecendo à 
     ![Tela de criar/editar kit](/img/editar-kit.png)
 </div>
 <!-- ![Tela de criar/editar kit](/img/editar-kit.png) -->
-<p align="center"><b>Figura 5 - </b> Tela de criar/editar kit</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 <div className = "borda_imagens">
     ![Pop up da tela de criar/editar kit](/img/editar-kit-popup.png)
 </div>
 <!-- ![Pop up da tela de criar/editar kit](/img/editar-kit-popup.png) -->
-<p align="center"><b>Figura 5 - </b> Pop up da tela de criar/editar kit </p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 Por fim, o terceiro card conduz à seção de estatísticas, oferecendo à gestora acesso a informações cruciais para a gestão estratégica. Dentro desta seção, há três subseções distintas: tabelas, dashboards e relatórios. Nas tabelas, os kits podem ser visualizados de forma tabular, facilitando a análise detalhada dos componentes e quantidades. Além disso, a opção de exportar os dados para CSV permite uma manipulação mais ampla e personalizada. Os dashboards apresentam os dados das tabelas em formato gráfico, fornecendo uma visualização dinâmica e intuitiva das tendências e padrões. Isso permite à gestora extrair insights valiosos para otimizar a gestão hospitalar. Por fim, os relatórios oferecem uma síntese dos dados mais relevantes em formato PDF, acessíveis através de filtros de datas, tornando-os úteis para apresentações e tomadas de decisão estratégicas. Essa variedade de ferramentas proporciona à gestora hospitalar uma visão abrangente e detalhada de sua operação, capacitando-a a tomar decisões informadas e eficazes.
 
@@ -63,22 +57,19 @@ Por fim, o terceiro card conduz à seção de estatísticas, oferecendo à gesto
     ![Tela de estatísticas em formato de tabela](/img/estatisticas-tabelas.png)
 </div>
 <!-- ![Tela de estatísticas em formato de tabela](/img/estatisticas-tabelas.png) -->
-<p align="center"><b>Figura 6 - </b> Tela de estatísticas em formato de tabela</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 <div className = "borda_imagens">
     ![Tela de estatísticas em formato de dashboards](/img/estatisticas-dashboards.png)
 </div>
 <!-- ![Tela de estatísticas em formato de dashboards](/img/estatisticas-dashboards.png) -->
-<p align="center"><b>Figura 7 - </b> Tela de estatísticas em formato de dashboards</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 <div className = "borda_imagens">
     ![Tela de estatísticas em formato de relatórios](/img/estatisticas-relatorios.png)
 </div>
 <!-- ![Tela de estatísticas em formato de relatórios](/img/estatisticas-relatorios.png) -->
-<p align="center"><b>Figura 8 - </b> Tela de estatísticas em formato de relatórios</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 O Hospital Sírio Libanês busca automatizar a montagem dos carrinhos de emergência, enfrentando o desafio de layouts variados e modificações frequentes. O objetivo é criar um sistema flexível que permita ajustes e integrações futuras. Com isso, espera-se reduzir o tempo de montagem e gerar relatórios detalhados dos itens utilizados. O projeto envolve a construção de um sistema automatizado capaz de montar diferentes layouts de carrinhos, rastrear os itens e integrar-se com outras soluções. Restrições incluem o uso limitado de uma base robótica em escala reduzida e a não integração com sistemas de login de terceiros.
 
@@ -91,8 +82,7 @@ O fluxo a seguir diz respeito a persona do Auxiliar de Farmácia, ele também de
     ![Fluxo Auxiliar de Farmácia](/img/fluxo-gabriel.png)
 </div>
 <!-- ![Fluxo Auxiliar de Farmácia](/img/fluxo-gabriel.png) -->
-<p align="center"><b>Figura 9 - </b> Fluxo Auxiliar de Farmácia</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 O Gabriel Menino começa fazendo o login no software, segue para a página de calibração de entrada do robô (alinha a posição do robô em relação ao kit) e depois para página de calibração de saída (alinha a posição conforme os suprimentos), em seguida define os kits e seus itens e verifica se está correto, depois desse passo define quantos kits serão montados baseados na configuração realizada. No próximo momento o braço mecânica realiza a tarefa, após ser completada aparece uma página indicando que o processo de montagem foi finalizado. Se o usuário quiser montar mais um leva de kits, caso queira voltará para página de calibração do robô, se não, ele fecha o programa. Esse fluxo é essencial para entender como uma pessoa dentro do setor da farmácia como responsável direto pelos kits interage com a solução.
 
@@ -106,8 +96,7 @@ Visando garantir a segurança da plataforma, foi pensado em um sistema de login 
     ![Wireframe Login](/img/wireframe-login-email.png)
 </div>
 <!-- ![Wireframe Login](/img/wireframe-login-email.png) -->
-<p align="center"><b>Figura 10 - </b> Wireframe - Login </p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 A tela apresenta a funcionalidade de login. Para entrar na plataforma, é necessário inserir nos inputs, respectivamente o e-mail e a senha. Além disso, é apresentada a funcionalidade de "esqueci minha senha", a qual recuperar a senha de um usuário.  
 
@@ -123,8 +112,7 @@ Nessa tela, existe uma simulação de uma bandeja de entrada, na qual aparecem 3
     ![Wireframe Calibrar](/img/wireframe-calibrar.png)
 </div>
 <!-- ![Wireframe Calibrar](/img/wireframe-calibrar.png) -->
-<p align="center"><b>Figura 11 - </b> Wireframe - Calibração - Selecionar ponto</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 #### Tela 3 - Calibrar ponto específico
 
@@ -134,8 +122,7 @@ A tela mostra em destaque o ponto selecionado pelo usuário anteriormente. A par
     ![Wireframe Calibrar - Ponto Específico](/img/wireframe-calibrar-especifico.png)
 </div>
 <!-- ![Wireframe Calibrar - Ponto Específico](/img/wireframe-calibrar-especifico.png) -->
-<p align="center"><b>Figura 12 - </b> Wireframe - Calibrar manualmente robô</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 
 ### Tela 4 - Escolher o kit a ser produzido
@@ -146,9 +133,7 @@ Ao concluir a calibração, o usuário deve escolher o kit que será produzido p
     ![Wireframe Selecionar Kit](/img/wireframe-kit.png)
 </div>
 <!-- ![Wireframe Selecionar Kit](/img/wireframe-kit.png) -->
-<p align="center"><b>Figura 13 - </b> Wireframe - Kit </p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
-
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ### Tela 5 - Confirmar quantidade do kit a ser produzido
 
@@ -158,8 +143,7 @@ Nessa parte da solução, o usuário deve verificar se o kit que está sendo rea
     ![Wireframe Quantidade de Kits](/img/wireframe-quantidade.png)
 </div>
 <!-- ![Wireframe Quantidade de Kits](/img/wireframe-quantidade.png) -->
-<p align="center"><b>Figura 14 - </b> Wireframe - Quantidade de Kits</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ### Tela 6 - Kit em produção
 
@@ -169,8 +153,7 @@ Essa tela representa o momento em que o braço robótico estará realizando os k
     ![Wireframe Produção dos kits](/img/wireframe-loading.png)
 </div>
 <!-- ![Wireframe Produção dos kits](/img/wireframe-loading.png) -->
-<p align="center"><b>Figura 15 - </b> Wireframe - Kits em produção</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 
 ### Tela 7 - Finalização dos kits 
@@ -181,5 +164,4 @@ Ao finalizar todos os kits solicitados pelo usuário, essa tela aparecerá e o u
     ![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png)
 </div>
 <!-- ![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png) -->
-<p align="center"><b>Figura 16 - </b> Wireframe - Tela final</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>

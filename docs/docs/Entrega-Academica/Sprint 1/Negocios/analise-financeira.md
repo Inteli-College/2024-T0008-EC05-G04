@@ -9,8 +9,10 @@ A tabela a seguir fornece uma visão consolidada das estimativas financeiras par
 Decidimos que o braço robótico Dobot CR3-1300 e quatro funcionários na área seriam o mais adequado para a conclusão do projeto num período de um ano.
 
 ![Planilha](/sheets/planilha-analise-financeira.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 <img class="image-intro" src={useBaseUrl("sheets/clt-table.png")} alt="CLT Automa"/>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 Planilha completa no link abaixo
 
