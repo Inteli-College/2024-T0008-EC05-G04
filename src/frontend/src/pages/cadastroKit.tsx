@@ -12,7 +12,7 @@ const CadastroKit: React.FC = () => {
     const navigate = useNavigate();
 
     // Define the types that will be used
-    const item = useFetch<Item[]>('http://localhost:8000/api/item');
+    const item = useFetch<Item[]>('http://localhost:8000/api/item/');
 
     const [kitItems, setKitItems] = useState<itemKit[]>([])
 
@@ -70,7 +70,7 @@ const CadastroKit: React.FC = () => {
 
     async function createKit() {
         try {
-            const response = await fetch('http://localhost:8000/api/kit', {
+            const response = await fetch('http://localhost:8000/api/kit/', {
                 method: 'POST',
                 body: JSON.stringify({ name }),
                 headers: {
@@ -94,7 +94,7 @@ const CadastroKit: React.FC = () => {
         for (const kit of kitItems) {
             kit.kit_id = kitCreatedId;
             try {
-                const createKit = await fetch('http://localhost:8000/api/kit-position', {
+                const createKit = await fetch('http://localhost:8000/api/kit-position/', {
                     method: 'POST',
                     body: JSON.stringify(kit),
                     headers: {

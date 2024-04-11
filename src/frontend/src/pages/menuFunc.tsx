@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Navbar from '../components/navbar';
-import Placeholder from '../static/placeholder.webp';
+import Placeholder from '../static/logoS.svg';
 
 const MainPage: React.FC = () => {
   const navigate = useNavigate(); // Initialize the navigate function
@@ -10,17 +10,17 @@ const MainPage: React.FC = () => {
   const cardData = [
     {
       title: 'Visualizar Kits',
-      content: '',
+      content: 'Permite visualizar os kits existentes, assim como criar novos kits.',
       path: '/visuKits', // Destination path when this card is clicked
     },
     {
       title: 'Montar Kit',
-      content: '',
+      content: 'Funcionalidade para montar kits hospitalares.',
       path: '/montarKits',
     },
     {
       title: 'Estatísticas',
-      content: '',
+      content: 'Funcionalidade para visualizar estatísticas de kits montados.',
       path: '/dashboards',
     },
   ];
@@ -38,12 +38,10 @@ const MainPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
               {cardData.map((card, index) => (
                 // Added onClick event to each card that calls handleCardClick with the card's path
-                <div key={index} onClick={() => handleCardClick(card.path)} className="transition duration-500 scale-[1.20] hover:scale-[1.30] border rounded-lg shadow-lg p-4 bg-white cursor-pointer">
-                  <div className="aspect-w-1 aspect-h-1 scale-[1.03] bg-gray-300 rounded-t-lg overflow-hidden">
-                    <img className="w-full" src={Placeholder} alt="Logo" />
-                  </div>
-                  <h2 className="mt-2 text-lg pt-2">{card.title}</h2>
-                  <p>{card.content}</p>
+                <div key={index} onClick={() => handleCardClick(card.path)} className="transition duration-500 scale-[1.20] hover:scale-[1.30] border rounded-lg shadow-lg p-16 flex flex-col items-center bg-white cursor-pointer">
+                  <b><h2 className="mt-2 text-xl text pt-2">{card.title}</h2></b>
+
+                  <p className='text-center'>{card.content}</p>
                 </div>
               ))}
             </div>

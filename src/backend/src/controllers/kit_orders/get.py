@@ -71,5 +71,6 @@ async def get_by_id(kit_order_id: int) -> Optional[KitOrderSchema]:
 
         if not row:
             return None
+        
 
         return KitOrderSchema(**row)

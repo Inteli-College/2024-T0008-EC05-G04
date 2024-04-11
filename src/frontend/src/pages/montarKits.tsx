@@ -16,7 +16,7 @@ const MontarKits: React.FC = () => {
   const [itensArray, setItensArray] = useState<TextCard[]>([]); // This should be an array of items, not a function
 
   // Assuming 'endpoint' is your target URL
-  const postEndpoint = 'http://localhost:8000/api/kit-order';
+  const postEndpoint = 'http://localhost:8000/api/kit-order/';
 
   function getSelectedKit(value: number) {
     if (value) {
@@ -34,6 +34,8 @@ const MontarKits: React.FC = () => {
       alert('Selecione um kit e um robô!.');
       return;
     }
+
+    alert('Enviado!')
 
     try {
       const response = await fetch(postEndpoint, {

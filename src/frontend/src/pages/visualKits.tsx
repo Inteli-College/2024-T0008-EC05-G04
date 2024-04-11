@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Navbar from '../components/navbar';
 import ButtonMedio from "../components/button";
-import Placeholder from '../static/placeholder.webp';
+import Placeholder from '../static/logoS.svg';
 import useFetch from '../hooks/useFetch';
 import { Kit } from '../interfaces/interfaces';
 import CardItem from '../components/cardItem';
@@ -42,10 +42,7 @@ const VisuPage: React.FC = () => {
             </div>
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {kits?.map((kit, index) => (
-              <div key={index} onClick={() => handleCardClick(kit)} className="transition duration-700 hover:scale-105 border rounded-lg shadow-lg p-4 bg-white cursor-pointer">
-                <div className="aspect-w-1 aspect-h-1 bg-gray-300 rounded-t-lg overflow-hidden">
-                  <img className="w-full" src={Placeholder} alt="Logo" />
-                </div>
+              <div key={index} onClick={() => handleCardClick(kit)} className="transition duration-700 hover:scale-105 border rounded-lg shadow-lg p-12 flex flex-col items-center bg-white cursor-pointer">
                 <h2 className="mt-2 font-bold text-lg">{kit.name}</h2>
                 <p className='text-base'>Kit id: {kit.id}</p>
               </div>
