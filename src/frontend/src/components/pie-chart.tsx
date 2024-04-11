@@ -5,8 +5,8 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 interface Dataset {
-  id: number;
-  name: string;
+  robot_name: string;
+  kit_name: string;
 }
 
 interface ChartDataType {
@@ -48,12 +48,12 @@ const PieGraph: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/kit');
+        const response = await fetch('http://localhost:8000/api/kit-order');
         const data: Dataset[] = await response.json();
 
         const processData = (data: Dataset[]) => {
           const nameCount = data.reduce((acc, item) => {
-            acc[item.name] = (acc[item.name] || 0) + 1;
+            acc[item.kit_name] = (acc[item.kit_name] || 0) + 1;
             return acc;
           }, {} as Record<string, number>);
 
