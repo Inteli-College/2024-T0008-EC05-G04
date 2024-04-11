@@ -14,8 +14,10 @@ async def send_kit_order_to_robot(kit_id: int, kit_order: int):
 
     body = {"kit_order_id": kit_order, "kit": kit}
 
+    url = tokens.ROBOT_URL + '/kit-order'
+
     response = requests.post(
-        url=f"{tokens.ROBOT_URL}/kit-order",
+        url=url,
         json=body,
     )
 
