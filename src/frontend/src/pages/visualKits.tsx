@@ -34,7 +34,7 @@ const VisuPage: React.FC = () => {
 
   return (
     <div className="flex flex-col h-screen overflow-y-scroll no-scrollbar">
-      <div className="flex-grow bg-gray-100 pt-28">
+      <div className="flex-grow bg-gray-100 pt-20">
         <Navbar />
         <div className="max-w-6xl mx-auto py-20">
             <div className="flex justify-end">
