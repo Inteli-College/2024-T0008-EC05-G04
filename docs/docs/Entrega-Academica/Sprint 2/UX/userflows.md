@@ -164,12 +164,9 @@ Ao finalizar todos os kits solicitados pelo usuário, essa tela aparecerá e o u
     ![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png)
 </div>
 <!-- ![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png) -->
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
-<p align="center"><b>Figura 16 - </b> Wireframe - Tela final</p>
-<p align="center">Fonte: Elaboração Grupo 4</p>
 
 ## Conclusão
 O Fluxo de Utilização da Solução demonstra uma interação intuitiva e segura com o sistema de automação, permitindo aos usuários, desde gestores hospitalares a auxiliares de farmácia, realizarem suas tarefas com eficácia. As funcionalidades do sistema, calibradas para atender as demandas específicas do hospital, oferecem uma operacionalização simplificada e eficiente, contribuindo para a melhoria contínua da gestão de kits de emergência e da qualidade dos serviços de saúde.
-
-<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 

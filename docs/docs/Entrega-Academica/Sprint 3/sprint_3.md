@@ -1,7 +1,7 @@
 # Sprint 3
 Nesta sprint, o foco foi no aprimoramento dos movimentos do robô, além da adição de controles periféricos.
 
-## Computação:
+## Computação
 Foi adicionado um sensor infravermelho de proximidade a um braço robótico. Este sensor, montado na ponta do braço, serve como um mecanismo de verificação para determinar se um item foi adequadamente agarrado pelo braço robótico. Dependendo da distância do objeto em relação ao sensor, um LED e um buzzer são ativados. Além disso, uma mensagem é exibida no monitor serial, indicando se um objeto está sendo detectado ou não.
 
 Os componentes utilizados no projeto incluem um Raspberry PICO, um resistor de 220 Ohms, um resistor de 10K Ohms, um LED vermelho, um buzzer e fios macho-macho e macho-fêmea.

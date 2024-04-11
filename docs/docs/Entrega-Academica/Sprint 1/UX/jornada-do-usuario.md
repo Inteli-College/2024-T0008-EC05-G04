@@ -1,16 +1,14 @@
 # Jornada do Usuário
 
 
-O mapa de jornada do usuário, se trata de um instrumento que desenha uma representação visual detalhada das etapas navegadas por um usuário ao interagir com uma plataforma. Essa ferramenta enfatiza as emoções e ações experimentadas pelo usuário durante tal interação, servindo como um recurso inestimável para identificar pontos de melhoria e compreender os desafios enfrentados pelo usuário em sua experiência. Na sequência, será apresentado o mapa de jornada de Mayumi Tanaka, que atua como gestora de logística no Hospital Sírio-Libanês, destacando os insights valiosos obtidos através desta análise detalhada.
-
-Neste contexto, exploraremos a ideia de mapa de jornada do usuário, que consiste em uma representação visual das fases percorridas por um usuário ao se envolver com uma plataforma. Destacamos as emoções e ações vivenciadas pelo usuário durante essa interação. Esse recurso é valioso para identificar oportunidades de aprimoramento e compreender os obstáculos enfrentados pelo usuário. Abaixo apresentaremos o mapa de jornada do usuário de Mayumi Tanaka, gestora de logística do Hospital Sírio-Libanês.
+O mapa de jornada do usuário é uma ferramenta que ilustra, através de uma representação visual detalhada, as etapas vivenciadas por um usuário ao interagir com uma plataforma. Essencial para destacar as emoções e ações durante essa experiência, o mapa serve como um recurso fundamental para identificar áreas de melhoria e entender os desafios enfrentados. A seguir, será detalhado o mapa de jornada de Mayumi Tanaka, gestora de logística no Hospital Sírio-Libanês, evidenciando os insights valiosos adquiridos nesta análise profunda.
 
 ![Persona Gestora Hospitalar](/img/jornada-usuario-mayumi.png)
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
-A jornada do usuário de Mayumi Tanaka, gestora de logística do Hospital Sírio-Libanês, ilustra as etapas que ela percorre ao lidar com os kits de emergência. A partir dessa jornada, é possível identificar os pontos de dor e as oportunidades de melhoria que podem ser exploradas para aprimorar a experiência de Mayumi e de outros gestores hospitalares.
+A jornada do usuário de Mayumi Tanaka, gestora de logística do Hospital Sírio-Libanês, ilustra as etapas percorridas por ela ao lidar com os kits de emergência. A análise dessa jornada possibilita a identificação de pontos de dor e oportunidades de melhoria, que podem ser aproveitadas para aprimorar a experiência de Mayumi e de outros gestores hospitalares.
 
-A seguir, temos a jornada do usuário de Renata Sanches, auxiliar de enfermagem do Hospital Sírio-Libanês, que ilustra as etapas que ela percorre ao lidar com os kits de emergência. A partir dessa jornada, é possível identificar os pontos de dor e as oportunidades de melhoria que podem ser exploradas para aprimorar a experiência de Renata e de outros profissionais de saúde.
+Em seguida, é apresentada a jornada do usuário de Renata Sanches, auxiliar de enfermagem do mesmo hospital, destacando as etapas enfrentadas por ela ao manusear os kits de emergência. Essa análise permite identificar pontos de dor e oportunidades de melhoria, visando aprimorar a experiência de Renata e de outros profissionais de saúde.
 
 ![Persona Auxiliar de Enfermagem](/img/jornada-usuario-renata.png)
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>

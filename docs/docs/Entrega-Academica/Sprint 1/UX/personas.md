@@ -1,5 +1,5 @@
 # Personas
-Uma persona se trata da representação de arquétipos fictícios do cliente ideal de um negócio, desempenhando um papel crucial no desenvolvimento de projetos. Elas são construídas a partir de informações pessoais, dores, necessidades e esperanças, permitindo a personificação e melhor entendimento das diferentes partes interessadas envolvidas no projeto. 
+Uma persona trata-se da representação de arquétipos fictícios do cliente ideal de um negócio, desempenhando um papel crucial no desenvolvimento de projetos. Elas são construídas a partir de informações pessoais, dores, necessidades e esperanças, permitindo a personificação e melhor entendimento das diferentes partes interessadas envolvidas no projeto. 
 
 No contexto desse projeto de automação dos kits de emergências, as personas são essenciais, pois representam os pacientes que buscam um atendimento mais eficaz, bem como membros da equipe responsável pela organização dos kits e funcionamento dos sistemas. Ao entender as necessidades e desafios de cada persona, pode-se direcionar a solução de automação, assegurando sua relevância e benefício para todos os envolvidos no ciclo de cuidados de saúde, desde a montagem dos carrinhos e kits de emergência até o atendimento aos pacientes. 
 
