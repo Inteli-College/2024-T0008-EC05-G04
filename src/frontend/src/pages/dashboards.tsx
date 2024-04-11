@@ -32,10 +32,10 @@ const Dashboards: React.FC = () => {
           <div className="text-center my-6">
             <h1 className="text-3xl my-6">Estatísticas</h1>
             <div className="flex justify-center gap-44 my-20">
-              <button onClick={() => navigate('/tables')} className=" transition duration-500 hover:bg-buttongrey text-black text-opacity-50 py-2 px-4 rounded-3xl">
+              <button onClick={() => navigate('/tables')} className=" transition duration-500 hover:bg-buttongrey text-black text-2xl text-opacity-50 py-2 px-4 rounded-3xl">
                 Tabelas
               </button>
-              <button className="transition duration-500 hover:bg-buttongrey text-black py-2 px-4 rounded-3xl">
+              <button className="transition duration-500 hover:bg-buttongrey text-black text-2xl py-2 px-4 rounded-3xl">
                 Dashboards
               </button>
             </div>
