@@ -17,7 +17,7 @@ async def get_all_kits():
     return kits_list
 
 
-@router.get("/{kit_id}", response_model=KitSchema)
+@router.get("/{kit_id}")
 async def get_kit(kit_id: int):
     kit = await kits.get_by_id(kit_id)
 

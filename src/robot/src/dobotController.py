@@ -13,8 +13,8 @@ class DobotController:
         self.caught_object = False
 
     def list_ports(self):
-        ports = [port.device for port in list_ports.comports()]
-        ports.append("mock")
+        ports = ["mock"]
+        ports += [port.device for port in list_ports.comports()]
 
         return ports
 
