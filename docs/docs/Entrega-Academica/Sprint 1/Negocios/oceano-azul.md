@@ -34,12 +34,11 @@ Desenvolver capacidades de integração com os sistemas já existentes no hospit
 Criar uma interface de usuário intuitiva para configuração, operação e dashboard do sistema não apenas simplifica sua utilização, mas também reduz a necessidade de aprendizado prévio. Isso distingue a solução da concorrência, garantindo que seja acessível a todos os usuários, inclusive os membros das equipes médicas que não possuem habilidade técnica. 
 
 ## Matriz Oceano Azul 
-<p align="center"><b>Figura 1 - </b>Matriz de Avaliação Oceano Azul</p>
 ![Persona Auxiliar de Enfermagem](/img/matriz-oceano.png)
-<p align="center">Fonte: Elaboração Grupo 4</p>
-<p align="center"><b>Figura 2 - </b>Matriz de Avaliação Oceano Azul</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
+
 ![Persona Auxiliar de Enfermagem](/img/grafico-oceano.png)
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 
 - **Intervenção Humana:** Nota 5 para o Grupo 4 e 9 para o Molde atual sugere que, enquanto o molde atual requer muita intervenção humana, o Grupo 4 reconhece a necessidade de reduzi-la.
