@@ -1,8 +1,6 @@
 # Jornada do Usuário
 
-Neste contexto, exploraremos a ideia de mapa de jornada do usuário, que consiste em uma representação visual das fases percorridas por um usuário ao se envolver com uma plataforma. Destacamos as emoções e ações vivenciadas pelo usuário durante essa interação. Esse recurso é valioso para identificar oportunidades de aprimoramento e compreender os obstáculos enfrentados pelo usuário. Abaixo apresentaremos o mapa de jornada do usuário de Mayumi Tanaka, gestora de logística do Hospital Sírio-Libanês.
-
-<p align="center"><b>Figura 3 - </b> Jornada do Usuário - Mayumi Tanaka</p>
+O mapa de jornada do usuário, se trata de um instrumento que desenha uma representação visual detalhada das etapas navegadas por um usuário ao interagir com uma plataforma. Essa ferramenta enfatiza as emoções e ações experimentadas pelo usuário durante tal interação, servindo como um recurso inestimável para identificar pontos de melhoria e compreender os desafios enfrentados pelo usuário em sua experiência. Na sequência, será apresentado o mapa de jornada de Mayumi Tanaka, que atua como gestora de logística no Hospital Sírio-Libanês, destacando os insights valiosos obtidos através desta análise detalhada.
 
 ![Persona Gestora Hospitalar](/img/jornada-usuario-mayumi.png)
 <p align="center">Fonte: Elaboração Grupo 4</p>
@@ -10,8 +8,6 @@ Neste contexto, exploraremos a ideia de mapa de jornada do usuário, que consist
 A jornada do usuário de Mayumi Tanaka, gestora de logística do Hospital Sírio-Libanês, ilustra as etapas que ela percorre ao lidar com os kits de emergência. A partir dessa jornada, é possível identificar os pontos de dor e as oportunidades de melhoria que podem ser exploradas para aprimorar a experiência de Mayumi e de outros gestores hospitalares.
 
 A seguir, temos a jornada do usuário de Renata Sanches, auxiliar de enfermagem do Hospital Sírio-Libanês, que ilustra as etapas que ela percorre ao lidar com os kits de emergência. A partir dessa jornada, é possível identificar os pontos de dor e as oportunidades de melhoria que podem ser exploradas para aprimorar a experiência de Renata e de outros profissionais de saúde.
-
-<p align="center"><b>Figura 4 - </b> Jornada do Usuário - Renata Sanches</p>
 
 ![Persona Auxiliar de Enfermagem](/img/jornada-usuario-renata.png)
 <p align="center">Fonte: Elaboração Grupo 4</p>
