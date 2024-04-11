@@ -16,7 +16,11 @@ async def create(kit: KitCreate) -> Optional[KitSchema]:
             """
             kit_id = await conn_postgres.fetchval(query, kit.name)
 
-            return await get_by_id(kit_id)
+            # retorna um json com {kit_id: kit_id}
+            return {
+                "id": kit_id,
+                "name": kit.name
+            }
 
         except Exception as e:
             print(f"Error adding kit: {str(e)}")

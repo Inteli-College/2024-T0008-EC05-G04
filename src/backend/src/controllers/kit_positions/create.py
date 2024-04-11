@@ -5,6 +5,7 @@ from .get import get_by_id
 
 
 async def create(kit_position: KitPositionCreate):
+    print(kit_position)
     async with conn_postgres.transaction():
         try:
             query = """
@@ -14,6 +15,8 @@ async def create(kit_position: KitPositionCreate):
             kit_position_id = await conn_postgres.fetchval(
                 query, kit_position.kit_id, kit_position.position, kit_position.item_id, kit_position.quantity
             )
+
+            print(kit_position_id)
 
             return await get_by_id(kit_position_id)
         except Exception:
