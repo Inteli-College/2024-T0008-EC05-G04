@@ -94,7 +94,7 @@ git clone https://github.com/Inteli-College/2024-T0008-EC05-G04.git
 
 ### Documentação
 
-A documentação é feita com o [Docussaurus], para executá-la, basta executar os seguintes comandos:
+A documentação é feita com o [Docussaurus](https://docusaurus.io/), para executá-la, basta executar os seguintes comandos:
 
 ```sh
 cd docs
@@ -165,3 +165,7 @@ npm start
 ## Licença
 
 Este projeto está licenciado sob a Licença CC-0. Veja o arquivo `LICENSE` para mais detalhes.
+
+---
+
+A documentação completa pode ser encontrada em https://inteli-college.github.io/2024-T0008-EC05-G04/
