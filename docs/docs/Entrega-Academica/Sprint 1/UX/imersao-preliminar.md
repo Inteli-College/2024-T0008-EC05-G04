@@ -12,13 +12,13 @@ Para realizar a imersão preliminar, optou-se por uma entrevista direta com o pa
 
 ### Contexto
 
-O projeto consiste na automatização do sistema de preparo de kits e/ou carrinhos de parada para o uso dentro de hospitais da rede Sírio Libanês. Os carrinhos possuem dois diferentes layouts, são utilizados especialmente para paradas, necessitam que seja possível alterar entre ambos. Além disso, é necessário que seus itens sejam rastreáveis. Em contrapartida, os kits possuem diversos layouts e têm uma saída mais frequente do que os carrinhos, utilizados para diversos fins.
+O projeto consiste na automatização do sistema de preparo de kits e/ou carrinhos de parada para o uso dentro de hospitais da rede Sírio-Libanês. Os carrinhos possuem dois diferentes layouts, são utilizados especialmente para paradas, necessitam que seja possível alterar entre ambos. Além disso, é necessário que seus itens sejam rastreáveis. Em contrapartida, os kits possuem diversos layouts e têm uma saída mais frequente do que os carrinhos, utilizados para diversos fins.
 
 ## Entrevista
 
 ### Decorrer da entrevista
 
-A entrevista ocorreu na quarta-feira, dentro da sala de aula da turma de engenharia de computação, o que permitiu a participação de todos os alunos, da representante do Sírio Libanês, Lorena e do professor orientador, Murilo, o qual intermediou a conversa. Portanto, para o encontro ocorrer de forma organizada, foi previamente estabelecido que a interação entre os alunos e a representante iria ocorrer de forma com que cada grupo pudesse realizar quatro perguntas, cada um em sua vez. Com isso, a dinamicidade da entrevista aumentou, evitando perguntas duplicadas e auxiliando as dúvidas a serem solucionadas simultaneamente por serem parecidas.
+A entrevista ocorreu na quarta-feira, dentro da sala de aula da turma de engenharia de computação, o que permitiu a participação de todos os alunos, da representante do Sírio-Libanês, Lorena e do professor orientador, Murilo, o qual intermediou a conversa. Portanto, para o encontro ocorrer de forma organizada, foi previamente estabelecido que a interação entre os alunos e a representante iria ocorrer de forma com que cada grupo pudesse realizar quatro perguntas, cada um em sua vez. Com isso, a dinamicidade da entrevista aumentou, evitando perguntas duplicadas e auxiliando as dúvidas a serem solucionadas simultaneamente por serem parecidas.
 
 Os grupos tiveram como objetivo principal, a busca por uma maior compreensão e delimitação do escopo do projeto. Como resultado, a pauta principal foi o funcionamento do carrinho de parada cardíaca, o qual tinha recebido maior destaque durante o kick-off e no TAPI. No decorrer da entrevista, houve vários questionamentos buscando compreender quem eram os principais usuários do produto, qual era sua frequência de uso, o tamanho de suas gavetas e como elas ficavam organizadas, entre outros.
 

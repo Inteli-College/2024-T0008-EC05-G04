@@ -34,23 +34,26 @@ Desenvolver capacidades de integração com os sistemas já existentes no hospit
 Criar uma interface de usuário intuitiva para configuração, operação e dashboard do sistema não apenas simplifica sua utilização, mas também reduz a necessidade de aprendizado prévio. Isso distingue a solução da concorrência, garantindo que seja acessível a todos os usuários, inclusive os membros das equipes médicas que não possuem habilidade técnica. 
 
 ## Matriz Oceano Azul 
-<p align="center"><b>Figura 1 - </b>Matriz de Avaliação Oceano Azul</p>
-![Persona Auxiliar de Enfermagem](/img/matriz-oceano.png)
-<p align="center">Fonte: Elaboração Grupo 4</p>
-<p align="center"><b>Figura 2 - </b>Matriz de Avaliação Oceano Azul</p>
-![Persona Auxiliar de Enfermagem](/img/grafico-oceano.png)
-<p align="center">Fonte: Elaboração Grupo 4</p>
+<p align="center">
+![Matriz Oceano](/img/matriz-oceano.png)
+<h6> Fonte: Elaboração Grupo 4U </h6>
+</p>
+
+<p align="center">
+![Gráfico Oceano](/img/grafico-oceano.png)
+<h6> Fonte: Elaboração Grupo 4U </h6>
+</p>
 
 
-- **Intervenção Humana:** Nota 5 para o Grupo 4 e 9 para o Molde atual sugere que, enquanto o molde atual requer muita intervenção humana, o Grupo 4 reconhece a necessidade de reduzi-la.
-- **Tempo de Montagem:** Nota 8 para o Grupo 4 e 9 para o Molde atual sugerindo que a importância de reduzir o tempo é reconhecida, mas esse atributo não é uma prioridade no momento. 
-- **Erros de Montagem:** Nota 1 para o Grupo 4 e 5 para o Molde atual sugere que o Grupo 4 vê a necessidade de reduzir esses erros, quanto menor o índice de erro melhor. E de acordo com isso, pretende-se reduzir significativamente o esse índice.
+- **Intervenção Humana:** Nota 5 para o grupo 4U e 9 para o Molde atual sugere que, enquanto o molde atual requer muita intervenção humana, o grupo 4U reconhece a necessidade de reduzi-la.
+- **Tempo de Montagem:** Nota 8 para o grupo 4U e 9 para o Molde atual sugerindo que a importância de reduzir o tempo é reconhecida, mas esse atributo não é uma prioridade no momento. 
+- **Erros de Montagem:** Nota 1 para o grupo 4U e 5 para o Molde atual sugere que o grupo 4U vê a necessidade de reduzir esses erros, quanto menor o índice de erro melhor. E de acordo com isso, pretende-se reduzir significativamente o esse índice.
 
-- **Montagem Manual:** Nota 0 para o Grupo 4 indica que o planejamento é  eliminar completamente a montagem manual, ao passo que o Molde atual, com nota 10, depende inteiramente dela.
-- **Rastreabilidade dos Itens:** Nota 9 para o Grupo 4 e 7 para o Molde atual demonstra a ênfase que tem-se em melhorar a rastreabilidade por meio do sistema de automação, enquanto o Molde atual tem um sistema menos apurado.
-- **Relatórios e Análises:** Nota 9 para o Grupo 4 e 6 para o Molde atual, demonstrando que o Grupo 4 vê isso como crítico, devido a valorização em análise de dados e feedback para apromiramento contínuo.
+- **Montagem Manual:** Nota 0 para o grupo 4U indica que o planejamento é  eliminar completamente a montagem manual, ao passo que o Molde atual, com nota 10, depende inteiramente dela.
+- **Rastreabilidade dos Itens:** Nota 9 para o grupo 4U e 7 para o Molde atual demonstra a ênfase que tem-se em melhorar a rastreabilidade por meio do sistema de automação, enquanto o Molde atual tem um sistema menos apurado.
+- **Relatórios e Análises:** Nota 9 para o grupo 4U e 6 para o Molde atual, demonstrando que o grupo 4U vê isso como crítico, devido a valorização em análise de dados e feedback para apromiramento contínuo.
 
-- **Integração com Outros Sistemas:** Nota 10 para o Grupo 4 significa que a adição como prioridade máxima, para garantir que a solução funcione em conjunto com as outras plataformas já em uso no hospital. O Molde atual, com nota 0, não tem essa integração.
-- **Usabilidade:** Nota 10 para o Grupo 4 sugere que a criação de uma interface intuitiva para o usuário é indispensável, reconhendo que a a importância da facilidade de adoção com o mínimo de treinamento possível.Enquando, o Molde atual se encontra com nota zero indicando que a usabilidade precisa de melhorias significativas.
+- **Integração com Outros Sistemas:** Nota 10 para o grupo 4U significa que a adição como prioridade máxima, para garantir que a solução funcione em conjunto com as outras plataformas já em uso no hospital. O Molde atual, com nota 0, não tem essa integração.
+- **Usabilidade:** Nota 10 para o grupo 4U sugere que a criação de uma interface intuitiva para o usuário é indispensável, reconhendo que a a importância da facilidade de adoção com o mínimo de treinamento possível.Enquando, o Molde atual se encontra com nota zero indicando que a usabilidade precisa de melhorias significativas.
 
 De acordo com as notas, é perceptível que as prioridades estratégicas do projeto que está sendo desenvolvido são fortemente focadas na experiência do usuário no contexto da automação. Por outro lado, o Molde atual demonstra maior dependência de procedimentos manuais.
