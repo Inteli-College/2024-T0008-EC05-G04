@@ -9,3 +9,5 @@ No aspecto de negócios, foram estruturadas análises financeiras para compreend
 
 ## Experiência do Usuário (UX)
 No domínio da experiência do usuário, foi realizada uma imersão preliminar para entender profundamente as necessidades e expectativas dos usuários. A jornada do usuário foi mapeada para visualizar todas as etapas realizadas ao interagir com o produto ou serviço. Foram criadas personas para representar os diferentes tipos de usuários, suas características, necessidades e objetivos. Por fim, foram elaboradas histórias de usuário para descrever as funcionalidades do sistema do ponto de vista do usuário, destacando as tarefas que precisam ser realizadas e os benefícios esperados.
+
+## Tabela de tarefas
