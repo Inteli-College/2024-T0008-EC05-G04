@@ -35,12 +35,12 @@ Criar uma interface de usuário intuitiva para configuração, operação e dash
 
 ## Matriz Oceano Azul 
 <p align="center">
-![Persona Auxiliar de Enfermagem](/img/matriz-oceano.png)
+![Matriz Oceano](/img/matriz-oceano.png)
 <h6> Fonte: Elaboração Grupo 4U </h6>
 </p>
 
 <p align="center">
-![Persona Auxiliar de Enfermagem](/img/grafico-oceano.png)
+![Gráfico Oceano](/img/grafico-oceano.png)
 <h6> Fonte: Elaboração Grupo 4U </h6>
 </p>
 

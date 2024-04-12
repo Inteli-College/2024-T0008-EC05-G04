@@ -9,7 +9,6 @@ Esse fluxo é referente à persona da Gestora Hospitalar, ele destina-se a ilust
 <div className = "borda_imagens">
     ![Fluxo Gestora Hospitalar](/img/fluxo-mayumi.png)
 </div>
-<!-- ![Fluxo Gestora Hospitalar](/img/fluxo-mayumi.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ## Wireframe da Gestora Hospitalar
@@ -22,13 +21,11 @@ A Mayumi começa fazendo o login no software, segue para um menu de funcionalida
 <div className = "borda_imagens">
     ![Tela de Login](/img/wireframe-login.png)
 </div>
-<!-- ![Tela de Login 1](/img/wireframe-login.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 <div className = "borda_imagens">
     ![Tela de Login 2](/img/wireframe-login-email.png)
 </div>
-<!-- ![Tela de Login 2](/img/wireframe-login-email.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ### Tela 3 - Menu de funcionalidades
@@ -38,7 +35,6 @@ Ao acessar a tela inicial, a gestora depara-se com três opções principais, ca
 <div className = "borda_imagens">
     ![Tela inicial de funcionalidades](/img/wireframe-funcionalidade.png)
 </div>
-<!-- ![Tela inicial de funcionalidades](/img/wireframe-funcionalidade.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ### Telas 4 e 5 - Criação de kits
@@ -50,7 +46,6 @@ O segundo card direciona à tela de criação e edição de kits, fornecendo à 
 <div className = "borda_imagens">
     ![Tela de criar/editar kit](/img/editar-kit.png)
 </div>
-<!-- ![Tela de criar/editar kit](/img/editar-kit.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 #### Tela 5 - Modal de confirmação
@@ -58,7 +53,6 @@ O segundo card direciona à tela de criação e edição de kits, fornecendo à 
 <div className = "borda_imagens">
     ![Pop up da tela de criar/editar kit](/img/editar-kit-popup.png)
 </div>
-<!-- ![Pop up da tela de criar/editar kit](/img/editar-kit-popup.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ### Telas 6, 7 e 8 - Estatísticas
@@ -70,7 +64,6 @@ Por fim, o terceiro card conduz à seção de estatísticas, oferecendo à gesto
 <div className = "borda_imagens">
     ![Tela de estatísticas em formato de tabela](/img/estatisticas-tabelas.png)
 </div>
-<!-- ![Tela de estatísticas em formato de tabela](/img/estatisticas-tabelas.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 #### Tela 7 - Dashboard
@@ -78,7 +71,6 @@ Por fim, o terceiro card conduz à seção de estatísticas, oferecendo à gesto
 <div className = "borda_imagens">
     ![Tela de estatísticas em formato de dashboards](/img/estatisticas-dashboards.png)
 </div>
-<!-- ![Tela de estatísticas em formato de dashboards](/img/estatisticas-dashboards.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 #### Tela 8 - Relatórios
@@ -86,7 +78,6 @@ Por fim, o terceiro card conduz à seção de estatísticas, oferecendo à gesto
 <div className = "borda_imagens">
     ![Tela de estatísticas em formato de relatórios](/img/estatisticas-relatorios.png)
 </div>
-<!-- ![Tela de estatísticas em formato de relatórios](/img/estatisticas-relatorios.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 O Hospital Sírio-Libanês busca automatizar a montagem dos carrinhos de emergência, enfrentando o desafio de layouts variados e modificações frequentes. O objetivo é criar um sistema flexível que permita ajustes e integrações futuras. Com isso, espera-se reduzir o tempo de montagem e gerar relatórios detalhados dos itens utilizados. O projeto envolve a construção de um sistema automatizado capaz de montar diferentes layouts de carrinhos, rastrear os itens e integrar-se com outras soluções. Restrições incluem o uso limitado de uma base robótica em escala reduzida e a não integração com sistemas de login de terceiros.
@@ -99,7 +90,6 @@ O fluxo a seguir diz respeito a persona do Auxiliar de Farmácia, ele também de
 <div className = "borda_imagens">
     ![Fluxo Auxiliar de Farmácia](/img/fluxo-gabriel.png)
 </div>
-<!-- ![Fluxo Auxiliar de Farmácia](/img/fluxo-gabriel.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 O Gabriel Menino começa fazendo o login no software, segue para a página de calibração de entrada do robô (alinha a posição do robô em relação ao kit) e depois para página de calibração de saída (alinha a posição conforme os suprimentos), em seguida define os kits e seus itens e verifica se está correto, depois desse passo define quantos kits serão montados baseados na configuração realizada. No próximo momento o braço mecânica realiza a tarefa, após ser completada aparece uma página indicando que o processo de montagem foi finalizado. Se o usuário quiser montar mais um leva de kits, caso queira voltará para página de calibração do robô, se não, ele fecha o programa. Esse fluxo é essencial para entender como uma pessoa dentro do setor da farmácia como responsável direto pelos kits interage com a solução.
@@ -113,7 +103,6 @@ Visando garantir a segurança da plataforma, foi pensado em um sistema de login 
 <div className = "borda_imagens">
     ![Wireframe Login](/img/wireframe-login-email.png)
 </div>
-<!-- ![Wireframe Login](/img/wireframe-login-email.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 A tela apresenta a funcionalidade de login. Para entrar na plataforma, é necessário inserir nos inputs, respectivamente o e-mail e a senha. Além disso, é apresentada a funcionalidade de "esqueci minha senha", a qual recuperar a senha de um usuário.  
@@ -129,7 +118,6 @@ Nessa tela, existe uma simulação de uma bandeja de entrada, na qual aparecem 3
 <div className = "borda_imagens">
     ![Wireframe Calibrar](/img/wireframe-calibrar.png)
 </div>
-<!-- ![Wireframe Calibrar](/img/wireframe-calibrar.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 #### Tela 3 - Calibrar ponto específico
@@ -139,7 +127,6 @@ A tela mostra em destaque o ponto selecionado pelo usuário anteriormente. A par
 <div className = "borda_imagens">
     ![Wireframe Calibrar - Ponto Específico](/img/wireframe-calibrar-especifico.png)
 </div>
-<!-- ![Wireframe Calibrar - Ponto Específico](/img/wireframe-calibrar-especifico.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 
@@ -150,7 +137,6 @@ Ao concluir a calibração, o usuário deve escolher o kit que será produzido p
 <div className = "borda_imagens">
     ![Wireframe Selecionar Kit](/img/wireframe-kit.png)
 </div>
-<!-- ![Wireframe Selecionar Kit](/img/wireframe-kit.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ### Tela 5 - Confirmar quantidade do kit a ser produzido
@@ -160,7 +146,6 @@ Nessa parte da solução, o usuário deve verificar se o kit que está sendo rea
 <div className = "borda_imagens">
     ![Wireframe Quantidade de Kits](/img/wireframe-quantidade.png)
 </div>
-<!-- ![Wireframe Quantidade de Kits](/img/wireframe-quantidade.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ### Tela 6 - Kit em produção
@@ -170,7 +155,6 @@ Essa tela representa o momento em que o braço robótico estará realizando os k
 <div className = "borda_imagens">
     ![Wireframe Produção dos kits](/img/wireframe-loading.png)
 </div>
-<!-- ![Wireframe Produção dos kits](/img/wireframe-loading.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 
@@ -181,7 +165,6 @@ Ao finalizar todos os kits solicitados pelo usuário, essa tela aparecerá e o u
 <div className = "borda_imagens">
     ![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png)
 </div>
-<!-- ![Wireframe Conclusão dos kits](/img/wireframe-final-kit.png) -->
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 
