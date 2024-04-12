@@ -13,7 +13,7 @@ As funcionalidades implementadas permitiram a manipulação eficiente de diverso
 
 Apesar dos avanços significativos, a funcionalidade de edição de layout não foi implementada até o momento. Esta funcionalidade é crucial para permitir ajustes nos layouts dos kits sem a necessidade de intervenção direta no código-fonte ou reconfigurações complexas do sistema. A ausência dessa capacidade limita a flexibilidade do sistema em adaptar-se rapidamente a mudanças nas demandas ou erros detectados após a fase inicial de implementação.
 
-### Futuras Direções
+### Próximos Passos
 
 Para avançar, o projeto prevê a integração desta funcionalidade de edição de layout, o que facilitará a manutenção e atualização contínua dos kits. Além disso, planeja-se a implementação completa do sistema junto às ferramentas já utilizadas no Hospital Sírio Libanês, garantindo uma interoperabilidade total e eficaz.
 
