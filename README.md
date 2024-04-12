@@ -28,60 +28,61 @@ Tais objetivos são atingidos por meio da implementação de um braço robótico
 ## Estrutura do Projeto
 
 O projeto está estruturado de acordo com as seguintes pastas:
-.
+
+```
 ├── docs
-│   ├── docs
-│   │   └── Entrega-Academica
-│   │       ├── Sprint 1
-│   │       │   ├── Arquitetura
-│   │       │   ├── Negocios
-│   │       │   ├── Pitch
-│   │       │   └── UX
-│   │       ├── Sprint 2
-│   │       │   ├── Computação
-│   │       │   ├── Pitch
-│   │       │   └── UX
-│   │       ├── Sprint 3
-│   │       │   └── Computação
-│   │       └── Sprint 4
-│   │           └── Frontend
-│   ├── src
-│   │   ├── components
-│   │   │   └── HomepageFeatures
-│   │   └── css
-│   └── static
-│       ├── img
-│       │   ├── apresentacao1
-│       │   ├── apresentacao2
-│       │   └── logo
-│       │       ├── pdf
-│       │       ├── png
-│       │       └── svg
-│       └── sheets
+│   ├── docs
+│   │   └── Entrega-Academica
+│   │       ├── Sprint 1
+│   │       │   ├── Arquitetura
+│   │       │   ├── Negocios
+│   │       │   └── UX
+│   │       ├── Sprint 2
+│   │       │   ├── Computação
+│   │       │   └── UX
+│   │       ├── Sprint 3
+│   │       │   └── Computação
+│   │       ├── Sprint 4
+│   │       │   └── Frontend
+│   │       └── Sprint 5
+│   ├── src
+│   │   ├── components
+│   │   │   └── HomepageFeatures
+│   │   └── css
+│   └── static
+│       ├── img
+│       │   ├── apresentacao1
+│       │   ├── apresentacao2
+│       │   └── logo
+│       │       ├── pdf
+│       │       ├── png
+│       │       └── svg
+│       └── sheets
 └── src
     ├── backend
-    │   └── src
-    │       ├── controllers
-    │       │   ├── itens
-    │       │   ├── kit_orders
-    │       │   ├── kit_positions
-    │       │   ├── kits
-    │       │   └── robots
-    │       ├── models
-    │       ├── routers
-    │       └── schemas
+    │   └── src
+    │       ├── controllers
+    │       │   ├── itens
+    │       │   ├── kit_orders
+    │       │   ├── kit_positions
+    │       │   ├── kits
+    │       │   └── robots
+    │       ├── models
+    │       ├── routers
+    │       └── schemas
     ├── firmware
-    │   └── src
+    │   └── src
     ├── frontend
-    │   ├── public
-    │   └── src
-    │       ├── components
-    │       ├── hooks
-    │       ├── interfaces
-    │       ├── pages
-    │       └── static
+    │   ├── public
+    │   └── src
+    │       ├── components
+    │       ├── hooks
+    │       ├── interfaces
+    │       ├── pages
+    │       └── static
     └── robot
         └── src
+```
 
 ## Execução do Projeto
 
