@@ -14,7 +14,8 @@ Finalmente, dedicamos um tempo para criar documentação e tutoriais detalhados 
 Essas atividades foram fundamentais para o progresso do nosso projeto durante esta sprint e estamos ansiosos para continuar nosso trabalho nas próximas sprints.
 
 ## Log de tarefas
+
 <div className = "borda_imagens">
-    ![Log de tarefas](/img/log-tarefas-sprint5.png)
+    ![Log de tarefas sprint 5](/img/log-tarefas-sprint5.png)
 </div>
 <h6 align="center"> Fonte: Elaboração Grupo 4U </h6>

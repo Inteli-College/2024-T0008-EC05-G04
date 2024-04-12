@@ -11,3 +11,10 @@ A funcionalidade do sensor de proximidade é detectar a presença de objetos pr�
 O código-fonte elaborado configura a operação do sensor, gerenciando o LED e o buzzer com base na leitura do sensor. O projeto visa verificar se um objeto foi corretamente agarrado pelo braço robótico, oferecendo feedback visual, auditivo e textual sobre a detecção de objetos.
 
 Adicionalmente, é descrita uma API de Gerenciamento de Kits, que disponibiliza uma série de endpoints para a manipulação de kits, posições de kits, registro de usuários e itens, e consultas relacionadas. Os endpoints oferecem funcionalidades como a consulta de kits, adição de novos kits, registro de usuários, autenticação de login, criação de posições de kit, registro de itens, consulta de posições de kit, consulta de itens, criação de pedidos de kit, consulta de pedidos de kit, atualização de status de pedidos de kit e consulta de pedidos de kit por status. Cada endpoint é detalhadamente descrito quanto à sua função, parâmetros de requisição e resposta, e código de status HTTP correspondente. O texto ressalta a organização e a eficiência da API para o gerenciamento abrangente de dados relacionados a kits.
+
+
+## Log de tarefas
+<div className = "borda_imagens">
+    ![Log de tarefas Sprint 3](/img/log-tarefas-sprint3.png)
+</div>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>

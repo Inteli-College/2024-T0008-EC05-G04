@@ -7,4 +7,8 @@ Na parte técnica do projeto, o foco principal foi no desenvolvimento dos movime
 ## User Experience (UX)
 No desenvolvimento da experiência do usuário (UX), foram desenvolvidos os fluxos de utilização para as personas identificadas. Dois fluxos de utilização da solução foram desenvolvidos: um para a gestora hospitalar e outro para o auxiliar de farmácia. Para a gestora hospitalar, o fluxo inicia com o login no software, apresentando opções para visualizar kits, criar/editar kits e acessar estatísticas. Cada opção oferece funcionalidades específicas, como visualizar detalhes dos kits, compor novos conjuntos de materiais e acessar informações estratégicas por meio de tabelas, dashboards e relatórios. Para o auxiliar de farmácia, o fluxo também começa com o login e inclui etapas de calibração do robô, seleção do kit a ser produzido, confirmação da quantidade de kits e monitoramento da produção. Ao finalizar, o usuário pode optar por iniciar uma nova produção ou encerrar a atividade. Estes fluxos são acompanhados de wireframes que ilustram as telas e interações do software para cada persona.
 
-## Tabela de tarefas
+## Log de tarefas
+<div className = "borda_imagens">
+    ![Log de tarefas Sprint 2](/img/log-tarefas-sprint2.png)
+</div>
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
