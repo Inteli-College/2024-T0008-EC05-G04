@@ -5,17 +5,23 @@ const useFetch = <T>(url: string): T | null => {
     const [data, setData] = useState<T | null>(null);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+        const fetchData = () => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url, false); // Synchronous request
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        const jsonData: T = JSON.parse(xhr.responseText);
+                        setData(jsonData);
+                    } else {
+                        console.error(`HTTP error! status: ${xhr.status}`);
+                    }
                 }
-                const jsonData: T = await response.json();
-                setData(jsonData);
-            } catch (error) {
-                console.error('Failed to fetch data:', error);
-            }
+            };
+
+            xhr.send();
         };
 
         fetchData();

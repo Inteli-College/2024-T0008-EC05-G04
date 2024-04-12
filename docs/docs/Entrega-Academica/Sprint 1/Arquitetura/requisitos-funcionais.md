@@ -1,6 +1,6 @@
 # Requisitos funcionais
 
-Os requisitos funcionais "é um requisito que se refere a um resultado de comportamento que deve ser provido por uma funcionalidade do sistema"[1]. Ou seja, os requisitos funcionais buscam explicar quais são as capacidades do sistema. Sendo assim, eles são considerados a base do projeto, pois guiaram as funcionalidades que a plataforma terá.
+Para a elaboração de uma arquitetura de solução consistente, é necessário que os requisitos funcionais sejam bem delimitados e suficientes haja vista que eles determinam a forma que a solução deve tomar. Objetivamente, os requisitos funcionais "é um requisito que se refere a um resultado de comportamento que deve ser provido por uma funcionalidade do sistema"[1]. Dessa forma, os requisitos funcionais buscam explicar quais são as capacidades do sistema, sendo assim, considerados a base do projeto, visto que guiam as funcionalidades que a plataforma terá. Em suma, os requisitos funcionais especificam o que o sistema deve fazer — suas funções, operações e comportamentos esperados. Portanto, delimitamos abaixo os requisitos funcionais do projeto desenvolvido.
  
 
 | Requisitos Funcionais | Descrição  |

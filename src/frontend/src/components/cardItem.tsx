@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { itemKit } from "../interfaces/interfaces";
-interface CardItemProps{
+interface CardItemProps {
     position: number
-    onSelectItem: (item: number) => void;
-    num: number
-    kitItems: itemKit[]
+    onSelectItem: (item: number) => void | null;
+    num: number | null
+    kitItems: itemKit[] | null
+    text: string | undefined
+    quantity: number | null
 }
 
-const CardItem: React.FC<CardItemProps>  = ({position,onSelectItem, num, kitItems}) => {
+const CardItem: React.FC<CardItemProps> = ({ position, onSelectItem, num, kitItems, text, quantity }) => {
     const [borderStyle, setBorderStyle] = useState<string>("");
     const [backgroundStyle, setBackgroundStyle] = useState<string>("bg-white hover:text-violet-600 text text-slate-900");
     useEffect(() => {
@@ -20,22 +22,29 @@ const CardItem: React.FC<CardItemProps>  = ({position,onSelectItem, num, kitItem
         }
     }, [num])
 
-    useEffect(() =>{
-        const foundItem = kitItems.find(item => item.position === position);
+    useEffect(() => {
+        const foundItem = kitItems?.find(item => item.position === position);
         if (foundItem) {
             setBackgroundStyle("bg-violet-600 text-white shadow");
         }
-        if (!foundItem){
+        if (!foundItem) {
             setBackgroundStyle("bg-white hover:text-violet-600 text text-slate-900");
         }
     }, [kitItems])
-    
-    return(
+
+    return (
         <div>
-            <div className={`${backgroundStyle}  rounded-lg border ${borderStyle} shadow w-52 h-52 flex items-center justify-center transition duration-500 `} onClick={() => onSelectItem(position)}>
-                    <p className="text-[22px] black">
-                        Posição {position}
+            <div className={`${backgroundStyle} rounded-lg border ${borderStyle} flex flex-col justify-center shadow w-52  h-52 items-center `} onClick={() => onSelectItem(position)}>
+                {text && (
+                        <p className="text-xl text-center black">
+                            {text}
+                        </p>
+                )}
+                {quantity && (
+                    <p className="text-xl text-center black">
+                        {String(quantity)}
                     </p>
+                )}
             </div>
         </div>
     );

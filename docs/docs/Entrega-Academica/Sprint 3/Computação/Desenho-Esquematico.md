@@ -16,6 +16,7 @@ Este documento descreve o projeto de um sensor de proximidade integrado a um bra
 ## Diagrama Esquemático
 
 ![Diagrama Esquemático](\img\desenho_esquematico.png)
+<h6 align="center"> Fonte: Elaboração Grupo 4U </h6>
 
 ## Procedimento de Montagem
 

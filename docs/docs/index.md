@@ -2,33 +2,47 @@
 slug: /
 sidebar_position: "1"
 ---
-# Grupo 4
+# Grupo 4U
 Devido à constante procura e necessidade de agilizar processos no setor de saúde, o Hospital Sírio-Libanês identificou a chance de aprimorar a montagem dos kits hospitalares de emergência. O grupo 4U, em parceria com o Alma Sírio-Libanês, vertente de tecnologia do hospital, desenvolveu um projeto de um sistema de automação, para que esse processo se torne mais eficiente. 
 
-Esse projeto não apenas tem como objetivo acelerar a montagem dos kits, mas também assegurar a a segurança necessária para atender as diversas demandas emergenciais. Ao aliviar a equipe de saúde das tarefas operacionais, o sistema permite que estes profissionais se concentrem no que realmente importa: prestar um atendimento rápido e cuidadoso aos pacientes. A expectativa é que essa inovação não só eleve o padrão dos serviços oferecidos, mas também otimize a utilização dos recursos, minimize os tempos de resposta em situações críticas e reforce a segurança dos pacientes.
+O sistema inovador proposto está projetado para acelerar a produção dos kits, tornando-a mais rápida e livre de falhas, assegurando a correta composição e uso seguro de cada um. Ao substituir tarefas manuais com soluções automatizadas, o projeto visa otimizar a alocação de recursos humanos, liberando a equipe médica para se dedicar às interações essenciais com os pacientes e à tomada de decisões clínicas, áreas onde a empatia e a criatividade são cruciais. Esta realocação de foco é estratégica, não só promovendo um atendimento ao paciente mais humanizado e eficiente, mas também estabelecendo um novo padrão que pode ser adaptado para outras aplicações dentro do ambiente hospitalar. Esta iniciativa reflete o compromisso contínuo do Hospital Sírio-Libanês e seus parceiros em incorporar soluções tecnológicas avançadas, abordando proativamente os desafios contemporâneos da saúde e elevando o padrão de cuidado oferecido aos pacientes.
 
+## Logo
 ![Logo_do_grupo](/img/apresentacao1/1.png)
 
-Introdução
+## O time
 
-Desenvolvido pelo grupo 4U em estreita colaboração com o Alma, o braço de tecnologia e inovação do Hospital Sírio-Libanês, o projeto promete revolucionar a montagem de kits hospitalares. Integrando braços robóticos avançados com uma interface intuitiva, coloca-se na vanguarda da inovação em processos hospitalares. Essa parceria estratégica entre o grupo 4U e o Alma destaca o compromisso com a transformação digital no cuidado à saúde, visando sempre a excelência no atendimento e no bem-estar dos pacientes.
+![equipe](/img/nosso-time.png)
 
-Objetivos
+## Apresentações
 
-O principal objetivo é automatizar o processo essencial de montagem de kits hospitalares, elevando tanto a eficiência quanto a segurança. Ao implementar essa tecnologia, espera-se minimizar os erros humanos e reduzir significativamente a demanda por trabalho repetitivo e fisicamente desgastante. Além disso, o projeto visa aprimorar a montagem dos kits hospitalares, tornando-a mais rápida e sem falhas, assegurando que cada kit seja corretamente composto e seguro para uso. Substituindo tarefas manuais por soluções automatizadas, o projeto não só busca otimizar a alocação de recursos humanos mas também abre espaço para que estes recursos sejam realocados em áreas onde o fator humano e a criatividade são indispensáveis. Esta mudança de foco visa potencializar áreas que beneficiam significativamente da interação humana, como o atendimento ao paciente, a tomada de decisões clínicas e a inovação em tratamentos, promovendo assim um atendimento mais humanizado e eficaz. Adicionalmente, ao estabelecer um novo padrão no setor, há um potencial enorme de adaptar essa abordagem para outras aplicações dentro do ambiente hospitalar, reforçando o compromisso do Hospital Sírio-Libanês e seus parceiros na incorporação de soluções tecnológicas inovadoras para enfrentar os desafios do setor de saúde.
-
-## Nossa equipe
-
-![equipe](/img/apresentacao1/2.png)
-
-## Apresentação 1 
+### Apresentação 1 
 *[Link da Apresentação](https://www.canva.com/design/DAF85Ckz8DI/MxIn38ARbo542v3Z3vxKSg/view?utm_content=DAF85Ckz8DI&utm_campaign=designshare&utm_medium=link&utm_source=editor)*
 
-## Apresentação 2 
+Nessa apresentação foi realizada a identificação do problema, sendo assim trabalhamos especialmente com o entendimento do negócio e de seus stakeholders. Durante a sprint foram desenvolvidos, na parte de negócios: Value Proposition Canvas, Matriz de Risco, Matriz de Oceano azul e uma análise financeira. Já na parte de UX foram desenvolvidas duas personas, também foram desenvolvidas jornadas do usuário e user Stories para melhorar o entendimento das personas. Por fim, foi realizada a idealização de uma arquitetura de solução, integrada com requisitos funcionais e requisitos não funcionais.  
+
+### Apresentação 2 
 *[Link da Apresentação](https://www.canva.com/design/DAF-AQ4RheE/ggb-ee-xurrqUNH54pyqrQ/view?utm_content=DAF-AQ4RheE&utm_campaign=designshare&utm_medium=link&utm_source=editor)*
 
-## Apresentação 3
-*[Link da Apresentação](https://www.canva.com/design/DAGBRegsR4w/DJQbpK3XvQMyLqRGSaT6BQ/edit?utm_content=DAGBRegsR4w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)*
+Nessa apresentação foi mostrada o desenvolvimento do fluxo de usuário, juntamente ao wireframe. Além disso, foram mostrados vídeos da solução já funcionando, integrado ao uma CLI (Command Line Interface). Os vídeos estão disponíveis no arquivo "CLI - Interface de Linha de Comando".
 
-## Apresentação 4
-*[Link da Apresentação](https://www.canva.com/design/DAGBRg1nqOs/VLHcuQ6Xt12G8VU2W6NBYQ/edit?utm_content=DAGBRg1nqOs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)*
+### Apresentação 3
+*[Link da Apresentação](https://www.canva.com/design/DAGB4l3HnfU/KSW6OIkmQ9mgHsKT1P7Cag/view?utm_content=DAGB4l3HnfU&utm_campaign=designshare&utm_medium=link&utm_source=editor)*
+
+Durante a apresentação foi demonstrado o desenvolvimento do Backend, da parte periférica do braço, assim como a case e a integração entre Backend e o código pertencente ao robô. Ao longo da sprint, além das tarefas citadas anteriormente, foi realizada a documentação dos itens citados, assim como tutorias para fazer a aplicação funcionar. 
+
+### Apresentação 4
+*[Link da Apresentação](https://www.canva.com/design/DAF_g2Y7nxE/IpGfsajTIr8qMa67sJFN0g/view?utm_content=DAF_g2Y7nxE&utm_campaign=designshare&utm_medium=link&utm_source=editor)*
+
+Ao longo da Sprint, desenvolvemos tanto o FrontEnd da solução, quanto o BackEnd. Para ser possível, foi aprimorado o wireframe, transformando-o em um Mock-Up. Para a apresentação, o foco do grupo demonstrou o funcionamento da solução, em especial para o Ícaro, principal usuário da aplicação.
+
+### Apresentação 5
+*[Link da Apresentação](https://www.canva.com/design/DAGCHZ2lPbE/jNOW5GrKq99RztZy-vEWOA/edit?utm_content=DAGCHZ2lPbE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)*
+
+Para essa apresentação, o grupo focou em apresentar uma visão geral sobre o projeto, contextualizando o problema, o que foi desenvolvido ao longo das Sprints e a solução final. Sendo assim, foi realizada uma demonstração com o robô iteragindo com o FrontEnd, além de uma montagem de kits.
+
+## Conclusão do projeto
+
+Em conclusão, o projeto do sistema de automação conseguiu encontrar uma solução eficiente para os problemas apresentados. Através da substituição de tarefas manuais por soluções automatizadas, foi possível acelerar a produção dos kits, tornando-a mais eficiente e livre de falhas. Além disso, a implementação do sistema permitiu a otimização da alocação de recursos humanos, liberando a equipe  para se dedicar a tarefas mais desejáveis, que necessitam mais do toque humano. 
+
+O foco do grupo em realizar uma solução, a qual solucionasse as dores primordiais do parceiro, assim permitindo também espaços para melhorias futuras. De tal forma, as principais tarefas, como criar um Kit, montar um Kit, visualizar estatísticas foram concluídas. Além disso, foi pensado em uma solução que permitisse mais de um robô atuar simultaneamente, apenas necessitando estar conectado com o computador. Por fim, como passos futuros ao projeto, deve-se implementá-lo juntamente ao sistemas utilizados no Sírio Libanês para garantir uma interoperabilidade entre sistemas. 
