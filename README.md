@@ -27,13 +27,60 @@ Tais objetivos são atingidos por meio da implementação de um braço robótico
 ## Estrutura do Projeto
 
 O projeto está estruturado de acordo com as seguintes pastas:
-
-- `src/`: Contém o código-fonte do projeto.
-  - `firmware/`: O código-fonte para a Raspberry Pi Pico W
-  - `robot/`: O código-fonte para a comunicação com o Dobot
-  - `backend/`: Código-fonte para o backend do projeto
-  - `frontend/`: Código-fonte para o frontend do projeto
-- `docs/`: Documentação do projeto feita no Docussaurus.
+.
+├── docs
+│   ├── docs
+│   │   └── Entrega-Academica
+│   │       ├── Sprint 1
+│   │       │   ├── Arquitetura
+│   │       │   ├── Negocios
+│   │       │   ├── Pitch
+│   │       │   └── UX
+│   │       ├── Sprint 2
+│   │       │   ├── Computação
+│   │       │   ├── Pitch
+│   │       │   └── UX
+│   │       ├── Sprint 3
+│   │       │   └── Computação
+│   │       └── Sprint 4
+│   │           └── Frontend
+│   ├── src
+│   │   ├── components
+│   │   │   └── HomepageFeatures
+│   │   └── css
+│   └── static
+│       ├── img
+│       │   ├── apresentacao1
+│       │   ├── apresentacao2
+│       │   └── logo
+│       │       ├── pdf
+│       │       ├── png
+│       │       └── svg
+│       └── sheets
+└── src
+    ├── backend
+    │   └── src
+    │       ├── controllers
+    │       │   ├── itens
+    │       │   ├── kit_orders
+    │       │   ├── kit_positions
+    │       │   ├── kits
+    │       │   └── robots
+    │       ├── models
+    │       ├── routers
+    │       └── schemas
+    ├── firmware
+    │   └── src
+    ├── frontend
+    │   ├── public
+    │   └── src
+    │       ├── components
+    │       ├── hooks
+    │       ├── interfaces
+    │       ├── pages
+    │       └── static
+    └── robot
+        └── src
 
 ## Execução do Projeto
 

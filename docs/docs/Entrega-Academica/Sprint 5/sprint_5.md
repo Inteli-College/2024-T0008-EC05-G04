@@ -1,4 +1,4 @@
-# Sprint 2
+# Sprint 5
 
 Nesta sprint, o desenvolvimento foi direcionado para várias áreas-chave:
 
