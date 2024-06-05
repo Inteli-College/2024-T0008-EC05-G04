@@ -164,7 +164,7 @@ npm start
 
 ## Licença
 
-Este projeto está licenciado sob a Licença CC-0. Veja o arquivo `LICENSE` para mais detalhes.
+4U by Inteli - Cecília Gonçalves, Eduardo Barreto, Fernando Vasconcelos, Lidia Mariano, Luan Ramos, Murilo Prianti, Ólin Costa is licensed under CC BY 4.0 
 
 ---
 
